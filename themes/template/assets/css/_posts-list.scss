@@ -2,12 +2,19 @@
 // POSTS LIST COMPONENT
 // ============================================
 
-.posts-list-section {
-  margin-top: $spacing-3xl;
+
+.section-posts-title {
+  margin: 0 0 $spacing-xl 0;
+  font-size: $font-size-3xl;
 }
 
-.posts-list-section:first-child {
-  margin-top: 0;
+.posts-list-section {
+  margin-top: $spacing-2xl;
+  margin-bottom: $spacing-3xl;
+}
+
+.posts-list-section:last-child {
+  margin-bottom: 0;
 }
 
 .posts-list-title {
@@ -72,7 +79,7 @@
 
 .all-posts-link {
   text-align: right;
-  margin-top: $spacing-md;
+  margin-top: -$spacing-2xl;
 }
 
 .all-posts-link a {
