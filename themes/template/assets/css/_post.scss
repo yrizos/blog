@@ -1,0 +1,206 @@
+// ============================================
+// SINGLE POST VIEW
+// ============================================
+
+.post {
+  position: relative;
+}
+
+// Post Cover Image
+.post-cover {
+  margin: 0;
+  margin-top: -$spacing-lg;
+  margin-bottom: $spacing-xl;
+  padding: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.post-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Post Header
+.post-header {
+  margin-bottom: $spacing-xl;
+  padding-bottom: $spacing-xl;
+  border-bottom: 1px solid $color-border-secondary;
+}
+
+.post .post-title {
+  margin: 0 0 $spacing-md 0;
+  font-size: $font-size-3xl;
+  color: $color-text-primary;
+}
+
+.post-meta {
+  display: flex;
+  gap: $spacing-md;
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+}
+
+.post-meta time,
+.post-meta .reading-time {
+  color: $color-text-muted;
+}
+
+// Post Content
+.post-content {
+  margin-bottom: $spacing-2xl;
+}
+
+.post .post-content h2,
+.post .post-content h3,
+.post .post-content h4,
+.post .post-content h5,
+.post .post-content h6 {
+  margin-top: $spacing-xl;
+  margin-bottom: $spacing-sm;
+}
+
+.post .post-content h2 {
+  font-size: $font-size-2xl;
+}
+
+.post .post-content h3 {
+  font-size: $font-size-lg;
+}
+
+.post .post-content h4 {
+  font-size: $font-size-md;
+}
+
+.post .post-content h5 {
+  font-size: $font-size-sm;
+}
+
+.post .post-content h6 {
+  font-size: $font-size-xs;
+}
+
+.post .post-content p,
+.post .post-content ul,
+.post .post-content ol {
+  margin-bottom: $spacing-xl;
+}
+
+.post .post-content ul,
+.post .post-content ol {
+  margin-left: 0;
+  padding-left: $spacing-xl;
+}
+
+.post .post-content li {
+  margin-bottom: $spacing-sm;
+  line-height: 1.5;
+}
+
+.post .post-content p {
+  line-height: 1.5;
+}
+
+.post .post-content a {
+  color: $color-text-primary;
+  text-decoration: underline;
+}
+
+.post .post-content a:hover {
+  color: $color-text-accent;
+}
+
+// Post Footer
+.post-footer {
+  border-top: 1px solid $color-border-secondary;
+  padding-top: $spacing-xl;
+}
+
+// Post Tags
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-xl;
+}
+
+.post-tags-label {
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+  font-weight: $font-weight-normal;
+}
+
+.post-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-tags-list li {
+  margin: 0;
+}
+
+.post-tags-list a {
+  display: inline-block;
+  font-size: $font-size-xs;
+  color: $color-text-accent;
+  padding: $spacing-xs $spacing-sm;
+  background-color: transparent;
+  border: 1px solid $color-border-primary;
+  border-radius: $border-radius-sm;
+  text-decoration: none;
+}
+
+.post-tags-list a:hover {
+  background-color: $color-background-hover;
+  color: $color-text-primary;
+}
+
+// Original URL Notice
+.post-original-notice {
+  margin-bottom: $spacing-xl;
+  padding: $spacing-md;
+  background-color: lighten($color-background-primary, 3%);
+  border-left: 3px solid $color-text-accent;
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+}
+
+.post-original-notice a {
+  color: $color-text-accent;
+  text-decoration: underline;
+}
+
+.post-original-notice a:hover {
+  color: $color-text-primary;
+}
+
+// License
+.post-license {
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+}
+
+.post-license a {
+  color: $color-text-muted;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.post-license a:hover {
+  color: $color-text-primary;
+}
+
+.post-license i {
+  font-size: $font-size-sm;
+}

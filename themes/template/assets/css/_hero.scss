@@ -1,0 +1,22 @@
+// ============================================
+// HERO COMPONENT
+// ============================================
+
+.hero {
+  margin-top: 0rem;
+  margin-bottom: $spacing-3xl;
+  text-align: center;
+}
+
+.hero p {
+  margin: 0;
+}
+
+.hero .avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: $border-radius-round;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}

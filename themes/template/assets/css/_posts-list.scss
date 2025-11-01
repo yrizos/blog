@@ -12,6 +12,7 @@
 
 .posts-list-title {
   color: $color-text-accent;
+  margin-top: 0;
   margin-bottom: $spacing-md;
 }
 
@@ -44,5 +45,33 @@
 }
 
 .post-title a:hover {
+  text-decoration: underline;
+}
+
+.all-posts-link {
+  text-align: right;
+  margin-top: $spacing-md;
+}
+
+.all-posts-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  font-size: $font-size-lg;
+  color: $color-text-accent;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.all-posts-link a i {
+  color: currentColor;
+  text-decoration: none;
+  font-size: $icon-size-small;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.all-posts-link a:hover {
   text-decoration: underline;
 }
