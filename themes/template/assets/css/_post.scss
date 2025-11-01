@@ -9,7 +9,6 @@
 // Post Cover Image
 .post-cover {
   margin: 0;
-  margin-top: -$spacing-lg;
   margin-bottom: $spacing-xl;
   padding: 0;
   width: 100vw;
@@ -21,13 +20,15 @@
 
 .post-cover img {
   width: 100%;
+  max-width: 960px;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 // Post Header
 .post-header {
-  margin-bottom: 0;
+  margin-bottom: $spacing-xl;
 }
 
 .post .post-title {
@@ -56,10 +57,6 @@
 // Post Content
 .post-content {
   margin-top: $spacing-xl;
-  padding-top: $spacing-xl;
-  padding-bottom: $spacing-xl;
-  border-top: 1px solid $color-border-secondary;
-  border-bottom: 1px solid $color-border-secondary;
 }
 
 .post .post-content h2,
@@ -131,6 +128,8 @@
 // Post Footer
 .post-footer {
   margin-top: $spacing-xl;
+  padding-top: $spacing-xl;
+  border-top: 1px solid $color-border-secondary;
   font-size: $font-size-xs;
 }
 

@@ -2,16 +2,17 @@
 // HEADER
 // ============================================
 
-header {
+body > header {
   position: relative;
   z-index: $z-index-header;
+  background-color: darken($color-background-primary, 2%);
 }
 
-header nav {
+body > header nav {
   position: relative;
 }
 
-header .container {
+body > header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +79,7 @@ header .container {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: $color-background-primary;
+  background-color: darken($color-background-primary, 2%);
   z-index: $z-index-nav;
   max-height: 0;
   overflow: hidden;
