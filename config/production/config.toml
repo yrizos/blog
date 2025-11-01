@@ -1,0 +1,4 @@
+# Production configuration overrides
+
+baseURL = 'https://yrizos.com/'
+
