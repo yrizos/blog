@@ -1,5 +1,5 @@
 +++
-title = 'Nature\'s Balance'
+title = "Nature's Balance"
 date = 2024-04-10T11:30:00-07:00
 draft = false
 +++

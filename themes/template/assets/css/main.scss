@@ -4,22 +4,36 @@ $color-accent: #715A5A;
 $color-light: #D3DAD9;
 
 $base-font-size: 1rem;
+$font-family: 'Source Sans 3', sans-serif;
+$heading-font-family: 'Inter', sans-serif;
 $footer-padding: 1.25rem;
 $social-icons-gap: 1rem;
 
-html,
-body {
+html {
   background-color: $color-dark;
-  height: 100%;
 }
 
 body {
+  background-color: $color-dark;
+  color: $color-light;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: $font-family;
+  font-weight: 300;
+}
+
+a {
+  color: $color-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
 }
 
 main {
   flex: 1;
+  padding: $footer-padding;
 }
 
 footer {
