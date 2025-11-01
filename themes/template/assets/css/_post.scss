@@ -120,50 +120,6 @@
   padding-top: $spacing-xl;
 }
 
-// Post Tags
-.post-tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: $spacing-sm;
-  margin-bottom: $spacing-xl;
-}
-
-.post-tags-label {
-  font-size: $font-size-xs;
-  color: $color-text-muted;
-  font-weight: $font-weight-normal;
-}
-
-.post-tags-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $spacing-sm;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-tags-list li {
-  margin: 0;
-}
-
-.post-tags-list a {
-  display: inline-block;
-  font-size: $font-size-xs;
-  color: $color-text-accent;
-  padding: $spacing-xs $spacing-sm;
-  background-color: transparent;
-  border: 1px solid $color-border-primary;
-  border-radius: $border-radius-sm;
-  text-decoration: none;
-}
-
-.post-tags-list a:hover {
-  background-color: $color-background-hover;
-  color: $color-text-primary;
-}
-
 // Original URL Notice
 .post-original-notice {
   margin-bottom: $spacing-xl;
