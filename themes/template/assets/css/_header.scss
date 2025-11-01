@@ -116,3 +116,83 @@ body > header .container {
   color: $color-text-primary;
   text-decoration: none;
 }
+
+// ============================================
+// DESKTOP NAVIGATION (768px and up)
+// ============================================
+
+@media (min-width: 768px) {
+  body > header {
+    position: sticky;
+    top: 0;
+  }
+
+  body > header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: $spacing-lg;
+  }
+
+  body > header .container {
+    padding: 0;
+    max-width: none;
+    margin: 0;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .home-icon {
+    z-index: 10;
+  }
+
+  .hamburger-nav {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
+
+  .hamburger-menu-list {
+    display: flex;
+    gap: $spacing-md;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hamburger-menu-list li {
+    border-top: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger-menu-list li:hover {
+    background-color: transparent;
+  }
+
+  .hamburger-menu-list li:not(:last-child)::after {
+    content: '|';
+    color: $color-text-accent;
+    margin-left: $spacing-md;
+  }
+
+  .hamburger-menu-list a {
+    padding: 0;
+    font-size: $font-size-sm;
+    color: $color-text-primary;
+    text-decoration: none;
+    display: inline;
+  }
+
+  .hamburger-menu-list a:hover {
+    text-decoration: underline;
+  }
+}

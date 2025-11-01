@@ -129,7 +129,9 @@
 .post-footer {
   margin-top: $spacing-xl;
   padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
   border-top: 1px solid $color-border-secondary;
+  border-bottom: 1px solid $color-border-secondary;
   font-size: $font-size-xs;
 }
 
