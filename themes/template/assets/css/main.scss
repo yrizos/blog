@@ -3,23 +3,37 @@ $color-medium-dark: #44444E;
 $color-accent: #715A5A;
 $color-light: #D3DAD9;
 
-$base-font-size: 1rem;
+$font-size-normal: 1rem;
+$font-size-h1: 2rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.25rem;
+$font-size-h4: 1.125rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.875rem;
 $font-family: 'Source Sans 3', sans-serif;
 $heading-font-family: 'Inter', sans-serif;
+$icon-font-size: $font-size-normal * 1.4;
+$content-icon-font-size: $font-size-normal * 0.8;
 $container-padding: 1.25rem;
 $social-icons-gap: 1rem;
+$post-link-padding: 1rem;
+$border-width: 1px;
+$all-posts-link-margin-top: 1rem;
+$all-posts-link-icon-gap: 0.5rem;
 
 html {
   background-color: $color-dark;
+  height: 100%;
 }
 
 body {
   background-color: $color-dark;
   color: $color-light;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   font-family: $font-family;
+  font-size: $font-size-normal;
   font-weight: 300;
 }
 
@@ -29,6 +43,31 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  color: $color-accent;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
 }
 
 .container {
@@ -50,16 +89,39 @@ header .container {
   border: none;
   padding: 0;
   cursor: pointer;
+  list-style: none;
+  text-decoration: none;
 }
 
-.home-icon svg,
-.hamburger-menu svg {
-  fill: $color-accent;
+.home-icon::before,
+.home-icon::after,
+.hamburger-menu::before,
+.hamburger-menu::after {
+  display: none;
+  content: none;
 }
 
-.home-icon:hover svg,
-.hamburger-menu:hover svg {
-  fill: $color-light;
+i {
+  text-decoration: none;
+}
+
+
+.home-icon i,
+.hamburger-menu i {
+  color: $color-accent;
+  display: block;
+  font-size: $icon-font-size;
+}
+
+.home-icon i::after,
+.hamburger-menu i::after {
+  display: none;
+  content: none;
+}
+
+.home-icon:hover i,
+.hamburger-menu:hover i {
+  color: $color-light;
 }
 
 main {
@@ -73,11 +135,71 @@ main {
   align-items: center;
 }
 
-.social-icons svg {
-  fill: $color-accent;
+.social-icons i {
+  color: $color-accent;
+  font-size: $icon-font-size;
 }
 
-.social-icons a:hover svg {
-  fill: $color-light;
+.social-icons a:hover i {
+  color: $color-light;
 }
 
+.posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.posts-list li {
+  margin: 0;
+  border-bottom: $border-width solid $color-accent;
+  padding-top: $post-link-padding;
+  padding-bottom: $post-link-padding;
+}
+
+.posts-list li:first-child {
+  border-top: $border-width solid $color-accent;
+}
+
+.posts-list a {
+  display: block;
+  text-decoration: none;
+  color: $color-light;
+}
+
+.posts-list a:hover {
+  text-decoration: underline;
+}
+
+.posts-list .post-title {
+  margin: 0;
+  font-weight: normal;
+}
+
+.all-posts-link {
+  text-align: right;
+  margin-top: $all-posts-link-margin-top;
+}
+
+.all-posts-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: $all-posts-link-icon-gap;
+  font-size: $font-size-h3;
+  color: $color-accent;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.all-posts-link a i {
+  color: currentColor;
+  text-decoration: none;
+  font-size: $content-icon-font-size;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.all-posts-link a:hover {
+  text-decoration: underline;
+}
