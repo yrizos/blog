@@ -14,31 +14,41 @@ Before working on any task, read README.md to understand:
 
 ### Core principles
 
-1. **Never make assumptions**
+1. **Never make assumptions - These rules are ABSOLUTE**
 
    - If anything is unclear, ask for clarification
    - Do not infer requirements beyond what is explicitly stated
    - Do not assume user preferences or constraints
    - Do not assume technical decisions without verification
+   - There is NO situation where violating these rules is acceptable
+   - "Probably what they want" = violation, STOP and ask
+   - "This seems obvious" = violation, STOP and ask
+   - "This will save time" = violation, STOP and ask
 
 2. **95% confidence threshold before action**
 
    - You must be 95% confident you understand exactly what the user wants before making any changes
-   - If you have any doubt about the request, ask clarifying questions first
+   - If you have ANY doubt about the request, ask clarifying questions first
    - Uncertainty about scope, approach, or requirements means STOP and ask
    - Do not proceed with "I think you mean..." or "I assume you want..." - ask instead
    - **It is always better to do NOTHING and ask than to do the wrong thing**
    - Doing the wrong thing wastes the user's time and creates more work
    - Taking no action is preferable to taking incorrect action
+   - **Before making ANY change, verify: Did the user explicitly specify this exact detail? If No, ASK.**
 
-3. **Do the minimum requested**
+3. **Do the minimum requested - Never "add value"**
 
-   - Complete only what the user explicitly asks for
-   - Do not add extra features, files, or improvements
-   - Do not refactor unrelated code
-   - Do not update dependencies unless asked
+   - Complete ONLY what the user explicitly asks for
+   - Do NOT add extra features, files, or improvements beyond what was requested
+   - Do NOT refactor unrelated code
+   - Do NOT update dependencies unless asked
+   - Do NOT fill in blanks that weren't specified
+   - Do NOT anticipate next steps or make anything "complete" unless explicitly asked
+   - If the user asks you to create a file, create ONLY the file structure they specified
+   - If the user asks you to add a function, add ONLY that function with no extra features
    - Excessive actions waste time and add complexity
    - Better to do less than more
+   - **Adding unrequested features wastes the user's time when you're wrong**
 
 4. **Answer questions, do not take action**
 
@@ -54,7 +64,9 @@ Before working on any task, read README.md to understand:
    - Only run `git commit` when directly instructed by the user
    - Making changes does not imply permission to commit them
 
-### When to ask for clarification
+### When to ask for clarification - Asking is REQUIRED, not optional
+
+Asking clarifying questions is the PRIMARY method of working, not a fallback. The user PREFERS questions over incorrect implementations. **It is IMPOSSIBLE to ask too many clarifying questions.**
 
 Ask clarifying questions when:
 
@@ -66,6 +78,8 @@ Ask clarifying questions when:
 - You're unsure about edge cases or error handling requirements
 - The request conflicts with existing code or patterns
 - You're below 95% confidence about what to do
+- ANY detail is unspecified - you MUST ask before proceeding
+- Multiple clarifying questions are better than one wrong assumption
 
 ### Example: The hamburger menu trap
 
