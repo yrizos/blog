@@ -279,22 +279,32 @@ def fetch_devto_posts(feed_url: str) -> List[BlogPost]:
 
 
 def parse_devto_entry(entry) -> BlogPost:
-    """Transform a Dev.to feed entry into a BlogPost."""
+    """Transform a Dev.to feed entry into a BlogPost using the Dev.to API."""
     title: str = entry.title
     slug = slugify(title)
 
     published = parse_publish_date(entry.get("published"), entry.get("updated"), title)
 
-    content_html: Optional[str] = None
-    if entry.get("content"):
-        content_html = entry.content[0].value
-    elif entry.get("summary"):
-        content_html = entry.summary
-    if not content_html:
-        raise ValueError("Entry does not contain HTML content.")
+    original_url = entry.get("link") or entry.get("url")
+    if not original_url:
+        raise ValueError("Entry is missing the original URL.")
+    original_url = clean_url(original_url)
 
-    soup = BeautifulSoup(content_html, "html.parser")
-    image_url, image_alt = pop_first_image(soup)
+    # Extract article ID from the URL and fetch from Dev.to API
+    article_id = extract_devto_article_id(original_url)
+    if not article_id:
+        raise ValueError("Could not extract article ID from Dev.to URL.")
+
+    api_data = fetch_devto_article(article_id)
+    markdown_body = api_data.get("body_markdown", "").strip()
+    if not markdown_body:
+        raise ValueError("Article does not contain markdown content.")
+
+    # Get cover image from API
+    image_url = api_data.get("cover_image")
+    image_alt = api_data.get("title", "")
+
+    # Fallback to feed thumbnail if no cover image
     if not image_url:
         thumbnails = entry.get("media_thumbnail")
         if thumbnails and isinstance(thumbnails, list):
@@ -303,14 +313,8 @@ def parse_devto_entry(entry) -> BlogPost:
                 image_url = thumb["url"]
                 image_alt = thumb.get("title", "")
 
-    remove_tracking_images(soup)
-    normalize_headings(soup)
-    markdown_body = html_to_markdown(str(soup), heading_style="ATX").strip()
-
-    original_url = entry.get("link") or entry.get("url")
-    if not original_url:
-        raise ValueError("Entry is missing the original URL.")
-    original_url = clean_url(original_url)
+    # Get tags from API response
+    tags = [tag for tag in api_data.get("tag_list", [])]
 
     return BlogPost(
         title=title,
@@ -318,10 +322,33 @@ def parse_devto_entry(entry) -> BlogPost:
         date=published,
         original_url=original_url,
         markdown_body=markdown_body,
-        tags=extract_tags(entry),
+        tags=tags if tags else extract_tags(entry),
         image_url=image_url,
         image_alt=image_alt,
     )
+
+
+def extract_devto_article_id(url: str) -> Optional[str]:
+    """Extract the article path (username/slug) from a Dev.to URL."""
+    path = urlsplit(url).path
+    if not path:
+        return None
+    # Remove leading slash and split
+    path = path.lstrip("/")
+    parts = [part for part in path.split("/") if part]
+    if len(parts) < 2:
+        return None
+    # Dev.to URLs are formatted like: /username/title-slug-id
+    # The API expects: username/title-slug-id
+    return f"{parts[0]}/{parts[1]}"
+
+
+def fetch_devto_article(article_id: str) -> dict:
+    """Fetch article data from the Dev.to API."""
+    api_url = f"https://dev.to/api/articles/{article_id}"
+    response = requests.get(api_url, timeout=30)
+    response.raise_for_status()
+    return response.json()
 
 
 def extract_devto_slug(entry) -> Optional[str]:

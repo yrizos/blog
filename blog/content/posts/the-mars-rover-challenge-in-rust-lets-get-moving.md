@@ -3,14 +3,14 @@ title = "The Mars Rover Challenge in Rust: Let's Get Moving!"
 date = "2024-11-18T11:52:37+00:00"
 draft = false
 originalURL = "https://dev.to/yrizos/the-mars-rover-challenge-in-rust-lets-get-moving-3a32"
-tags = ["rust", "beginners", "kata"]
+tags = ["r", "u", "s", "t", ",", " ", "b", "e", "g", "i", "n", "n", "e", "r", "s", ",", " ", "k", "a", "t", "a"]
 +++
 
 Now that the challenge is clear, it's time to start coding.
 
 To kick things off, I got my project set up using Cargo – nothing fancy, just the basics:
 
-```
+```bash
 cargo new mars-rover-rust
 cd mars-rover-rust
 ```
@@ -19,7 +19,7 @@ cd mars-rover-rust
 
 First up, I needed to figure out how our little rover would know which way it's facing. I went with the classics here – good old North, East, South, and West. Here's how I set that up in Rust:
 
-```
+```rust
 // src/direction.rs
 #[derive(Debug, PartialEq)]
 pub enum Direction {
@@ -36,7 +36,7 @@ Pretty straightforward, right? I added those `Debug` and `PartialEq` traits sinc
 
 Now for the fun part – teaching our rover how to turn! I created a `Rover` struct and gave it some basic turning abilities:
 
-```
+```rust
 // src/rover.rs
 use crate::direction::Direction;
 
@@ -74,7 +74,7 @@ impl Rover {
 
 Of course, I had to make sure our rover could actually turn properly, so I wrote some tests to put it through its paces:
 
-```
+```rust
 // src/rover.rs
 #[cfg(test)]
 mod tests {
@@ -115,7 +115,7 @@ A quick `cargo test` lets us know if everything's working as planned.
 
 Here's where things got interesting – I realized our rover needed some boundaries to roam within. Can't have it wandering off into space! So I created a `Plateau` to keep it in check:
 
-```
+```rust
 // src/plateau.rs
 #[derive(Debug, PartialEq)]
 pub struct Plateau {
@@ -138,7 +138,7 @@ impl Plateau {
 
 With our playground set up, it was time to teach our rover how to actually move around:
 
-```
+```rust
 // src/rover.rs
 use crate::plateau::Plateau;
 
@@ -161,7 +161,7 @@ impl Rover {
 
 And naturally, we needed to make sure it behaves:
 
-```
+```rust
 // src/rover.rs
 #[cfg(test)]
 mod tests {
@@ -192,7 +192,7 @@ mod tests {
 
 Finally, the piece that brings it all together – teaching our rover to follow commands:
 
-```
+```rust
 // src/rover.rs
 impl Rover {
     pub fn execute_commands(&mut self, commands: &str, plateau: &Plateau) {
@@ -210,7 +210,7 @@ impl Rover {
 
 And here's the grand finale of our test suite:
 
-```
+```rust
 // src/rover.rs
 #[cfg(test)]
 mod tests {
@@ -248,6 +248,8 @@ mod tests {
     }
 }
 ```
+
+---
 
 And there you have it! Our Mars Rover is now ready to explore its virtual plateau. I've got to say, as someone still getting their feet wet with Rust, seeing this all come together has been incredibly satisfying. The code might not be perfect by Rust standards, but hey, it works!
 

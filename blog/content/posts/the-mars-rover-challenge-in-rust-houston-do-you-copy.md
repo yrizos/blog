@@ -3,12 +3,12 @@ title = "The Mars Rover Challenge in Rust: Houston, Do You Copy?"
 date = "2024-11-18T11:59:45+00:00"
 draft = false
 originalURL = "https://dev.to/yrizos/the-mars-rover-challenge-in-rust-houston-do-you-copy-334o"
-tags = ["rust", "beginners", "kata"]
+tags = ["r", "u", "s", "t", ",", " ", "b", "e", "g", "i", "n", "n", "e", "r", "s", ",", " ", "k", "a", "t", "a"]
 +++
 
 Our rover navigation system is ready for its maiden voyage, but first, it needs to know where to go! The mission parameters have provided specific test scenarios to validate our implementation. My rover needs to interpret these commands:
 
-```
+```plaintext
 5 5
 1 2 N
 LMLMLMLMM
@@ -18,16 +18,16 @@ MMRMMRMRRM
 
 And respond with precise positional data:
 
-```
+```plaintext
 1 3 N
 5 1 E
 ```
 
-## Establishing Communication: Receiving User Input
+## Establishing Communication: Receiving User Input 
 
 My first challenge was creating a communication channel with Mission Control. I turned to Rust's powerful `std::io` module to establish this vital link:
 
-```
+```rust
 // src/main.rs
 mod direction;
 mod instruction;
@@ -53,13 +53,13 @@ This foundational setup acts as our mission control interface. Think of it as a 
 
 To verify our communication systems, I ran some basic diagnostic tests:
 
-```
+```sh
 cargo build
 ```
 
 Followed by:
 
-```
+```sh
 cargo run
 ```
 
@@ -69,7 +69,7 @@ Perfect clarity - the system faithfully relays every message it receives, confir
 
 A rover without terrain data is like a ship without a map. I needed to interpret the first transmission - the dimensions of our Martian plateau:
 
-```
+```rust
 // src/main.rs
 
 // ...
@@ -94,7 +94,7 @@ The process here is like a surveyor reading coordinates. When Mission Control tr
 
 With our terrain mapped, it's time to establish our rover's starting position. Each rover deployment needs three crucial pieces of information - its x and y coordinates on our digital map, and which way it's facing when it touches down:
 
-```
+```rust
 // src/main.rs
 
 // ...
@@ -124,7 +124,7 @@ This setup phase is like a pre-launch checklist. The code carefully parses the d
 
 Next came the most critical part of our mission control interface - interpreting the sequence of movement commands. Each instruction is like a carefully choreographed dance move, telling our rover to pirouette left (L), right (R), or march forward (M):
 
-```
+```rust
 // src/main.rs
 
 // ...
@@ -148,7 +148,7 @@ Think of this as our rover's mission sequence - each character in the instructio
 
 With all our systems ready, it was time to bring everything together into a coordinated mission control center. Like launching a space mission, every component needs to work in perfect harmony:
 
-```
+```rust
 // src/main.rs
 
 mod direction;
@@ -203,7 +203,7 @@ Like a well-orchestrated space mission, each piece plays its crucial role. First
 
 After each successful mission, Mission Control needs accurate position reports. I added some eyes to our rover:
 
-```
+```rust
 // src/main.rs
 
 // ...
@@ -217,7 +217,7 @@ fn main() {
 
 When I put this to the test with a sample mission:
 
-```
+```plaintext
 5 5
 1 2 N
 LMLMLMLMM
@@ -225,7 +225,7 @@ LMLMLMLMM
 
 The rover reported back:
 
-```
+```plaintext
 1 3 NORTH
 ```
 
@@ -233,7 +233,7 @@ The rover reported back:
 
 Mission Control protocols are strict - they expect position reports in a specific format. `1 3 NORTH` wouldn't do - they need `1 3 N`. Time for some message formatting:
 
-```
+```rust
 // src/direction.rs
 #[derive(Debug, PartialEq)]
 pub enum Direction {
@@ -257,7 +257,7 @@ impl Direction {
 
 A quick update to our transmission format:
 
-```
+```rust
 // src/main.rs
 
 // ...
@@ -273,7 +273,7 @@ fn main() {
 
 The real challenge emerged when Mission Control revealed their master plan - coordinating multiple rovers! Each rover would receive its own set of instructions:
 
-```
+```plaintext
 5 5
 1 2 N
 LMLMLMLMM
@@ -283,7 +283,7 @@ MMRMMRMRRM
 
 Like an air traffic controller managing multiple aircraft, I needed to coordinate multiple rover operations:
 
-```
+```rust
 // src/main.rs
 
 // ...
@@ -327,7 +327,7 @@ fn main() {
 
 When put to the test with our multi-rover scenario:
 
-```
+```plaintext
 5 5
 1 2 N
 LMLMLMLMM
@@ -337,7 +337,7 @@ MMRMMRMRRM
 
 Mission accomplished! Each rover reported its position perfectly:
 
-```
+```plaintext
 1 3 N
 5 1 E
 ```
@@ -346,7 +346,7 @@ Mission accomplished! Each rover reported its position perfectly:
 
 Success is great, but in space exploration, we verify everything twice. I needed comprehensive tests to ensure our multi-rover coordination system worked flawlessly under all conditions:
 
-```
+```rust
 // tests/integration_test.rs
 use std::process::{Command, Stdio};
 use std::io::Write;
@@ -379,11 +379,13 @@ This test suite acts like a mission simulator. It sends commands just like Missi
 
 I run the full battery of tests with:
 
-```
+```sh
 cargo test
 ```
 
 When every test passes, I know our rovers are ready for their Martian adventure. The integration tests confirm that our entire command and control system - from receiving instructions to coordinating multiple rovers to reporting positions - works in perfect harmony. This comprehensive testing approach ensures that when our rovers touch down on Mars, they'll execute their missions flawlessly, navigating the red planet's terrain with precision and reliability.
+
+---
 
 The journey through this challenge has finally reached its conclusion, and what a gratifying experience it turned out to be. While Rust Analyzer flags a couple of minor issues, the robust test suite provides confidence that these will be straightforward fixes.
 
