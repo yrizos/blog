@@ -3,6 +3,16 @@ languageCode = 'en-us'
 title = 'Yannis Rizos'
 theme = 'template'
 
+[outputs]
+  home = ['HTML', 'RSS', 'Robots', 'Humans']
+
+[outputFormats]
+  [outputFormats.Humans]
+    mediaType = 'text/plain'
+    baseName = 'humans'
+    rel = 'canonical'
+    isPlainText = true
+
 [params]
   recentPostsLimit = 6
 
@@ -11,4 +21,3 @@ linkedin = 'https://www.linkedin.com/in/yrizos/'
 github = 'https://github.com/yrizos'
 medium = 'https://medium.com/@yrizos'
 goodreads = 'https://www.goodreads.com/user/show/68793210-yannis-rizos'
-

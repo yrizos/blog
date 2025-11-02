@@ -1,0 +1,10 @@
+/* TEAM */
+Author: Yannis Rizos
+GitHub: https://github.com/yrizos
+LinkedIn: https://www.linkedin.com/in/yrizos/
+Medium: https://medium.com/@yrizos
+
+/* SITE */
+Site: {{ .Site.Title }}
+URL: {{ .Site.BaseURL }}
+Generator: Hugo
