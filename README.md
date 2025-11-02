@@ -19,7 +19,7 @@ Hugo-powered personal blog for https://yrizos.com.
 │   ├── static/                # Static assets (images, JS, CSS) served as-is
 │   └── themes/                # Theme packages pulled into the site
 ├── scripts/                   # Utility scripts that support the blog workflow
-│   └── fetch_medium_posts.py  # Medium importer that generates new posts
+│   └── fetch_posts.py         # Medium/Dev.to import
 └── CNAME                      # Domain configuration used when deploying the site
 ```
 
@@ -43,9 +43,14 @@ hugo --source blog
 
 Static site output goes to `blog/public/`.
 
-## Medium Import
+## Medium/Dev.to import
 
-Reads `https://medium.com/feed/@yrizos` and converts posts to Hugo markdown files.
+Reads posts from:
+
+- https://medium.com/feed/@yrizos
+- https://dev.to/feed/yrizos
+
+and converts them into Hugo-ready Markdown files.
 
 ### Setup
 
@@ -58,5 +63,5 @@ pip install -r requirements.txt
 ### Run
 
 ```bash
-python3 scripts/fetch_medium_posts.py
+python3 scripts/fetch_posts.py
 ```

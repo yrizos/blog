@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-"""
-Interactive CLI to fetch blog posts from Medium or Dev.to and convert them into Hugo content files.
-"""
+"""CLI utility that fetches Medium or Dev.to posts and converts them into Hugo content files."""
 
-import argparse
 import json
 import pathlib
 import re
@@ -376,7 +373,7 @@ def remove_tracking_images(soup: BeautifulSoup) -> None:
 
 def prompt_source() -> str:
     """Prompt the user to pick a source feed."""
-    console.print("\nWhere should I fetch posts from today?", style="choice")
+    console.print("\nSelect a source:", style="choice")
     console.print("[1] Medium")
     console.print("[2] Dev.to")
     console.print("[3] Exit")
@@ -393,12 +390,12 @@ def prompt_source() -> str:
 
 
 def prompt_for_post(post: BlogPost) -> str:
-    """Prompt the user whether to fetch a specific post."""
+    """Prompt the user whether to import a specific post."""
     console.print(
         f"\n[choice]{post.title}[/choice]\n  Published: {post.date.strftime('%Y-%m-%d')}\n  URL: {post.original_url}"
     )
     while True:
-        decision = console.input("[prompt]Fetch this post? (yes/no/exit): [/prompt]").strip().lower()
+        decision = console.input("[prompt]Import this post? (yes/no/exit): [/prompt]").strip().lower()
         if decision in {"yes", "y"}:
             return "yes"
         if decision in {"no", "n"}:
@@ -413,7 +410,6 @@ def process_posts(posts: Iterable[BlogPost]) -> None:
     for post in posts:
         decision = prompt_for_post(post)
         if decision == "exit":
-            console.print("Alright, stopping here. Catch you next time! 👋", style="choice")
             break
         if decision == "no":
             console.print(f"Skipping: {post.title}", style="choice")
@@ -431,27 +427,17 @@ def run(feed_fetcher: Callable[[str], List[BlogPost]], feed_url: str) -> None:
     if not posts:
         console.print("No posts found to process.", style="error")
         return
-    console.print(f"\nFetched {len(posts)} posts. Let's pick which ones to keep!", style="choice")
     process_posts(posts)
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Fetch posts from Medium or Dev.to and convert to Hugo content.")
-    parser.add_argument("--medium-feed", default=DEFAULT_MEDIUM_FEED, help="Medium RSS feed URL.")
-    parser.add_argument("--devto-feed", default=DEFAULT_DEVTO_FEED, help="Dev.to RSS feed URL.")
-    return parser.parse_args()
-
-
 def main() -> None:
-    args = parse_args()
     source = prompt_source()
     if source == "exit":
-        console.print("Nothing fetched this time. See you soon! ✨", style="choice")
         return
     if source == "medium":
-        run(fetch_medium_posts, args.medium_feed)
+        run(fetch_medium_posts, DEFAULT_MEDIUM_FEED)
     elif source == "devto":
-        run(fetch_devto_posts, args.devto_feed)
+        run(fetch_devto_posts, DEFAULT_DEVTO_FEED)
 
 
 if __name__ == "__main__":
