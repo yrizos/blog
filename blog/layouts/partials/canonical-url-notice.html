@@ -1,0 +1,19 @@
+{{- $url := .Params.canonical_url -}}
+{{- $displayText := $url -}}
+{{- $parsed := urls.Parse $url -}}
+{{- $host := $parsed.Host -}}
+
+{{- /* Domain mapping for custom display text */ -}}
+{{- if eq $host "dev.to" -}}
+  {{- $displayText = "dev.to/yrizos" -}}
+{{- else if eq $host "medium.com" -}}
+  {{- $displayText = "medium.com/@yrizos" -}}
+{{- else if eq $host "www.medium.com" -}}
+  {{- $displayText = "medium.com/@yrizos" -}}
+{{- else if eq $host "www.starttech.vc" -}}
+  {{- $displayText = "www.starttech.vc/blog" -}}
+{{- end -}}
+
+<div class="post-original-notice">
+  Originally published at <a href="{{ $url }}" target="_blank" rel="noopener noreferrer"><span>{{ $displayText }}</span></a>
+</div>

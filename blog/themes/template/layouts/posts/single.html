@@ -16,11 +16,9 @@
     </div>
 
     <footer class="post-footer">
-      {{- if .Params.originalURL }}
+      {{- if .Params.canonical_url }}
       <hr>
-      <aside class="post-original-notice">
-        Originally published at <a href="{{ .Params.originalURL }}" target="_blank" rel="noopener noreferrer"><span>{{ .Params.originalURL }}</span></a>
-      </aside>
+      {{ partial "canonical-url-notice.html" . }}
       {{- end }}
 
       <div class="post-license">

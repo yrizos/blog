@@ -1,6 +1,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{- if .Params.canonical_url }}
+<link rel="canonical" href="{{ .Params.canonical_url }}">
+{{- end }}
 <link rel="icon" type="image/png" sizes="180x180" href="{{ "images/avatar/avatar-180x180-rounded.png" | relURL }}">
 <link rel="icon" type="image/x-icon" href="{{ "images/avatar/avatar-180x180-rounded.ico" | relURL }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/avatar/avatar-180x180-rounded.png" | relURL }}">
