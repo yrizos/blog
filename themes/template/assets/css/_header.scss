@@ -14,7 +14,7 @@
 }
 
 .site-title a {
-  font-size: $font-size-brand;
+  font-size: #{$font-scale-brand}em;
   font-weight: $font-weight-bold;
   color: $color-text-primary;
   font-family: $font-family-heading;

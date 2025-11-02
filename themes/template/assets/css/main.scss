@@ -16,7 +16,7 @@ body {
   background-color: $color-background-primary;
   color: $color-text-primary;
   font-family: $font-family-primary;
-  font-size: $font-size-sm;
+  font-size: $font-size-base-desktop;
   font-weight: $font-weight-light;
   margin: 0;
 }
@@ -37,37 +37,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $font-size-3xl;
+  font-size: #{$font-scale-3xl}em;
   margin-top: 0;
   margin-bottom: $space-normal;
 }
 
 h2 {
-  font-size: $font-size-2xl;
+  font-size: #{$font-scale-2xl}em;
   margin-top: $space-extra-large;
   margin-bottom: $space-normal;
 }
 
 h3 {
-  font-size: $font-size-lg;
+  font-size: #{$font-scale-lg}em;
   margin-top: $space-extra-large;
   margin-bottom: $space-normal;
 }
 
 h4 {
-  font-size: $font-size-md;
+  font-size: #{$font-scale-md}em;
   margin-top: $space-extra-large;
   margin-bottom: $space-normal;
 }
 
 h5 {
-  font-size: $font-size-sm;
+  font-size: #{$font-scale-sm}em;
   margin-top: $space-extra-large;
   margin-bottom: $space-normal;
 }
 
 h6 {
-  font-size: $font-size-sm;
+  font-size: #{$font-scale-sm}em;
   margin-top: $space-extra-large;
   margin-bottom: $space-normal;
 }
@@ -149,4 +149,10 @@ hr {
 .site-footer {
   margin-top: 0;
   padding-top: 0;
+}
+
+@media (max-width: $layout-content-max-width) {
+  body {
+    font-size: $font-size-base-mobile;
+  }
 }
