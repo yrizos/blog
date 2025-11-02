@@ -1,0 +1,29 @@
+div.highlight {
+    margin-bottom: $space-normal;
+    overflow: hidden;
+  }
+  
+  .chroma,
+  pre,
+  code {
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+  }
+  
+  pre {
+    padding: $space-normal;
+    border-radius: 1rem;
+  }
+  
+  code {
+    font-family: 'Source Code Pro', monospace;
+    font-size: $font-size-base-desktop;
+  }
+  
+  @media (max-width: $layout-content-max-width) {
+    code {
+      font-size: $font-size-base-mobile;
+    }
+  }
+  

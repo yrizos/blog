@@ -13,6 +13,13 @@ theme = 'template'
     rel = 'canonical'
     isPlainText = true
 
+[markup]
+  [markup.highlight]
+    style = 'monokai'
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = true
+
 [params]
   recentPostsLimit = 6
 
