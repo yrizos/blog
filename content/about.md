@@ -10,7 +10,7 @@ That last one is the hardest.
 
 ## How We Work
 
-The Architecture Team at TalentLMS operates as an enabling team in the [Team Topologies](https://teamtopologies.com/) sense. We work with stream-aligned and platform teams such as QA, DevOps, and SecOps to reduce cognitive load and remove friction. Our goal is not ownership but acceleration.
+The Architecture Team operates as an enabling team in the [Team Topologies](https://teamtopologies.com/) sense. We work with stream-aligned and platform teams such as QA, DevOps, and SecOps to reduce cognitive load and remove friction. Our goal is not ownership but acceleration.
 
 Modernizing a platform that serves millions of users means evolving what exists. We look for places where automation removes friction, where boundaries restrict flow, and where structure no longer fits the pace of change. Progress happens through steady improvement that compounds over time.
 

@@ -1,6 +1,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{- if .IsPage }}
+  {{- $rawDescription := .Params.description | default .Params.summary | default .Summary | default .Content -}}
+  {{- $description := strings.TrimSpace (truncate 200 (plainify $rawDescription)) -}}
+  <meta property="og:type" content="{{ if eq .Section "posts" }}article{{ else }}website{{ end }}">
+  <meta property="og:title" content="{{ .Title | htmlEscape }}">
+  <meta property="og:site_name" content="{{ site.Title | htmlEscape }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{- if $description }}
+    <meta property="og:description" content="{{ $description | htmlEscape }}">
+  {{- end }}
+  {{- with .Params.image }}
+    <meta property="og:image" content="{{ . | absURL }}">
+    {{- with $.Params.imageAlt | default $.Title }}
+      <meta property="og:image:alt" content="{{ . | plainify | htmlEscape }}">
+    {{- end }}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ . | absURL }}">
+  {{- else }}
+    <meta name="twitter:card" content="summary">
+  {{- end }}
+  <meta name="twitter:title" content="{{ .Title | htmlEscape }}">
+  {{- if $description }}
+    <meta name="twitter:description" content="{{ $description | htmlEscape }}">
+  {{- end }}
+{{- end }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
