@@ -33,6 +33,14 @@ jobs:
           hugo-version: "0.151.2"
           extended: true
 
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: blog/resources
+          key: ${{ runner.os }}-hugo-${{ hashFiles('blog/**') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
+
       - name: Build site
         run: hugo --source blog --gc --minify --environment production
 
@@ -42,4 +50,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: blog/public
+          cname: yrizos.com
           commit_message: "Deploy blog: ${{ github.sha }}"
