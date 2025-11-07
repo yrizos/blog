@@ -3,3 +3,4 @@ markdownify
 requests
 beautifulsoup4
 rich
+urllib3<2.0

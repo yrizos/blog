@@ -6,6 +6,8 @@
 HUGO_VERSION := v0.151.2
 HUGO_IMAGE := ghcr.io/gohugoio/hugo:$(HUGO_VERSION)
 DOCKER_RUN := docker run --rm -v $(PWD):/app -w /app
+VENV := .venv
+PYTHON := $(VENV)/bin/python3
 
 # Variables with defaults
 PORT ?= 1313
@@ -32,6 +34,11 @@ help:
 	@echo "  hugo             - Run any hugo command (usage: make hugo -- --help)"
 	@echo "  clean            - Clean build artifacts"
 	@echo "  shell            - Open shell in hugo container"
+	@echo ""
+	@echo "Scripts:"
+	@echo "  fetch-posts       - Fetch posts from Medium/Dev.to"
+	@echo "  fetch-currently-reading - Fetch currently-reading books from Goodreads"
+	@echo "  venv-setup        - Set up Python virtual environment"
 	@echo ""
 	@echo "Parameters:"
 	@echo "  PORT=8080        - Change server port (default: 1313)"
@@ -102,4 +109,28 @@ version:
 check:
 	@echo "Checking Hugo configuration..."
 	$(DOCKER_RUN) $(HUGO_IMAGE) config --source blog
+
+# Python virtual environment setup
+.PHONY: venv-setup
+venv-setup:
+	@echo "Setting up Python virtual environment..."
+	@if [ ! -d "$(VENV)" ]; then \
+		python3 -m venv $(VENV); \
+	fi
+	@echo "Installing dependencies..."
+	@$(VENV)/bin/python3 -m pip install --upgrade pip --quiet
+	@$(VENV)/bin/python3 -m pip install -r requirements.txt --quiet
+	@echo "Virtual environment ready!"
+
+# Scripts
+
+.PHONY: fetch-posts
+fetch-posts: venv-setup
+	@echo "Fetching posts from Medium/Dev.to..."
+	$(PYTHON) scripts/fetch_posts.py
+
+.PHONY: fetch-currently-reading
+fetch-currently-reading: venv-setup
+	@echo "Fetching currently-reading books from Goodreads..."
+	$(PYTHON) scripts/fetch_currently_reading.py
 

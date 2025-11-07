@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <section class="page">
+    <div class="page-content">
+      {{ .Content }}
+      
+      <h2>Currently Reading</h2>
+      <div class="books-list">
+        {{- $currentlyReading := where .Site.RegularPages "Section" "books" -}}
+        {{- $currentlyReading = where $currentlyReading "File.Dir" "books/currently-reading/" -}}
+        {{- range $currentlyReading }}
+        <div class="book-item">
+          {{- if .Params.image }}
+          {{- $imagePath := .Params.image }}
+          {{- $imageResource := resources.Get $imagePath }}
+          {{- if $imageResource }}
+          {{- $webp := $imageResource.Resize (printf "%dx webp" $imageResource.Width) }}
+          {{- $altText := printf "Cover of the book %s by %s" .Title .Params.author }}
+          <a href="{{ .Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover">
+            <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy">
+          </a>
+          {{- end }}
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
+

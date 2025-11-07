@@ -1,0 +1,49 @@
+// ============================================
+// BOOKS LIST COMPONENT
+// ============================================
+
+.page-content h2:has(+ .books-list) {
+  font-size: #{$font-scale-3xl}em;
+  margin-top: 0;
+  margin-bottom: $space-large;
+}
+
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-normal;
+  margin-top: $space-normal;
+  margin-bottom: $space-normal;
+
+  @media (max-width: $layout-content-max-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $layout-mobile-max-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.book-item {
+  margin: 0;
+  padding: 0;
+}
+
+.book-cover {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
