@@ -24,9 +24,9 @@ DEVTO_SKIP_SLUGS = {"building-a-chess-game-with-python-and-openai-3knn"}
 
 ROOT_DIR = pathlib.Path(__file__).resolve().parent.parent
 BLOG_DIR = ROOT_DIR / "blog"
-POSTS_DIR = BLOG_DIR / "content/posts"
-IMAGES_DIR = BLOG_DIR / "assets/images/posts"
-WEB_IMAGE_PREFIX = pathlib.Path("images/posts")
+POSTS_DIR = BLOG_DIR / "content/writing"
+IMAGES_DIR = BLOG_DIR / "assets/images/writing"
+WEB_IMAGE_PREFIX = pathlib.Path("images/writing")
 
 ORIGINAL_LINE_PATTERN = re.compile(r"Originally published at", re.IGNORECASE)
 ORIGINAL_DATE_PATTERN = re.compile(r"on\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})", re.IGNORECASE)
@@ -133,10 +133,11 @@ def build_front_matter(post: BlogPost, image_web_path: Optional[pathlib.Path]) -
         "title": post.title,
         "date": post.date.isoformat(),
         "draft": False,
+        "type": "posts",
         "canonical_url": post.original_url,
     }
     if image_web_path:
-        fields["image"] = "/" + image_web_path.as_posix()
+        fields["image"] = image_web_path.as_posix()
         fields["imageAlt"] = post.image_alt or ""
     if post.tags:
         fields["tags"] = post.tags
