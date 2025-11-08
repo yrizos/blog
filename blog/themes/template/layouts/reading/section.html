@@ -3,26 +3,102 @@
     <div class="page-content">
       {{ .Content }}
       
-      <h2>Currently Reading</h2>
-      <div class="books-list">
-        {{- $currentlyReading := where .Site.RegularPages "Section" "books" -}}
-        {{- $currentlyReading = where $currentlyReading "File.Dir" "books/currently-reading/" -}}
-        {{- range $currentlyReading }}
-        <div class="book-item">
-          {{- if .Params.image }}
-          {{- $imagePath := .Params.image }}
-          {{- $imageResource := resources.Get $imagePath }}
-          {{- if $imageResource }}
-          {{- $webp := $imageResource.Resize (printf "%dx webp" $imageResource.Width) }}
-          {{- $altText := printf "Cover of the book %s by %s" .Title .Params.author }}
-          <a href="{{ .Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover">
-            <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy">
-          </a>
-          {{- end }}
+      <section>
+        <h2>Currently Reading</h2>
+        <div class="books-list">
+          {{- $currentlyReading := where .Site.RegularPages "Section" "books" -}}
+          {{- $currentlyReading = where $currentlyReading "File.Dir" "books/currently-reading/" -}}
+          {{- range $currentlyReading }}
+          <div class="book-item" itemscope itemtype="https://schema.org/Book">
+            {{- if .Params.image }}
+            {{- $imagePath := .Params.image }}
+            {{- $imageResource := resources.Get $imagePath }}
+            {{- if $imageResource }}
+            {{- $webp := $imageResource.Resize (printf "%dx webp" $imageResource.Width) }}
+            {{- $altText := printf "Cover of the book %s by %s" .Title .Params.author }}
+            <a href="{{ .Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover">
+              <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy" itemprop="image">
+            </a>
+            {{- end }}
+            {{- end }}
+            <meta itemprop="name" content="{{ .Title }}">
+            {{- if .Params.author }}
+            <meta itemprop="author" content="{{ .Params.author }}">
+            {{- end }}
+            {{- if .Params.isbn }}
+            <meta itemprop="isbn" content="{{ .Params.isbn }}">
+            {{- end }}
+            {{- if .Params.goodreads_url }}
+            <link itemprop="url" href="{{ .Params.goodreads_url }}">
+            {{- end }}
+          </div>
           {{- end }}
         </div>
-        {{- end }}
-      </div>
+      </section>
+
+      <section>
+        <h2>Recent Favourites</h2>
+        <div class="books-list">
+          {{- $readBooks := where .Site.RegularPages "Section" "books" -}}
+          {{- $readBooks = where $readBooks "File.Dir" "books/read/" -}}
+          {{- $readBooks = where $readBooks "Params.date_read" "!=" "" -}}
+          {{- $sortedBooks := slice }}
+          {{- range $readBooks }}
+            {{- $dateStr := .Params.date_read }}
+            {{- $sortKey := $dateStr }}
+            {{- if eq (len $dateStr) 10 }}
+              {{- $sortKey = $dateStr }}
+            {{- else }}
+              {{- $sortKey = "0000-00-00" }}
+            {{- end }}
+            {{- $sortedBooks = $sortedBooks | append (dict "page" . "sortKey" $sortKey) }}
+          {{- end }}
+          {{- $sortedBooks = sort $sortedBooks "sortKey" "desc" }}
+          {{- $sortedBooks = first 25 $sortedBooks }}
+          {{- range $sortedBooks }}
+          <div class="book-item" itemscope itemtype="https://schema.org/Book">
+            {{- if .page.Params.image }}
+            {{- $imagePath := .page.Params.image }}
+            {{- $imageResource := resources.Get $imagePath }}
+            {{- if $imageResource }}
+            {{- $webp := $imageResource.Resize (printf "%dx webp" $imageResource.Width) }}
+            {{- $altText := printf "Cover of the book %s by %s" .page.Title .page.Params.author }}
+            <a href="{{ .page.Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover">
+              <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy" itemprop="image">
+            </a>
+            {{- end }}
+            {{- end }}
+            {{- if .page.Params.rating }}
+            <div class="book-rating">
+              {{- $rating := int .page.Params.rating }}
+              {{- range seq 5 }}
+                {{- if le . $rating }}
+                  <i class="fa-solid fa-star"></i>
+                {{- else }}
+                  <i class="fa-regular fa-star"></i>
+                {{- end }}
+              {{- end }}
+            </div>
+            <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+              <meta itemprop="ratingValue" content="{{ .page.Params.rating }}">
+              <meta itemprop="bestRating" content="5">
+              <meta itemprop="worstRating" content="1">
+            </div>
+            {{- end }}
+            <meta itemprop="name" content="{{ .page.Title }}">
+            {{- if .page.Params.author }}
+            <meta itemprop="author" content="{{ .page.Params.author }}">
+            {{- end }}
+            {{- if .page.Params.isbn }}
+            <meta itemprop="isbn" content="{{ .page.Params.isbn }}">
+            {{- end }}
+            {{- if .page.Params.goodreads_url }}
+            <link itemprop="url" href="{{ .page.Params.goodreads_url }}">
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+      </section>
     </div>
   </section>
 {{ end }}

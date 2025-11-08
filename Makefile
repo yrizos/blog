@@ -37,6 +37,7 @@ help:
 	@echo ""
 	@echo "Scripts:"
 	@echo "  fetch-posts       - Fetch posts from Medium/Dev.to"
+	@echo "  fetch-books        - Fetch 4 and 5 star read books from Goodreads RSS"
 	@echo "  fetch-currently-reading - Fetch currently-reading books from Goodreads"
 	@echo "  venv-setup        - Set up Python virtual environment"
 	@echo ""
@@ -128,6 +129,12 @@ venv-setup:
 fetch-posts: venv-setup
 	@echo "Fetching posts from Medium/Dev.to..."
 	$(PYTHON) scripts/fetch_posts.py
+
+.PHONY: fetch-books fetch-read-books
+fetch-books: fetch-read-books
+fetch-read-books: venv-setup
+	@echo "Fetching 4 and 5 star read books from Goodreads RSS..."
+	$(PYTHON) scripts/fetch_read_books.py
 
 .PHONY: fetch-currently-reading
 fetch-currently-reading: venv-setup

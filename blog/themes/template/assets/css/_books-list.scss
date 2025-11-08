@@ -2,7 +2,7 @@
 // BOOKS LIST COMPONENT
 // ============================================
 
-.page-content h2:has(+ .books-list) {
+.page-content h2:has(+ section) {
   font-size: #{$font-scale-3xl}em;
   margin-top: 0;
   margin-bottom: $space-large;
@@ -10,23 +10,47 @@
 
 .books-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: $space-normal;
   margin-top: $space-normal;
   margin-bottom: $space-normal;
 
   @media (max-width: $layout-content-max-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: $layout-mobile-max-width) {
+  @media (max-width: 400px) {
     grid-template-columns: 1fr;
   }
+}
+
+.page-content .books-list {
+  margin-bottom: $space-large;
 }
 
 .book-item {
   margin: 0;
   padding: 0;
+}
+
+.book-rating {
+  margin-top: $space-small;
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  
+  i {
+    color: $color-text-accent;
+    font-size: 0.875rem;
+  }
+  
+  .fa-regular {
+    color: $color-border-primary;
+  }
 }
 
 .book-cover {
