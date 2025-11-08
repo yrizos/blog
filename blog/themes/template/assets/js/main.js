@@ -130,6 +130,11 @@
     const rightArrow = slideViewer.querySelector('.slide-viewer-arrow--right');
     const bullets = slideViewer.querySelectorAll('.slide-viewer-bullet');
 
+    // Set first bullet as active on load
+    if (bullets.length > 0) {
+      bullets[0].classList.add('slide-viewer-bullet--active');
+    }
+
     if (leftArrow) {
       leftArrow.addEventListener('click', function() {
         glide.go('<');
@@ -142,12 +147,6 @@
       });
     }
 
-    bullets.forEach(function(bullet, index) {
-      bullet.addEventListener('click', function() {
-        glide.go('=' + index);
-      });
-    });
-
     // Update active bullet on slide change
     glide.on(['mount.after', 'run'], function() {
       bullets.forEach(function(bullet, index) {
@@ -156,6 +155,17 @@
         } else {
           bullet.classList.remove('slide-viewer-bullet--active');
         }
+      });
+    });
+
+    bullets.forEach(function(bullet, index) {
+      bullet.addEventListener('click', function() {
+        // Set active immediately on click
+        bullets.forEach(function(b) {
+          b.classList.remove('slide-viewer-bullet--active');
+        });
+        bullet.classList.add('slide-viewer-bullet--active');
+        glide.go('=' + index);
       });
     });
   }

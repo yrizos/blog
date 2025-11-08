@@ -3,18 +3,11 @@
 // ============================================
 
 // Slide viewer control colors
-$color-slide-control-bg: lighten($color-text-primary, 40%);
+$color-slide-control-bg: lighten($color-text-primary, 45%);
 $color-slide-control-text: $color-background-primary;
-$color-slide-control-bg-hover: lighten($color-text-primary, 20%);
-$color-slide-control-bg-active: $color-text-accent;
+$color-slide-control-bg-hover: darken($color-slide-control-bg, 10%);
 $color-slide-bullet-bg: $color-slide-control-bg;
 $color-slide-bullet-bg-hover: $color-slide-control-bg-hover;
-$color-slide-bullet-bg-active: $color-slide-control-bg-active;
-
-// Slide viewer control borders
-$color-slide-control-border: $color-border-accent;
-$border-slide-control-width: 2px;
-$border-slide-control-offset: 2px;
 
 // Slide viewer spacing
 $space-slide-viewer-bottom: $space-large;
@@ -22,8 +15,8 @@ $space-slide-controls-top: $space-normal;
 $space-slide-controls-padding: $space-normal;
 $space-slide-controls-gap: $space-tiny;
 $space-slide-arrow-padding: $space-small;
-$space-slide-bullets-gap: $space-tiny;
-$space-slide-arrow-bullet-gap: $space-tiny;
+$space-slide-bullets-gap: $space-small;
+$space-slide-arrow-bullet-gap: $space-normal;
 
 .slide-viewer {
   margin: 0;
@@ -104,19 +97,19 @@ $space-slide-arrow-bullet-gap: $space-tiny;
   line-height: 1;
   padding: $space-slide-arrow-padding;
   border-radius: $border-radius-small;
-  transition: background-color $motion-duration-normal $motion-easing-normal;
+  transition: background-color $motion-duration-normal $motion-easing-normal, color $motion-duration-normal $motion-easing-normal;
   flex-shrink: 0;
   margin: 0;
+  outline: none;
 
   &:hover,
   &:focus {
     background-color: $color-slide-control-bg-hover;
-    outline: $border-slide-control-width solid $color-slide-control-border;
-    outline-offset: $border-slide-control-offset;
   }
 
   &:active {
-    background-color: $color-slide-control-bg-active;
+    background-color: $color-text-accent;
+    color: $color-background-primary;
   }
 }
 
@@ -138,15 +131,19 @@ $space-slide-arrow-bullet-gap: $space-tiny;
   width: 0.5rem;
   padding: 0;
   transition: background-color $motion-duration-normal $motion-easing-normal;
+  outline: none;
 
-  &:hover,
-  &:focus {
+  &:hover:not(&--active),
+  &:focus:not(&--active) {
     background-color: $color-slide-bullet-bg-hover;
-    outline: $border-slide-control-width solid $color-slide-control-border;
-    outline-offset: $border-slide-control-offset;
   }
 
   &--active {
-    background-color: $color-slide-bullet-bg-active;
+    background-color: $color-text-accent;
+  }
+
+  &--active:hover,
+  &--active:focus {
+    background-color: $color-text-accent;
   }
 }
