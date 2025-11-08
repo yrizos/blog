@@ -15,9 +15,11 @@
             {{- $imageResource := resources.Get $imagePath }}
             {{- if $imageResource }}
             {{- $webp := $imageResource.Resize (printf "%dx webp" $imageResource.Width) }}
+            {{- $placeholder := $imageResource.Resize "20x webp q20" }}
+            {{- $placeholderBase64 := $placeholder.Content | base64Encode }}
             {{- $altText := printf "Cover of the book %s by %s" .Title .Params.author }}
-            <a href="{{ .Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover">
-              <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy" itemprop="image">
+            <a href="{{ .Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover" style="background-image: url('data:image/webp;base64,{{ $placeholderBase64 }}'); background-size: cover; background-position: center;">
+              <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy" itemprop="image" class="book-cover-img">
             </a>
             {{- end }}
             {{- end }}
@@ -62,9 +64,11 @@
             {{- $imageResource := resources.Get $imagePath }}
             {{- if $imageResource }}
             {{- $webp := $imageResource.Resize (printf "%dx webp" $imageResource.Width) }}
+            {{- $placeholder := $imageResource.Resize "20x webp q20" }}
+            {{- $placeholderBase64 := $placeholder.Content | base64Encode }}
             {{- $altText := printf "Cover of the book %s by %s" .page.Title .page.Params.author }}
-            <a href="{{ .page.Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover">
-              <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy" itemprop="image">
+            <a href="{{ .page.Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover" style="background-image: url('data:image/webp;base64,{{ $placeholderBase64 }}'); background-size: cover; background-position: center;">
+              <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy" itemprop="image" class="book-cover-img">
             </a>
             {{- end }}
             {{- end }}

@@ -52,30 +52,43 @@
   }
 })();
 
-// Cover image progressive loading
+// Progressive loading for post cover and book cover images
 (function() {
   'use strict';
 
-  function initCoverImage() {
-    const coverImg = document.querySelector('.post-cover-img');
-    if (!coverImg) return;
-
-    function handleLoad() {
-      coverImg.classList.add('loaded');
+  function initProgressiveImages() {
+    // Handle post cover images
+    const postCoverImg = document.querySelector('.post-cover-img');
+    if (postCoverImg) {
+      handleImageLoad(postCoverImg);
     }
 
-    if (coverImg.complete) {
-      handleLoad();
+    // Handle book cover images
+    const bookCoverImages = document.querySelectorAll('.book-cover-img');
+    bookCoverImages.forEach(function(img) {
+      handleImageLoad(img);
+    });
+  }
+
+  function handleImageLoad(img) {
+    function markLoaded() {
+      img.classList.add('loaded');
+    }
+
+    // If image is already loaded (cached), show it immediately without transition
+    if (img.complete && img.naturalHeight !== 0) {
+      img.style.transition = 'none';
+      markLoaded();
     } else {
-      coverImg.addEventListener('load', handleLoad);
+      img.addEventListener('load', markLoaded);
     }
   }
 
   // Initialize on DOM ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCoverImage);
+    document.addEventListener('DOMContentLoaded', initProgressiveImages);
   } else {
-    initCoverImage();
+    initProgressiveImages();
   }
 })();
 
