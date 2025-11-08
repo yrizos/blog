@@ -24,7 +24,7 @@
 
 @media (min-width: $layout-cover-max-width) {
   .post-cover img {
-    border-radius: 1rem;
+    border-radius: $border-radius-normal;
   }
 }
 

@@ -6,14 +6,14 @@ div.highlight {
   .chroma,
   pre,
   code {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     overflow: auto;
   }
   
   pre {
     padding: $space-normal;
-    border-radius: 1rem;
+    border-radius: $border-radius-normal;
   }
   
   code {

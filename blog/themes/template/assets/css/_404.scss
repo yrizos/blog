@@ -17,8 +17,8 @@
 }
 
 .not-found__avatar {
-  width: 192px;
-  height: 192px;
+  width: $size-avatar;
+  height: $size-avatar;
   border-radius: 50%;
   object-fit: cover;
   display: block;

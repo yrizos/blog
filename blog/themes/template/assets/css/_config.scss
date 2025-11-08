@@ -14,6 +14,9 @@ $color-quote-background: lighten($color-background-primary, 10%);
 // Border colors
 $color-border-primary: darken($color-background-primary, 10%);
 
+// Shadow colors
+$color-shadow-primary: rgba(0, 0, 0, 0.1);
+
 // ============================================
 // SPACING
 // ============================================
@@ -25,6 +28,7 @@ $space-extra-large: 2.5rem;
 $space-separator: $space-small;
 $space-hero: $space-normal * 3;
 $space-quote-padding: 1.5rem;
+$space-tiny: 0.125rem; // 2px
 
 // ============================================
 // TYPOGRAPHY
@@ -53,6 +57,7 @@ $font-size-lg: $font-size-base-desktop * $font-scale-lg;
 $font-size-2xl: $font-size-base-desktop * $font-scale-2xl;
 $font-size-3xl: $font-size-base-desktop * $font-scale-3xl;
 $font-size-brand: $font-size-base-desktop * $font-scale-brand;
+$font-size-rating: 0.875rem;
 
 // Font weights
 $font-weight-light: 300;
@@ -74,9 +79,24 @@ $icon-size-primary: 1.4rem;
 $layout-content-max-width: 768px;
 $layout-cover-max-width: 992px;
 $layout-mobile-max-width: 576px;
+$layout-small-mobile-max-width: 400px;
 
 // Border widths
 $border-width-accent: 6px;
 
 // Decorative sizing
 $size-divider-dot: 0.3rem;
+$size-avatar: 192px;
+
+// Border radius
+$border-radius-small: 4px;
+$border-radius-normal: 1rem;
+
+// Motion
+$motion-duration-fast: 0.1s;
+$motion-duration-normal: 0.2s;
+$motion-easing-normal: ease;
+$motion-easing-out: ease-out;
+
+// Component sizes
+$size-progress-bar-height: 3px;

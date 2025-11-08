@@ -19,11 +19,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: $layout-mobile-max-width) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: $layout-small-mobile-max-width) {
     grid-template-columns: 1fr;
   }
 }
@@ -40,12 +40,12 @@
 .book-rating {
   margin-top: $space-small;
   display: flex;
-  gap: 2px;
+  gap: $space-tiny;
   justify-content: center;
   
   i {
     color: $color-text-accent;
-    font-size: 0.875rem;
+    font-size: $font-size-rating;
   }
   
   .fa-regular {
@@ -56,7 +56,7 @@
 .book-cover {
   display: block;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: transform $motion-duration-normal $motion-easing-normal;
   
   &:hover {
     transform: scale(1.05);
@@ -66,8 +66,8 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: $border-radius-small;
+    box-shadow: 0 2px 8px $color-shadow-primary;
   }
 }
 

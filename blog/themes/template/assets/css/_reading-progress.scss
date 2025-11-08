@@ -8,10 +8,10 @@
   left: 0;
   width: 0%;
   min-width: 0;
-  height: 3px;
+  height: $size-progress-bar-height;
   background-color: $color-text-accent;
   z-index: 9999;
-  transition: width 0.1s ease-out;
+  transition: width $motion-duration-fast $motion-easing-out;
   opacity: 1;
   pointer-events: none;
   display: block;
