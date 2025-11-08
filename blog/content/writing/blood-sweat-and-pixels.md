@@ -2,8 +2,9 @@
 title = "Blood, Sweat, and Pixels"
 date = "2024-11-28T21:53:21+00:00"
 draft = false
+type = "posts"
 canonical_url = "https://medium.com/@yrizos/blood-sweat-and-pixels-250bcb7f9ff7"
-image = "/images/posts/blood-sweat-and-pixels.png"
+image = "images/writing/blood-sweat-and-pixels.png"
 imageAlt = "Abstract painting showing a game controller transforming into construction tools. Thick, gestural brushstrokes in muted earth tones create the metamorphosis from gaming interface to hammer and wrench, representing the creative construction of video games."
 tags = ["book-review", "creative-process", "gaming", "jason-schreier", "game-development"]
 +++

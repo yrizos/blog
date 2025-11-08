@@ -6,9 +6,16 @@
     </header>
 
     {{- if .Params.image }}
+    {{- $imageResource := resources.Get .Params.image }}
+    {{- if $imageResource }}
+    {{- $webp := $imageResource.Resize (printf "%dx webp" $imageResource.Width) }}
     <figure class="post-cover">
-      <img src="{{ .Params.image }}" alt="{{ .Params.imageAlt | default .Title }}">
+      <picture>
+        <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+        <img src="{{ $imageResource.RelPermalink }}" alt="{{ .Params.imageAlt | default .Title }}">
+      </picture>
     </figure>
+    {{- end }}
     {{- end }}
 
     <div class="post-content">

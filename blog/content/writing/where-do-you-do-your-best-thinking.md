@@ -2,8 +2,9 @@
 title = "Where Do You Do Your Best Thinking?"
 date = "2024-11-21T12:09:28+00:00"
 draft = false
+type = "posts"
 canonical_url = "https://medium.com/@yrizos/where-do-you-do-your-best-thinking-aa2d7a91f425"
-image = "/images/posts/where-do-you-do-your-best-thinking.png"
+image = "images/writing/where-do-you-do-your-best-thinking.png"
 imageAlt = "Abstract painted view from inside Hymettus Forest looking out toward Athens cityscape, with pine and cypress trees framing the scene in the foreground, rendered in muted earth tones with heavy brushstrokes and paint texture, showing the contrast between natural forest environment and distant urban sprawl."
 tags = ["personal-growth", "productivity", "mental-health", "work-life-balance"]
 +++

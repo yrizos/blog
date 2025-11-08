@@ -25,7 +25,7 @@ DEVTO_SKIP_SLUGS = {"building-a-chess-game-with-python-and-openai-3knn"}
 ROOT_DIR = pathlib.Path(__file__).resolve().parent.parent
 BLOG_DIR = ROOT_DIR / "blog"
 POSTS_DIR = BLOG_DIR / "content/posts"
-IMAGES_DIR = BLOG_DIR / "static/images/posts"
+IMAGES_DIR = BLOG_DIR / "assets/images/posts"
 WEB_IMAGE_PREFIX = pathlib.Path("images/posts")
 
 ORIGINAL_LINE_PATTERN = re.compile(r"Originally published at", re.IGNORECASE)
