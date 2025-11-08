@@ -23,6 +23,15 @@
       </div>
     </div>
   </div>
+  <div class="slide-viewer-controls">
+    <button class="slide-viewer-arrow slide-viewer-arrow--left" aria-label="Previous slide">←</button>
+    <div class="slide-viewer-bullets">
+      {{- range $index := (seq 0 (sub $slideCount 1)) -}}
+      <button class="slide-viewer-bullet" aria-label="Go to slide {{ add $index 1 }}"></button>
+      {{- end -}}
+    </div>
+    <button class="slide-viewer-arrow slide-viewer-arrow--right" aria-label="Next slide">→</button>
+  </div>
 </div>
 {{- end -}}
 {{- end -}}

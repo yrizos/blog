@@ -2,9 +2,32 @@
 // SLIDE VIEWER
 // ============================================
 
+// Slide viewer control colors
+$color-slide-control-bg: lighten($color-text-primary, 40%);
+$color-slide-control-text: $color-background-primary;
+$color-slide-control-bg-hover: lighten($color-text-primary, 20%);
+$color-slide-control-bg-active: $color-text-accent;
+$color-slide-bullet-bg: $color-slide-control-bg;
+$color-slide-bullet-bg-hover: $color-slide-control-bg-hover;
+$color-slide-bullet-bg-active: $color-slide-control-bg-active;
+
+// Slide viewer control borders
+$color-slide-control-border: $color-border-accent;
+$border-slide-control-width: 2px;
+$border-slide-control-offset: 2px;
+
+// Slide viewer spacing
+$space-slide-viewer-bottom: $space-large;
+$space-slide-controls-top: $space-normal;
+$space-slide-controls-padding: $space-normal;
+$space-slide-controls-gap: $space-tiny;
+$space-slide-arrow-padding: $space-small;
+$space-slide-bullets-gap: $space-tiny;
+$space-slide-arrow-bullet-gap: $space-tiny;
+
 .slide-viewer {
   margin: 0;
-  margin-bottom: $space-large;
+  margin-bottom: $space-slide-viewer-bottom;
   padding: 0;
   width: 100vw;
   position: relative;
@@ -52,5 +75,78 @@
 @media (min-width: $layout-cover-max-width) {
   .slide-viewer-picture {
     border-radius: $border-radius-normal;
+  }
+}
+
+// Navigation controls - underneath the slider, on one line: arrow - dots - arrow
+// Constrained to same width as text content
+.slide-viewer-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  max-width: $layout-content-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $space-slide-controls-padding;
+  gap: $space-slide-arrow-bullet-gap;
+  width: 100%;
+  position: relative;
+}
+
+.slide-viewer-arrow {
+  background-color: $color-slide-control-bg;
+  border: none;
+  color: $color-slide-control-text;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: $space-slide-arrow-padding;
+  border-radius: $border-radius-small;
+  transition: background-color $motion-duration-normal $motion-easing-normal;
+  flex-shrink: 0;
+  margin: 0;
+
+  &:hover,
+  &:focus {
+    background-color: $color-slide-control-bg-hover;
+    outline: $border-slide-control-width solid $color-slide-control-border;
+    outline-offset: $border-slide-control-offset;
+  }
+
+  &:active {
+    background-color: $color-slide-control-bg-active;
+  }
+}
+
+.slide-viewer-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $space-slide-bullets-gap;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+}
+
+.slide-viewer-bullet {
+  background-color: $color-slide-bullet-bg;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 0.5rem;
+  width: 0.5rem;
+  padding: 0;
+  transition: background-color $motion-duration-normal $motion-easing-normal;
+
+  &:hover,
+  &:focus {
+    background-color: $color-slide-bullet-bg-hover;
+    outline: $border-slide-control-width solid $color-slide-control-border;
+    outline-offset: $border-slide-control-offset;
+  }
+
+  &--active {
+    background-color: $color-slide-bullet-bg-active;
   }
 }

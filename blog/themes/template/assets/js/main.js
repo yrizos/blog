@@ -124,6 +124,40 @@
 
     // Mount Glide
     glide.mount();
+
+    // Wire up controls outside .glide
+    const leftArrow = slideViewer.querySelector('.slide-viewer-arrow--left');
+    const rightArrow = slideViewer.querySelector('.slide-viewer-arrow--right');
+    const bullets = slideViewer.querySelectorAll('.slide-viewer-bullet');
+
+    if (leftArrow) {
+      leftArrow.addEventListener('click', function() {
+        glide.go('<');
+      });
+    }
+
+    if (rightArrow) {
+      rightArrow.addEventListener('click', function() {
+        glide.go('>');
+      });
+    }
+
+    bullets.forEach(function(bullet, index) {
+      bullet.addEventListener('click', function() {
+        glide.go('=' + index);
+      });
+    });
+
+    // Update active bullet on slide change
+    glide.on(['mount.after', 'run'], function() {
+      bullets.forEach(function(bullet, index) {
+        if (index === glide.index) {
+          bullet.classList.add('slide-viewer-bullet--active');
+        } else {
+          bullet.classList.remove('slide-viewer-bullet--active');
+        }
+      });
+    });
   }
 
   // Initialize on DOM ready, wait for Glide to be available
