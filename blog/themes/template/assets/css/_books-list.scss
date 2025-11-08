@@ -8,6 +8,14 @@
   margin-bottom: $space-large;
 }
 
+.page-content > section:first-of-type h2 {
+  margin-top: 0;
+}
+
+.page-content > section h2:has(+ .books-list) {
+  font-size: #{$font-scale-3xl}em;
+}
+
 .books-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
