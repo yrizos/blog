@@ -52,3 +52,30 @@
   }
 })();
 
+// Cover image progressive loading
+(function() {
+  'use strict';
+
+  function initCoverImage() {
+    const coverImg = document.querySelector('.post-cover-img');
+    if (!coverImg) return;
+
+    function handleLoad() {
+      coverImg.classList.add('loaded');
+    }
+
+    if (coverImg.complete) {
+      handleLoad();
+    } else {
+      coverImg.addEventListener('load', handleLoad);
+    }
+  }
+
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCoverImage);
+  } else {
+    initCoverImage();
+  }
+})();
+

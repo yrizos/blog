@@ -9,10 +9,12 @@
     {{- $imageResource := resources.Get .Params.image }}
     {{- if $imageResource }}
     {{- $webp := $imageResource.Resize (printf "%dx webp" $imageResource.Width) }}
+    {{- $placeholder := $imageResource.Resize "20x webp q20" }}
+    {{- $placeholderBase64 := $placeholder.Content | base64Encode }}
     <figure class="post-cover">
-      <picture>
+      <picture class="post-cover-picture" style="background-image: url('data:image/webp;base64,{{ $placeholderBase64 }}'); background-size: cover; background-position: center;">
         <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-        <img src="{{ $imageResource.RelPermalink }}" alt="{{ .Params.imageAlt | default .Title }}">
+        <img src="{{ $imageResource.RelPermalink }}" alt="{{ .Params.imageAlt | default .Title }}" loading="eager" class="post-cover-img">
       </picture>
     </figure>
     {{- end }}

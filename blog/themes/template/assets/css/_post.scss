@@ -14,16 +14,30 @@
   margin-right: -50vw;
 }
 
-.post-cover img {
+.post-cover-picture {
+  display: block;
   width: 100%;
   max-width: $layout-cover-max-width;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-cover img {
+  width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  position: relative;
+}
+
+.post-cover img.loaded {
+  opacity: 1;
 }
 
 @media (min-width: $layout-cover-max-width) {
-  .post-cover img {
+  .post-cover-picture {
     border-radius: $border-radius-normal;
   }
 }
