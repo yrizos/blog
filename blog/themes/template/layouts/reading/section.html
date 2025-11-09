@@ -9,6 +9,7 @@
           {{- $currentlyReading := where .Site.RegularPages "Section" "books" -}}
           {{- $currentlyReading = where $currentlyReading "File.Dir" "books/currently-reading/" -}}
           {{- range $currentlyReading }}
+          {{- if .Params.goodreads_url }}
           <div class="book-item" itemscope itemtype="https://schema.org/Book">
             {{- if .Params.image }}
             {{- $imagePath := .Params.image }}
@@ -18,7 +19,7 @@
             {{- $placeholder := $imageResource.Resize "20x webp q20" }}
             {{- $placeholderBase64 := $placeholder.Content | base64Encode }}
             {{- $altText := printf "Cover of the book %s by %s" .Title .Params.author }}
-            <a href="{{ .Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover" style="background-image: url('data:image/webp;base64,{{ $placeholderBase64 }}'); background-size: cover; background-position: center;">
+            <a href="{{ .Params.goodreads_url }}" target="_blank" rel="noopener noreferrer" class="book-cover" style="background-image: url('data:image/webp;base64,{{ $placeholderBase64 }}'); background-size: cover; background-position: center;">
               <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy" itemprop="image" class="book-cover-img">
             </a>
             {{- end }}
@@ -30,10 +31,9 @@
             {{- if .Params.isbn }}
             <meta itemprop="isbn" content="{{ .Params.isbn }}">
             {{- end }}
-            {{- if .Params.goodreads_url }}
             <link itemprop="url" href="{{ .Params.goodreads_url }}">
-            {{- end }}
           </div>
+          {{- end }}
           {{- end }}
         </div>
       </section>
@@ -58,6 +58,7 @@
           {{- end }}
           {{- $sortedBooks = sort $sortedBooks "sortTime" "desc" }}
           {{- range $sortedBooks }}
+          {{- if .page.Params.goodreads_url }}
           <div class="book-item" itemscope itemtype="https://schema.org/Book">
             {{- if .page.Params.image }}
             {{- $imagePath := .page.Params.image }}
@@ -67,19 +68,19 @@
             {{- $placeholder := $imageResource.Resize "20x webp q20" }}
             {{- $placeholderBase64 := $placeholder.Content | base64Encode }}
             {{- $altText := printf "Cover of the book %s by %s" .page.Title .page.Params.author }}
-            <a href="{{ .page.Params.goodreads_url | default "#" }}" target="_blank" rel="noopener noreferrer" class="book-cover" style="background-image: url('data:image/webp;base64,{{ $placeholderBase64 }}'); background-size: cover; background-position: center;">
+            <a href="{{ .page.Params.goodreads_url }}" target="_blank" rel="noopener noreferrer" class="book-cover" style="background-image: url('data:image/webp;base64,{{ $placeholderBase64 }}'); background-size: cover; background-position: center;">
               <img src="{{ $webp.RelPermalink }}" alt="{{ $altText }}" loading="lazy" itemprop="image" class="book-cover-img">
             </a>
             {{- end }}
             {{- end }}
             {{- if .page.Params.rating }}
-            <div class="book-rating">
+            <div class="book-rating" aria-label="Rating: {{ .page.Params.rating }} out of 5 stars">
               {{- $rating := int .page.Params.rating }}
               {{- range seq 5 }}
                 {{- if le . $rating }}
-                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
                 {{- else }}
-                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star" aria-hidden="true"></i>
                 {{- end }}
               {{- end }}
             </div>
@@ -96,10 +97,9 @@
             {{- if .page.Params.isbn }}
             <meta itemprop="isbn" content="{{ .page.Params.isbn }}">
             {{- end }}
-            {{- if .page.Params.goodreads_url }}
             <link itemprop="url" href="{{ .page.Params.goodreads_url }}">
-            {{- end }}
           </div>
+          {{- end }}
           {{- end }}
         </div>
       </section>
