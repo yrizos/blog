@@ -1,1 +1,1 @@
-# github.com/FortAwesome/Font-Awesome v4.7.0+incompatible
+# github.com/FortAwesome/Font-Awesome@6.7.1 v0.0.0-20241120164804-3447c58c6b3f
