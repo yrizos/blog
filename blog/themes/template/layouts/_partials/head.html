@@ -17,6 +17,31 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ site.Title | htmlEscape }}">
   <meta name="twitter:description" content="{{ $description | htmlEscape }}">
+{{- else if .IsSection }}
+  {{- $rawDescription := .Params.description | default .Summary | default .Content -}}
+  {{- if not $rawDescription }}
+    {{- if eq .Section "writing" }}
+      {{- $rawDescription = "Articles about building systems meant to last, software architecture, engineering leadership, and the decisions that matter when building for the long term." -}}
+    {{- else if eq .Section "reading" }}
+      {{- $rawDescription = "Books I'm currently reading and my favorite reads." -}}
+    {{- end }}
+  {{- end }}
+  {{- $description := strings.TrimSpace (truncate 200 (plainify $rawDescription)) -}}
+  {{- if $description }}
+    <meta name="description" content="{{ $description | htmlEscape }}">
+  {{- end }}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ .Title | htmlEscape }}">
+  <meta property="og:site_name" content="{{ site.Title | htmlEscape }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{- if $description }}
+    <meta property="og:description" content="{{ $description | htmlEscape }}">
+  {{- end }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title | htmlEscape }}">
+  {{- if $description }}
+    <meta name="twitter:description" content="{{ $description | htmlEscape }}">
+  {{- end }}
 {{- else if .IsPage }}
   {{- $rawDescription := .Params.description | default .Params.summary | default .Summary | default .Content -}}
   {{- $description := strings.TrimSpace (truncate 200 (plainify $rawDescription)) -}}
