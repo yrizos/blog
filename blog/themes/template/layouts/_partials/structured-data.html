@@ -23,6 +23,7 @@
 </script>
 {{- else if .IsPage }}
   {{- $isArticle := or (eq .Section "writing") (eq .Params.type "posts") (eq .Params.type "talk") -}}
+  {{- $isTalk := or (eq .Section "speaking") (eq .Params.type "talk") -}}
   {{- if $isArticle }}
 <script type="application/ld+json">
 {
@@ -52,6 +53,40 @@
     "@type": "WebPage",
     "@id": {{ .Permalink | jsonify }}
   }
+}
+</script>
+  {{- end }}
+  {{- if $isTalk }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": {{ .Title | jsonify }}{{- if .Params.subtitle }},
+  "alternateName": {{ .Params.subtitle | jsonify }}{{- end }},
+  "url": {{ .Permalink | jsonify }}{{- with .Params.event }},
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place"{{- with $.Params.venue }},
+    "name": {{ . | jsonify }}{{- end }}
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": {{ . | jsonify }}{{- with $.Params.event_url }},
+    "url": {{ . | jsonify }}{{- end }}
+  }{{- end }}{{- with .PublishDate | default .Date }},
+  "startDate": {{ .Format "2006-01-02T15:04:05Z07:00" | jsonify }}{{- end }}{{- $description := .Params.description | default .Params.summary | default .Summary | default "" -}}{{ if $description }},
+  "description": {{ (strings.TrimSpace (truncate 200 (plainify $description))) | jsonify }}{{ end }}{{- with .Params.image }},
+  "image": {{ . | absURL | jsonify }}{{ end }},
+  "performer": {
+    "@type": "Person",
+    "name": {{ site.Title | jsonify }},
+    "url": {{ site.Home.Permalink | jsonify }}
+  }{{- with .Params.co_presenter }},
+  "additionalPerformer": {
+    "@type": "Person",
+    "name": {{ . | jsonify }}
+  }{{- end }}
 }
 </script>
   {{- end }}

@@ -15,6 +15,7 @@
   <meta property="og:site_name" content="{{ site.Title | htmlEscape }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:description" content="{{ $description | htmlEscape }}">
+  <meta property="og:locale" content="{{ site.LanguageCode | replace "-" "_" | default "en_US" }}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ site.Title | htmlEscape }}">
   <meta name="twitter:description" content="{{ $description | htmlEscape }}">
@@ -40,6 +41,7 @@
   <meta property="og:title" content="{{ .Title | htmlEscape }}">
   <meta property="og:site_name" content="{{ site.Title | htmlEscape }}">
   <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:locale" content="{{ site.LanguageCode | replace "-" "_" | default "en_US" }}">
   {{- if $description }}
     <meta property="og:description" content="{{ $description | htmlEscape }}">
   {{- end }}
@@ -64,6 +66,7 @@
   <meta property="og:title" content="{{ .Title | htmlEscape }}">
   <meta property="og:site_name" content="{{ site.Title | htmlEscape }}">
   <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:locale" content="{{ site.LanguageCode | replace "-" "_" | default "en_US" }}">
   {{- if $description }}
     <meta property="og:description" content="{{ $description | htmlEscape }}">
   {{- end }}
@@ -75,6 +78,9 @@
       <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
     {{- end }}
     <meta property="article:author" content="{{ site.Title | htmlEscape }}">
+    {{- if .Section }}
+      <meta property="article:section" content="{{ .Section | title | htmlEscape }}">
+    {{- end }}
     {{- with .Params.tags }}
       {{- range first 10 . }}
         <meta property="article:tag" content="{{ . | htmlEscape }}">
@@ -118,6 +124,7 @@
 {{ partial "structured-data.html" . }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" as="style">
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {{- if and (or (eq .Type "talk") (eq .Params.type "talk")) .Params.slides_dir -}}
