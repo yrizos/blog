@@ -44,12 +44,10 @@ def slugify(text: str) -> str:
 
 def get_image_url_from_sources(book_id: str, isbn: str, title: str, author: str) -> Optional[str]:
     """Try multiple sources to get book cover image URL."""
-    # Try Open Library by ISBN
     if isbn:
         isbn_clean = isbn.strip()
         if isbn_clean and len(isbn_clean) >= 10:
             url = f"https://covers.openlibrary.org/b/isbn/{isbn_clean}-L.jpg"
-            # Test if URL exists
             try:
                 response = requests.head(url, timeout=5)
                 if response.status_code == 200:
@@ -57,7 +55,6 @@ def get_image_url_from_sources(book_id: str, isbn: str, title: str, author: str)
             except Exception:
                 pass
 
-    # Try Google Books API by ISBN
     if isbn:
         isbn_clean = isbn.strip()
         if isbn_clean and len(isbn_clean) >= 10:
@@ -76,7 +73,6 @@ def get_image_url_from_sources(book_id: str, isbn: str, title: str, author: str)
             except Exception:
                 pass
 
-    # Try Google Books API by title + author
     if title and author:
         try:
             query = f"{title} {author}".replace(" ", "+")
@@ -94,7 +90,6 @@ def get_image_url_from_sources(book_id: str, isbn: str, title: str, author: str)
         except Exception:
             pass
 
-    # Try Open Library Search API
     if title:
         try:
             query = f"{title}".replace(" ", "+")
@@ -121,7 +116,6 @@ def to_toml_value(value) -> str:
     if isinstance(value, (int, float)):
         return str(value)
     if isinstance(value, str):
-        # Escape quotes and backslashes
         escaped = value.replace("\\", "\\\\").replace('"', '\\"')
         return f'"{escaped}"'
 
@@ -182,21 +176,17 @@ def fetch_goodreads_books() -> List[Book]:
                 goodreads_url = goodreads_url.replace(
                     "&utm_medium=api&utm_source=rss", "")
 
-        # Get date read and convert to ISO format (YYYY-MM-DD) for Hugo
         # Only use user_read_at, not user_date_added (which is when added to favorites)
         date_read_raw = entry.get("user_read_at", "").strip()
         date_read = ""
         if date_read_raw:
             try:
-                # Parse RFC 822 format date
                 dt = datetime.strptime(date_read_raw, "%a, %d %b %Y %H:%M:%S %z")
-                # Convert to ISO format (YYYY-MM-DD)
                 date_read = dt.strftime("%Y-%m-%d")
             except (ValueError, AttributeError):
                 # If parsing fails, keep original
                 date_read = date_read_raw
 
-        # Get image URL from RSS
         image_url = entry.get("book_large_image_url",
                               "") or entry.get("book_image_url", "")
         image_url = image_url.strip() if image_url else None
@@ -248,11 +238,9 @@ def process_book(book: Book) -> bool:
     """Process a single book: download image and create content file."""
     book_file = BOOKS_DIR / f"{book.slug}.md"
     
-    # Skip if already exists
     if book_file.exists():
         return False
 
-    # Try to get image URL
     image_url = book.image_url
 
     # If no image from RSS, try alternative sources
@@ -264,11 +252,9 @@ def process_book(book: Book) -> bool:
         print(f"Skipping '{book.title}' - no image available")
         return False
 
-    # Determine image filename and path
     image_filename = determine_image_filename(book.slug, image_url)
     image_path_local = IMAGES_DIR / image_filename
 
-    # Download image (skip if already exists)
     if not image_path_local.exists():
         try:
             download_image(image_url, image_path_local)
@@ -276,7 +262,6 @@ def process_book(book: Book) -> bool:
             print(f"Failed to download image for '{book.title}': {err}")
             return False
 
-    # Create content file
     BOOKS_DIR.mkdir(parents=True, exist_ok=True)
 
     # Image path relative to assets/
@@ -303,9 +288,7 @@ def remove_skipped_books() -> None:
             if book_id_match:
                 book_id = book_id_match.group(1)
                 if book_id in SKIP_BOOK_IDS:
-                    # Delete the book file
                     book_file.unlink()
-                    # Delete the image if it exists
                     image_match = re.search(r'image\s*=\s*"([^"]+)"', content)
                     if image_match:
                         image_path = image_match.group(1)
@@ -337,11 +320,8 @@ def remove_books_not_in_feed(feed_book_ids: set[str]) -> None:
                 # Skip if in skip list (handled separately)
                 if book_id in SKIP_BOOK_IDS:
                     continue
-                # Remove if not in feed
                 if book_id not in feed_book_ids:
-                    # Delete the book file
                     book_file.unlink()
-                    # Delete the image if it exists
                     image_match = re.search(r'image\s*=\s*"([^"]+)"', content)
                     if image_match:
                         image_path = image_match.group(1)
@@ -362,7 +342,6 @@ def main() -> None:
     """Main entry point."""
     print("Fetching favorite books from Goodreads...")
 
-    # Remove existing books that are in skip list
     remove_skipped_books()
 
     books = fetch_goodreads_books()
@@ -375,10 +354,8 @@ def main() -> None:
 
     print(f"Found {len(books)} favorite books in feed.")
 
-    # Get set of book IDs from feed
     feed_book_ids = {book.book_id for book in books}
     
-    # Remove books that are no longer in the feed
     remove_books_not_in_feed(feed_book_ids)
 
     saved_count = 0

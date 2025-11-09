@@ -45,7 +45,8 @@ help:
 	@echo ""
 	@echo "Scripts:"
 	@echo "  python-build     - Build Python Docker image with dependencies"
-	@echo "  fetch-posts      - Fetch posts from Medium/Dev.to"
+	@echo "  fetch-medium     - Fetch posts from Medium"
+	@echo "  fetch-devto      - Fetch posts from Dev.to"
 	@echo "  fetch-books      - Fetch favorite books from Goodreads RSS"
 	@echo "  fetch-reading    - Fetch currently-reading books from Goodreads"
 	@echo "  pdf-to-images    - Convert PDF slides to images"
@@ -124,9 +125,12 @@ python-build:
 
 # Python scripts
 
-.PHONY: fetch-posts
-fetch-posts: python-build
-	$(PYTHON_RUN) python scripts/fetch_posts.py
+.PHONY: fetch-medium fetch-devto
+fetch-medium: python-build
+	$(PYTHON_RUN) python scripts/fetch_posts.py medium
+
+fetch-devto: python-build
+	$(PYTHON_RUN) python scripts/fetch_posts.py devto
 
 .PHONY: fetch-books
 fetch-books: python-build

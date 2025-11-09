@@ -26,7 +26,7 @@ def pdf_to_images(
     prefix: Optional[str] = None,
 ) -> None:
     """Convert PDF pages to JPG images.
-    
+
     Args:
         pdf_path: Path to the PDF file
         output_dir: Directory to save JPG images
@@ -36,72 +36,61 @@ def pdf_to_images(
     if not pdf_path.exists():
         print(f"Error: PDF file not found: {pdf_path}")
         sys.exit(1)
-    
+
     if not pdf_path.suffix.lower() == ".pdf":
         print(f"Error: File is not a PDF: {pdf_path}")
         sys.exit(1)
-    
-    # Determine prefix from PDF filename if not provided
+
     if prefix is None:
         prefix = pdf_path.stem
-    
-    # Create output directory if it doesn't exist
+
     output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     print(f"Converting PDF: {pdf_path.name}")
     print(f"Output directory: {output_dir}")
     print(f"DPI: {dpi}")
-    
+
     try:
-        # Open PDF document
         doc = fitz.open(pdf_path)
-        
+
         page_count = len(doc)
         print(f"Found {page_count} pages")
-        
-        # Target max width in pixels
+
         max_width = 1200
-        
-        # Convert each page to image
+
         for page_num in range(page_count):
             page = doc[page_num]
-            
-            # Calculate zoom to get max 1200px width
+
             # Get page dimensions in points (72 points = 1 inch)
             page_rect = page.rect
             page_width_points = page_rect.width
-            
-            # Calculate zoom to achieve target width
+
             # At 72 DPI (zoom=1.0), width in pixels = width in points
-            # So zoom = target_width / page_width_points
             zoom = max_width / page_width_points
-            
-            # Create transformation matrix
+
             mat = fitz.Matrix(zoom, zoom)
-            
+
             # Render page to pixmap with RGB color space to avoid darkening
             # Use alpha=False for better compatibility
             pix = page.get_pixmap(matrix=mat, alpha=False)
-            
+
             # Convert to RGB if not already (handles CMYK and other color spaces)
             if pix.colorspace.name != fitz.csRGB.name:
                 pix = fitz.Pixmap(fitz.csRGB, pix)
-            
-            # Save as PNG (lossless)
+
             if prefix:
                 output_filename = f"{prefix}-{page_num + 1:02d}.png"
             else:
                 output_filename = f"slide-{page_num + 1:02d}.png"
             output_path = output_dir / output_filename
-            
-            # Save as PNG (lossless format)
+
             pix.save(output_path, output="png")
             print(f"Saved: {output_filename}")
-        
+
         doc.close()
-        
+
         print(f"\nSuccessfully converted {page_count} pages to PNG images")
-        
+
     except Exception as e:
         print(f"Error converting PDF: {e}")
         sys.exit(1)
@@ -138,18 +127,18 @@ def main() -> None:
         default=None,
         help="Prefix for output filenames (default: PDF filename without extension)",
     )
-    
+
     args = parser.parse_args()
-    
+
     # Resolve relative paths relative to script location
     pdf_path = args.pdf
     if not pdf_path.is_absolute():
         pdf_path = (pathlib.Path.cwd() / pdf_path).resolve()
-    
+
     output_dir = args.output
     if not output_dir.is_absolute():
         output_dir = (pathlib.Path.cwd() / output_dir).resolve()
-    
+
     pdf_to_images(
         pdf_path=pdf_path,
         output_dir=output_dir,
@@ -160,4 +149,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

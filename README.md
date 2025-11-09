@@ -19,7 +19,12 @@ Hugo-powered personal blog for https://yrizos.com.
 │   ├── static/                # Static assets (images, JS, CSS) served as-is
 │   └── themes/                # Theme packages pulled into the site
 ├── scripts/                   # Utility scripts that support the blog workflow
-│   ├── fetch_posts.py         # Medium/Dev.to import
+│   ├── fetch_posts.py         # CLI entry point for post fetching
+│   ├── posts/                 # Post fetching package
+│   │   ├── blog_post.py       # BlogPost data transfer object
+│   │   ├── cli.py             # Common utilities and CLI
+│   │   ├── fetch_medium.py    # Medium-specific fetching logic
+│   │   └── fetch_devto.py     # Dev.to-specific fetching logic
 │   ├── fetch_books.py         # Goodreads favorites import
 │   ├── fetch_reading.py       # Goodreads currently-reading import
 │   └── pdf_to_images.py       # PDF slide conversion to images
@@ -74,18 +79,25 @@ Static site output goes to `blog/public/`.
 
 All Python scripts run in Docker containers with dependencies pre-installed. The Docker image is built automatically on first use.
 
-### Medium/Dev.to Posts
+### Medium Posts
 
-Fetches posts from:
-
-- https://medium.com/feed/@yrizos
-- https://dev.to/feed/yrizos
-
-and converts them into Hugo-ready Markdown files.
+Fetches posts from Medium and converts them into Hugo-ready Markdown files.
 
 ```bash
-make fetch-posts
+make fetch-medium
 ```
+
+Fetches from: https://medium.com/feed/@yrizos
+
+### Dev.to Posts
+
+Fetches posts from Dev.to and converts them into Hugo-ready Markdown files.
+
+```bash
+make fetch-devto
+```
+
+Fetches from: https://dev.to/feed/yrizos
 
 ### Goodreads Books
 
@@ -97,6 +109,8 @@ Fetches favorite books from Goodreads RSS feed and creates Hugo content files.
 make fetch-books
 ```
 
+Fetches from: https://www.goodreads.com/review/list_rss/68793210?key=Q5sTrEOdYsUhUSrXK0J7wg9adkkcAuTFlIKN8-TetPnEWK2-&shelf=favorites
+
 #### Currently Reading
 
 Fetches currently-reading books from Goodreads RSS feed.
@@ -104,6 +118,8 @@ Fetches currently-reading books from Goodreads RSS feed.
 ```bash
 make fetch-reading
 ```
+
+Fetches from: https://www.goodreads.com/review/list_rss/68793210?key=Q5sTrEOdYsUhUSrXK0J7wg9adkkcAuTFlIKN8-TetPnEWK2-&shelf=currently-reading
 
 ### PDF to Images
 
