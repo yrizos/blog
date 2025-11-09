@@ -6,10 +6,11 @@
     const progressBar = document.getElementById('reading-progress');
     if (!progressBar) return;
 
-    // Only show on posts and pages
+    // Only show on posts, pages, and talks
     const isPost = document.querySelector('.post');
     const isPage = document.querySelector('.page');
-    if (!isPost && !isPage) {
+    const isTalk = document.querySelector('.talk');
+    if (!isPost && !isPage && !isTalk) {
       progressBar.style.display = 'none';
       return;
     }
