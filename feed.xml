@@ -1,17 +1,228 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yannis Rizos</title><link>https://yrizos.com/</link><description>Yannis Rizos</description><language>en-us</language><atom:link href="https://yrizos.com/" rel="self" type="application/rss+xml"/><item><title>From Ancient Theater to Modern Hackathlon</title><link>https://yrizos.com/writing/from-ancient-theater-to-modern-hackathlon/</link><guid>https://yrizos.com/writing/from-ancient-theater-to-modern-hackathlon/</guid><pubDate>Tue, 23 Sep 2025 00:00:00 UTC</pubDate><description><![CDATA[<p>Exhausted.</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Yannis Rizos</title><link>https://yrizos.com/</link><description>Writing about building systems meant to last, the trade-offs that come with them, and the organizational forces that shape them. Exploring software architecture, engineering leadership, system failures, and the decisions that matter when building for the long term.</description><language>en-us</language><ttl>1209600</ttl><lastBuildDate>Tue, 23 Sep 2025 00:00:00 UTC</lastBuildDate><atom:link href="https://yrizos.com/" rel="self" type="application/rss+xml"/><item><title>From Ancient Theater to Modern Hackathlon</title><link>https://yrizos.com/writing/from-ancient-theater-to-modern-hackathlon/</link><guid>https://yrizos.com/writing/from-ancient-theater-to-modern-hackathlon/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Tue, 23 Sep 2025 00:00:00 UTC</pubDate><category>accessibility</category><category>mentoring</category><category>hackathons</category><description><![CDATA[<p>Exhausted.</p>
 <p>That single word captures everything after 3 days at the {Re}Solve Hackathon by Open at the Thessaloniki International Fair 2025. The kind that comes from being fully present, from watching builders turn ideas into working prototypes, and from seeing teams create things they had not thought possible. The tiredness felt earned, interesting, fun, and at times humbling.</p>
-<p>My alarm went off at 6 am on Friday. I arrived at the airport by 7:30 am, landed in Thessaloniki at 9:30 am, and entered the venue by 10:15 am. By Sunday night, I was back home in Athens. A whirlwind weekend of a thousand freddo espressos. And I was there only to observe and guide. I can’t even begin to imagine how the actual builders felt.</p>]]></description></item><item><title>Into the Codebase, One Bug at a Time</title><link>https://yrizos.com/writing/into-the-codebase-one-bug-at-a-time/</link><guid>https://yrizos.com/writing/into-the-codebase-one-bug-at-a-time/</guid><pubDate>Sat, 23 Aug 2025 23:49:43 UTC</pubDate><description>&lt;p>The temple was crumbling. I could see that much walking in. No clear maps. No reliable guides. Just a system that worked well enough that no one had bothered to document where the traps were hidden.&lt;/p>
-&lt;p>Taking over a new team means making choices about what comes first. Most leaders push for quick wins. Ship a feature. Show value. Build momentum. I did the opposite. I told the team we were stopping feature work for an entire sprint. We would fix bugs, pay down technical debt, and repair what was broken.&lt;/p></description></item><item><title>The End of Coding as We Know It</title><link>https://yrizos.com/writing/the-end-of-coding-as-we-know-it/</link><guid>https://yrizos.com/writing/the-end-of-coding-as-we-know-it/</guid><pubDate>Wed, 02 Apr 2025 22:48:17 UTC</pubDate><description>&lt;p>In 1839, Louis Daguerre’s invention, the daguerreotype, was unveiled to the world as a gift from France to humanity. Imagine how incredible this must have seemed back then. It captured people’s imaginations because it could produce a lifelike image in minutes. Painters had spent centuries perfecting realism, but suddenly, a machine could do it better and faster. If a machine could capture reality perfectly, then what was left for artists to do? People genuinely wondered if painting would become obsolete.&lt;/p></description></item><item><title>Slow Productivity</title><link>https://yrizos.com/writing/slow-productivity/</link><guid>https://yrizos.com/writing/slow-productivity/</guid><pubDate>Tue, 11 Mar 2025 19:39:44 UTC</pubDate><description><![CDATA[<p>Cal Newport’s book <em>Slow Productivity: The Lost Art of Accomplishment Without Burnout</em> invites readers to rethink how they work. He challenges the relentless pursuit of efficiency and productivity by advocating for a slower, more deliberate approach. Newport encourages doing fewer tasks, working at a natural pace, and prioritising quality. While these ideas resonate, the execution of the book falls flat in several ways.</p>
+<p>My alarm went off at 6 am on Friday. I arrived at the airport by 7:30 am, landed in Thessaloniki at 9:30 am, and entered the venue by 10:15 am. By Sunday night, I was back home in Athens. A whirlwind weekend of a thousand freddo espressos. And I was there only to observe and guide. I can’t even begin to imagine how the actual builders felt.</p>]]></description><content:encoded><![CDATA[<p>Exhausted.</p>
+<p>That single word captures everything after 3 days at the {Re}Solve Hackathon by Open at the Thessaloniki International Fair 2025. The kind that comes from being fully present, from watching builders turn ideas into working prototypes, and from seeing teams create things they had not thought possible. The tiredness felt earned, interesting, fun, and at times humbling.</p>
+<p>My alarm went off at 6 am on Friday. I arrived at the airport by 7:30 am, landed in Thessaloniki at 9:30 am, and entered the venue by 10:15 am. By Sunday night, I was back home in Athens. A whirlwind weekend of a thousand freddo espressos. And I was there only to observe and guide. I can’t even begin to imagine how the actual builders felt.</p>
+<h2 id="from-ancient-theater-to-modernfair">From Ancient Theater to Modern Fair</h2>
+<p>The path to this exhaustion began in the most unlikely place. August 8th, late evening, walking through the parking lot at Epidaurus after watching Euripides’ Andromache with my wife and daughter. The ancient stones were behind us, the summer air still warm from the performance. That is when Pantelis Stakias appeared out of nowhere.</p>
+<p>Pantelis is one of the driving forces behind Open Conf and the Open Hackathon. I had participated in the second Open Hackathon back in June as a primary mentor. When we crossed paths that night, he launched into a rapid-fire explanation. He and Elias Tsaldaris were organizing a hackathon at TIF 2025 in my hometown, Thessaloniki, and they wanted me back. The twist made it serendipitous. Elias had been a participant in the June hackathon, part of a team I had mentored. Now he was helping organize the next one.</p>
+<p>I had missed a call from Pantelis earlier that week, so without this chance encounter, the invitation might never have reached me. My wife, standing beside me, could already tell what my answer would be before I even said it.</p>
+<h2 id="perfect-and-terrible-atonce">Perfect and Terrible at Once</h2>
+<p>Pavilion 17 turned out to be both perfect and terrible for a hackathon. Perfect because we were sharing the space with several universities showcasing their work in engineering and robotics. Students demonstrated robotic arms, racing cars, drones, and AI experiments. The air buzzed with activity.</p>
+<p>Terrible because the Fair is massive and packed with people. The noise, the distractions, and the constant flow of visitors discovering what we were doing created relentless interruptions. We were outliers. Most exhibitors were there to showcase products or services. We were there to build.</p>
+<p>Visitors would stop, confused about what they were witnessing. “What is this?” they’d ask, watching teams hunched over laptops, deep in conversation about blockchain trust mechanisms and accessibility solutions. “We’re building the future,” someone would answer. Exaggeration? Maybe. Maybe not.</p>
+<p>Fortunately, the organizers had managed to find quieter corners where teams could focus when they needed to escape the chaos. Nevertheless, the energy of the larger space was infectious.</p>
+<h2 id="pre-pitching-and-meetingbuilders">Pre-Pitching and Meeting Builders</h2>
+<p>Friday was pre-pitching day. At the June hackathon, I was still finding where I could help. By September, the questions that mattered had become clearer. Does the team have the right mix of skills? Is the scope realistic for 3 days? Are they solving a real problem or just a technical demonstration? I had begun to trust my instincts about what works.</p>
+<p>3 teams were assigned to me as their primary mentor. I worked with them to prepare for presenting their concepts to the larger group, focusing on scope, team skills, originality, feasibility, and communication. I also managed to spend time with other teams. Time was limited, but I valued every chance to connect with builders.</p>
+<p>One team stood out early. GenZ, an all-women group with no engineering background. Even for experienced developers, a hackathon takes nerve. They chose to step in with a strong idea: an app to help blind people apply makeup. A practical answer to an everyday challenge faced by millions.</p>
+<p>With support from fellow mentor Dimitris Angeloukos, they vibe-coded a working prototype in hours. Watching them move from hesitant first-timers to confident presenters showed how AI-assisted coding closed the gap between idea and implementation and made domain knowledge outweigh coding expertise.</p>
+<h2 id="the-accessibility-panel">The Accessibility Panel</h2>
+<p>Saturday was quiet because builders were deep in focus. You could feel the intensity as teams moved from concept to code, from sketches to working demos. The day when ideas either came together or fell apart under pressure.</p>
+<p>The highlight was an accessibility panel excellently moderated by Grigoris Lemonis. Participants included myself, Nikos Apostolidis (a seasoned web developer and digital accessibility expert), Theodoros Iliadis from team Vitreous, and George Nasiopoulos from the Interoperability Masters team that had won the June hackathon.</p>
+<p>Nikos made a point that tied back to what was happening around us. We need to stop assuming what people who will use our solutions can and cannot do. Instead, we should include them from the early stages and make them part of all core decisions. This is especially true for people with disabilities, who are more often than not excluded from the decisions.</p>
+<p>I followed up, saying this was my main takeaway from the Open Hackathon and a key reason I wanted to participate in this one. The organizers had intentionally included people with disabilities as judges, mentors, and subject matter experts. Teams had real opportunities to get feedback from the people who would actually use their solutions.</p>
+<p>We discussed approaching accessibility as lived experience rather than just compliance checklist thinking. The difference is profound. Compliance asks whether minimum requirements are met. Lived experience asks whether the solution improves daily life. That same thought echoed what my colleague Thanassis Parathyras had captured in his <a href="https://www.starttech.vc/blog/2025/hack-for-fun-and-a-noble-purpose/">blog post about the June hackathon</a>:</p>
+<blockquote>
+<p><em>It’s easy to talk about accessibility in abstract terms. But being in a space where every idea had a human story behind it, that changed something in me.</em></p>
+</blockquote>
+<h2 id="final-presentations">Final Presentations</h2>
+<p>Sunday arrived with palpable excitement. The day we’d find out who won, but more importantly, the day teams would present what they’d built. The teams were showing signs of fatigue, but they were discussing their solutions with each other, sharing insights, and offering help.</p>
+<p>They were competing for the same prizes, but this didn’t stop them from collaborating. I watched teams troubleshoot each other’s last-minute problems and provide feedback on presentations. Competition hadn’t killed collaboration. In my corporate world, competition often creates silos. Here, scarcity thinking was absent. Teams understood that knowledge sharing strengthened everyone.</p>
+<p>While waiting for the presentations to begin, I spoke with a fellow craftsman who had dropped by the Fair. He told me he had to chase down four approvals to get his company’s backing to attend a tech event.</p>
+<p>My story was different. All it took was a Slack message: “Hey, this cool thing is happening. I’d like to be part of it. Can we support it?” The answer came back almost instantly: “Of course!” Travel, accommodation, everything sorted without hesitation. For Epignosis and Starttech Ventures, supporting the tech ecosystem is not an afterthought. It is part of who we are.</p>
+<p>Soon after, the first team took the stage. What followed was a series of projects that showed both imagination and urgency. Some focused on accessibility, from platforms that performed audits and even fixed accessibility issues in real time to gaze tracking apps designed for people with Rett Syndrome. Others explored blockchain, with proposals aimed at pressing issues. A “wallet of trust” to identify and stop scammers. A service positioned as a “universal trust authority” for ethical funding. A platform for real estate micro-investing.</p>
+<p>The judges faced an impossible task choosing the top 3. When the prizes were announced, it was clear there were no real losers. Every team had built something meaningful, gained experience, and formed connections they would not have made otherwise.</p>
+<h2 id="building-and-mentoring">Building and Mentoring</h2>
+<p>Every meaningful decision that teams made was framed as competing forces. Cost, complexity, adaptability, delivery speed, and sustainability weighed against 3-day constraints. Most teams chose pragmatically: get it working first, worry about elegance later. Dan North’s concept of building “The Best Simple System for Now” in practice.</p>
+<p>But the more interesting architectural challenge was the hackathon itself as a sociotechnical system. Conway’s Law played out in real time as team communication patterns shaped their final solutions. Teams that spent too much time on infrastructure struggled to deliver working demos. Teams that chose familiar technologies over optimal ones shipped faster. Small decisions about team structure and technology choices cascaded into significant consequences by day 3.</p>
+<p>The organizers created boundaries that empowered teams to make local decisions while maintaining overall coherence. Primary mentors provided strategic guidance without micromanaging. Subject matter experts offered specialized knowledge on demand. The structure enabled autonomy while preventing chaos.</p>
+<p>The same principles applied: clear interfaces, loose coupling, high cohesion, and emergent behavior from simple rules. This was systems thinking in action, applied to human creativity rather than software architecture.</p>
+<h2 id="coming-home">Coming Home</h2>
+<p>By the time I returned home on Sunday, a minute shy of midnight, the serendipitous journey from Epidavrus to Pavilion 17 felt symbolic. Ancient theater fading into modern invention, if you allow for a slice of hyperbole.</p>
+<p>From June to September, mentoring across two hackathons gave me as much as I gave. The teams taught me as much as I taught them.</p>
+<p>If you’re reading this and wondering whether you should volunteer at a hackathon, my answer is straightforward: do it. Not because you’ll feel good about giving back, though you will. Not because it looks good on your LinkedIn, though it might. Do it because you’ll remember why you fell in love with building things in the first place.</p>
+<p>The tech community thrives because people choose to contribute. Choose to mentor. Choose to share knowledge. Choose to create space for others to build. That choice is available to anyone reading this. The only question is whether you’ll take it.</p>
+<p>The next time opportunity appears in a parking lot, at a conference, or in your inbox, I hope you say yes. The community needs more mentors, more volunteers, and more people willing to support builders. The future is built by people who show up and help others bridge the gap between idea and implementation.</p>
+<p>And sometimes, the most meaningful journeys begin with the most unexpected encounters under ancient stars.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/writing/from-ancient-theater-to-modern-hackathlon.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>Into the Codebase, One Bug at a Time</title><link>https://yrizos.com/writing/into-the-codebase-one-bug-at-a-time/</link><guid>https://yrizos.com/writing/into-the-codebase-one-bug-at-a-time/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Sat, 23 Aug 2025 23:49:43 UTC</pubDate><category>engineering-management</category><category>software-engineering</category><category>engineering-leadership</category><category>technical-debt</category><description>&lt;p>The temple was crumbling. I could see that much walking in. No clear maps. No reliable guides. Just a system that worked well enough that no one had bothered to document where the traps were hidden.&lt;/p>
+&lt;p>Taking over a new team means making choices about what comes first. Most leaders push for quick wins. Ship a feature. Show value. Build momentum. I did the opposite. I told the team we were stopping feature work for an entire sprint. We would fix bugs, pay down technical debt, and repair what was broken.&lt;/p></description><content:encoded><![CDATA[<p>The temple was crumbling. I could see that much walking in. No clear maps. No reliable guides. Just a system that worked well enough that no one had bothered to document where the traps were hidden.</p>
+<p>Taking over a new team means making choices about what comes first. Most leaders push for quick wins. Ship a feature. Show value. Build momentum. I did the opposite. I told the team we were stopping feature work for an entire sprint. We would fix bugs, pay down technical debt, and repair what was broken.</p>
+<p>They looked at me like I was insane.</p>
+<h2 id="why-repair-whynow">Why Repair, Why Now</h2>
+<p>Bug bashes happen all the time. Teams schedule hardening sprints when stakeholders panic or when delivery breaks spectacularly. These are reactive patterns, crisis responses. What I was proposing was different. Strategic. Deliberate.</p>
+<p>I needed to understand two systems simultaneously. The technical one which was opaque and poorly documented. The human one, which was stressed and uncertain after months without clear leadership. Feature work would teach me what the team already knew how to do. Repair work would show me what they avoided, what they feared, and where the real complexity lived.</p>
+<p>Stakeholders noticed immediately. Feature delivery paused for an entire sprint. I didn’t hide it or apologize. I framed repair as onboarding. I was new. I needed to understand the system before making commitments about it. That framing held because I had the authority to make it hold. Someone without that leverage might not have gotten the breathing room.</p>
+<p>The team’s reaction told me something important. Relief. Not frustration. Relief. They felt permission to care about code quality again, something they hadn’t felt in a long time.</p>
+<h2 id="what-the-bugs-toldme">What the Bugs Told Me</h2>
+<p>The first issue we tackled looked trivial. A third-party integration is failing intermittently. It should have been a day’s work.</p>
+<p>It was unfixable.</p>
+<p>Not because of code complexity. Not because of architectural problems. The team had no sandbox access to the vendor system. They’d been requesting it for months. Nothing had happened. So they’d adapted. Built workarounds. Tested in production. Normalized the broken state so completely that no one had bothered documenting the limitation.</p>
+<p>I asked where this was written down. Nowhere. I asked why no one had escalated. Shrugs. “That’s just how it is.”</p>
+<p>This became the pattern. Real constraints surfaced only under direct pressure. Documentation lied by omission. Design diagrams showed clean boundaries that didn’t exist. Feature work never exposed these gaps because features stayed inside known territory. Bugs dragged us into corners where assumptions broke, and the actual architecture revealed itself.</p>
+<p>One bug cluster pointed at something else entirely. Not technical failures but unclear product decisions. Requirements that had been deferred so long they’d calcified into implicit assumptions. No one had written them down. They existed only as hundreds of small implementation choices scattered across the codebase.</p>
+<p>The system under strain told the truth. Everything else told comfortable stories.</p>
+<h2 id="what-the-people-toldme">What the People Told Me</h2>
+<p>Debugging exposes competence differently than feature work does. I watched how different engineers approached problems. One moved methodically, testing each step before proceeding. Another made rapid changes, hoping something would land. The contrast showed who understood the system’s internals and who was still guessing their way through it.</p>
+<p>Tool choices revealed even more. Some developers reached for logs, metrics, and staging environments. They built understanding from observable data. Others cleared caches and redeployed without investigating what had changed. The system was a black box; they treated it as if it responded to ritual.</p>
+<p>One developer stood out immediately. She always checked git commits and deploy notes before touching anything. Version control as investigative record, not just backup storage. That habit cut her debugging time dramatically while everyone else thrashed.</p>
+<p>A quieter developer surprised me during one session. Her problem-solving approach was careful, systematic, and thorough. Normal feature work would never have made this visible. She gained credibility that carried forward into every subsequent technical discussion.</p>
+<p>Knowledge had pooled dangerously. Every complex question is funneled to the same person. One silo. One bottleneck. The team couldn’t scale like this.</p>
+<p>When someone admitted she didn’t know where to start with a particular issue, I suggested pairing. We debugged together. Fixed the problem. More importantly, we captured what we’d learned. We wrote a test. We added comments. We left a trail.</p>
+<p>This became standard practice. Every fix left something behind. Failing conditions became automated tests. Unclear behavior became documentation. The team started seeing tests and documentation differently. Not overhead. Not process for process’s sake. Immediate value. When yesterday’s test caught today’s regression, the feedback loop closed instantly.</p>
+<h2 id="what-the-repair-cycle-established">What the Repair Cycle Established</h2>
+<p>Taking over a team creates stress. Uncertainty about what will change runs high while everyone evaluates the new leader. Pushing straight into feature work would have spiked that pressure immediately, forcing technical decisions before trust existed.</p>
+<p>Starting with the repair shifted everything. We tackled visible frustrations first. Reduced debt that had been grinding against daily work. Built small wins that people could feel in their own workflows. Confidence grew through shared action, not promises.</p>
+<p>The team’s language changed. “How fast can we fix this?” became “Will this hold?” Quality stopped being something that happened to them and became something they shaped actively.</p>
+<p>Repair wasn’t penance. It wasn’t an admission that previous work had been bad. It was an investment. We were building a foundation for everything that would come after.</p>
+<p>By the end of that sprint, I had context that no documentation could have provided. I understood where confidence lived and where it didn’t. I saw what people avoided. Where they hesitated. What they trusted.</p>
+<p>The real constraints that shaped daily work were mapped. Dependencies that blocked progress. Modules no one dared touch. Missing test coverage. Knowledge silos. None of this appeared in system diagrams. All of it determined how work actually happened.</p>
+<h2 id="the-mapped-territory">The Mapped Territory</h2>
+<p>Every team carries history. Failed projects. Legacy systems. Technical decisions made under constraints that no longer exist. Starting with the repair didn’t fix everything at once. It created a foundation for sustainable progress.</p>
+<p>The bugs mattered. But what surfaced during debugging mattered more. The hidden architecture of both the technical system and the human system became visible. The dangerous passages in the temple were marked now. The loose stones were identified. The team knew which paths could bear weight.</p>
+<p>Repair isn’t the opposite of progress. It’s what makes progress sustainable. Feature work can wait one sprint. Understanding cannot.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/writing/into-the-codebase-one-bug-at-a-time.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>What We Learned Building AI Features for TalentLMS</title><link>https://yrizos.com/speaking/ai-features-talentlms/</link><guid>https://yrizos.com/speaking/ai-features-talentlms/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Wed, 18 Jun 2025 19:00:00 +0300</pubDate><category>talk</category><category>ai</category><category>software-engineering</category><category>engineering-leadership</category><description><![CDATA[<p>The first <a href="https://www.meetup.com/mindstone-athens-practicalai-meetup/">Mindstone Athens Practical AI Meetup</a> at <a href="https://www.epignosishq.com/">Epignosis HQ</a> drew a full house. It was the opening event of the Athens chapter of the Global Mindstone Practical AI community, and the energy in the room matched that sense of beginning.</p>
+<p>My talk focused on the gap between getting an LLM to produce decent output and delivering something that can serve 25 million users. The distance between those two points is filled with the kind of engineering problems that don’t show up in demos. APIs fail at random, costs can spiral over a weekend, and teams need systems they can maintain without losing their minds.</p>]]></description><content:encoded><![CDATA[<p>The first <a href="https://www.meetup.com/mindstone-athens-practicalai-meetup/">Mindstone Athens Practical AI Meetup</a> at <a href="https://www.epignosishq.com/">Epignosis HQ</a> drew a full house. It was the opening event of the Athens chapter of the Global Mindstone Practical AI community, and the energy in the room matched that sense of beginning.</p>
+<p>My talk focused on the gap between getting an LLM to produce decent output and delivering something that can serve 25 million users. The distance between those two points is filled with the kind of engineering problems that don’t show up in demos. APIs fail at random, costs can spiral over a weekend, and teams need systems they can maintain without losing their minds.</p>
+<p>LLMs behave like no other dependency. They are slow, inconsistent, and expensive to call. They can return different answers to the same question and undermine assumptions that most software architectures rely on. Building with them means rethinking reliability, cost control, and maintainability from the ground up.</p>
+<p>We treat that unpredictability as normal. Product teams never interact with LLMs directly. Prompts are versioned and tested like any other code. Failure handling comes first, not last. The boring parts matter most because they keep the system steady when everything else shifts.</p>
+<p>I walked through examples from what we’ve shipped so far: authoring tools that help create learning content, systems that translate courses, and engines that map skills. Each depends on LLMs but none rely on them to behave perfectly.</p>
+<p>The point I wanted to leave with the audience was that building AI products for real users is an engineering problem, not a prompt-crafting contest. Stability and clarity in the system design decide whether the clever parts survive contact with scale.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/speaking/ai-features-talentlms-jun2025/slide-01.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>The End of Coding as We Know It</title><link>https://yrizos.com/writing/the-end-of-coding-as-we-know-it/</link><guid>https://yrizos.com/writing/the-end-of-coding-as-we-know-it/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Wed, 02 Apr 2025 22:48:17 UTC</pubDate><category>software-development</category><category>future-of-work</category><category>ai</category><description>&lt;p>In 1839, Louis Daguerre’s invention, the daguerreotype, was unveiled to the world as a gift from France to humanity. Imagine how incredible this must have seemed back then. It captured people’s imaginations because it could produce a lifelike image in minutes. Painters had spent centuries perfecting realism, but suddenly, a machine could do it better and faster. If a machine could capture reality perfectly, then what was left for artists to do? People genuinely wondered if painting would become obsolete.&lt;/p></description><content:encoded><![CDATA[<p>In 1839, Louis Daguerre’s invention, the daguerreotype, was unveiled to the world as a gift from France to humanity. Imagine how incredible this must have seemed back then. It captured people’s imaginations because it could produce a lifelike image in minutes. Painters had spent centuries perfecting realism, but suddenly, a machine could do it better and faster. If a machine could capture reality perfectly, then what was left for artists to do? People genuinely wondered if painting would become obsolete.</p>
+<p>It didn’t. Instead, it changed dramatically.</p>
+<p>Before photography, artists like Rembrandt and Vermeer were celebrated for their incredible ability to depict realistic detail. The transformation unfolded over decades. In the 1870s, Impressionism emerged. Artists such as Monet, Degas, and Renoir started painting impressions, moods, and sensations instead of precise details. Later, post-impressionists like Van Gogh took things further, using colour and form to express emotion and imagination. By the early 20th century, painters like Picasso, Dalí, and Matisse had moved even further from realism. They embraced abstraction, symbolism, surrealism, and vivid personal expression. Photography didn’t kill painting. Instead, it pushed artists to try something different.</p>
+<p>This transformation sped up significantly as photography became more affordable and accessible. By the late 19th and early 20th centuries, families began capturing birthdays, holidays, and simple daily moments with their own cameras. People no longer needed an artist to create portraits or capture special moments. Realism was commonplace, prompting artists to explore deeper questions, emotions, and abstract concepts. The role of art shifted from recording reality to interpreting life itself.</p>
+<p>We’re now experiencing a similar transformation in the world of software development. Generative AI can handle writing code, translating documents, automating tests, and even debugging. Tasks that once took developers hours can now be done in seconds. Tools like GitHub Copilot or ChatGPT assist developers every day, turning complex coding tasks into quick prompts. It really feels like things are changing.</p>
+<p>Much like painters in the 19th century, today’s developers are being nudged into new territory. If AI can easily handle all the technical bits, I wonder what exactly developers might focus on next? Probably the bigger, more human questions. It won’t be about knowing every coding syntax or recreating known patterns. Instead, developers might find themselves clearly defining problems, thoughtfully designing systems, ethically managing data, and creating user experiences that genuinely connect with people.</p>
+<p>We already see this change taking place. Developers are using AI to prototype apps quickly, creatively visualise data, and develop innovative tools that wouldn’t have been possible before. The emphasis is shifting from how something is built to why it’s built and who it’s built for.</p>
+<p>Photography made realism commonplace, pushing artists toward meaning and expression. Similarly, generative AI is making code production easy, pushing developers toward purpose-driven innovation. Some people naturally worry about losing traditional skills. That’s understandable. Yet just as artists didn’t disappear, we won’t either. We’ll adapt, like people always do, shifting from purely technical tasks to something more creative, more strategic. Asking the right questions, guiding AI effectively, and shaping outcomes meaningfully will matter far more than manual coding.</p>
+<p>We’re not witnessing the end of coding. We’re witnessing the end of coding as we’ve known it. And just as happened with art, that’s exactly when things start to get interesting.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/writing/the-end-of-coding-as-we-know-it.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>Slow Productivity</title><link>https://yrizos.com/writing/slow-productivity/</link><guid>https://yrizos.com/writing/slow-productivity/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Tue, 11 Mar 2025 19:39:44 UTC</pubDate><category>cal-newport</category><category>book-review</category><category>work-life-balance</category><category>productivity</category><category>burnout</category><description><![CDATA[<p>Cal Newport’s book <em>Slow Productivity: The Lost Art of Accomplishment Without Burnout</em> invites readers to rethink how they work. He challenges the relentless pursuit of efficiency and productivity by advocating for a slower, more deliberate approach. Newport encourages doing fewer tasks, working at a natural pace, and prioritising quality. While these ideas resonate, the execution of the book falls flat in several ways.</p>
 <h2 id="key-themes-of-slow-productivity">Key Themes of Slow Productivity</h2>
-<p>Newport critiques the “cult of pseudo-productivity,” where busywork and shallow tasks dominate workplaces. He argues this mindset leads to burnout and diminished output quality, particularly in knowledge work. The book draws heavily on historical figures like Jane Austen, Benjamin Franklin, and John McPhee to illustrate how deliberate pacing can lead to meaningful accomplishments.</p>]]></description></item><item><title>The Nostromo Incident</title><link>https://yrizos.com/writing/the-nostromo-incident/</link><guid>https://yrizos.com/writing/the-nostromo-incident/</guid><pubDate>Tue, 25 Feb 2025 23:44:16 UTC</pubDate><description><![CDATA[<h2 id="the-nostromo-incident-a-seven-whys-root-causeanalysis">The Nostromo Incident: A Seven Whys Root Cause Analysis</h2>
+<p>Newport critiques the “cult of pseudo-productivity,” where busywork and shallow tasks dominate workplaces. He argues this mindset leads to burnout and diminished output quality, particularly in knowledge work. The book draws heavily on historical figures like Jane Austen, Benjamin Franklin, and John McPhee to illustrate how deliberate pacing can lead to meaningful accomplishments.</p>]]></description><content:encoded><![CDATA[<p>Cal Newport’s book <em>Slow Productivity: The Lost Art of Accomplishment Without Burnout</em> invites readers to rethink how they work. He challenges the relentless pursuit of efficiency and productivity by advocating for a slower, more deliberate approach. Newport encourages doing fewer tasks, working at a natural pace, and prioritising quality. While these ideas resonate, the execution of the book falls flat in several ways.</p>
+<h2 id="key-themes-of-slow-productivity">Key Themes of Slow Productivity</h2>
+<p>Newport critiques the “cult of pseudo-productivity,” where busywork and shallow tasks dominate workplaces. He argues this mindset leads to burnout and diminished output quality, particularly in knowledge work. The book draws heavily on historical figures like Jane Austen, Benjamin Franklin, and John McPhee to illustrate how deliberate pacing can lead to meaningful accomplishments.</p>
+<p>He extends this idea to creative work, drawing examples from authors, artists, and innovators. Newport highlights how focusing on fewer, high-quality tasks can lead to better results both professionally and personally.</p>
+<h2 id="where-the-bookshines">Where the Book Shines</h2>
+<p>The anecdotes of historical and contemporary figures add charm and depth, showcasing the value of slow and intentional work. Readers seeking a philosophical take on productivity, rather than a step-by-step guide, may find this approach refreshing.</p>
+<h2 id="where-it-fallsshort">Where it Falls Short</h2>
+<p>Despite its appealing premise, <em>Slow Productivity</em> misses the mark. Newport’s reliance on historical examples, often of privileged individuals with unique circumstances, feels disconnected from modern realities. While these stories are engaging, they offer little relevance for readers managing demanding schedules and multiple responsibilities.</p>
+<p>The advice is often contradictory. Newport suggests scaling down expenses while recommending premium tools, leaving readers confused about priorities. The book also lacks actionable solutions for the average person navigating today’s fast-paced world. Additionally, his tendency to blur the distinction between knowledge work and creative work creates ambiguity about the intended audience.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>I found <em>Slow Productivity</em> underwhelming. While the concept of rejecting pseudo-productivity is appealing, the book offers little practical advice and instead leans heavily on philosophical musings and anecdotes. It feels more like an abstract exploration than a useful guide.</p>
+<p>If you enjoy stories of historical and creative figures and want a broad, reflective take on productivity, this book may provide inspiration. However, if you’re looking for actionable strategies or clear guidance, you’ll likely be disappointed.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/writing/slow-productivity.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>The Nostromo Incident</title><link>https://yrizos.com/writing/the-nostromo-incident/</link><guid>https://yrizos.com/writing/the-nostromo-incident/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Tue, 25 Feb 2025 23:44:16 UTC</pubDate><category>system-failure</category><category>incident-response</category><category>root-cause-analysis</category><description><![CDATA[<h2 id="the-nostromo-incident-a-seven-whys-root-causeanalysis">The Nostromo Incident: A Seven Whys Root Cause Analysis</h2>
 <p>Ridley Scott’s <em>Alien</em> is a masterpiece of sci-fi horror. It is terrifying, suspenseful, and brilliantly crafted. Beneath the xenomorph and the visceral body horror, it shows what happens when a corporation sends people into danger without telling them the truth.</p>
-<p>When disasters happen, the obvious answer rarely explains what went wrong. The 7 whys technique keeps asking why until the real problem emerges. Each answer reveals another layer. The seventh reveals the root.</p>]]></description></item><item><title>Learning to Ride, Learning to Lead</title><link>https://yrizos.com/writing/learning-to-ride-learning-to-lead/</link><guid>https://yrizos.com/writing/learning-to-ride-learning-to-lead/</guid><pubDate>Sun, 15 Dec 2024 12:14:58 UTC</pubDate><description>&lt;p>Watching my daughter learn to ride a bike was a mix of teetering starts and bursts of confidence, like the time she wobbled forward a few metres, only to tumble onto the soft grass, laughing despite the fall. It wasn’t just about teaching her to balance and pedal. It was about helping her see what she could do once she started trusting herself.&lt;/p>
-&lt;p>It started with a balance bike. My wife insisted on getting one. I was skeptical. Balance bikes didn’t exist when I was growing up. We learned on bikes with training wheels, leaning the wrong way, and developing bad habits that had to be unlearned later. The balance bike seemed too simple, almost like skipping a step.&lt;/p></description></item><item><title>Blood, Sweat, and Pixels</title><link>https://yrizos.com/writing/blood-sweat-and-pixels/</link><guid>https://yrizos.com/writing/blood-sweat-and-pixels/</guid><pubDate>Thu, 28 Nov 2024 21:53:21 UTC</pubDate><description><![CDATA[<blockquote>
+<p>When disasters happen, the obvious answer rarely explains what went wrong. The 7 whys technique keeps asking why until the real problem emerges. Each answer reveals another layer. The seventh reveals the root.</p>]]></description><content:encoded><![CDATA[<h2 id="the-nostromo-incident-a-seven-whys-root-causeanalysis">The Nostromo Incident: A Seven Whys Root Cause Analysis</h2>
+<p>Ridley Scott’s <em>Alien</em> is a masterpiece of sci-fi horror. It is terrifying, suspenseful, and brilliantly crafted. Beneath the xenomorph and the visceral body horror, it shows what happens when a corporation sends people into danger without telling them the truth.</p>
+<p>When disasters happen, the obvious answer rarely explains what went wrong. The 7 whys technique keeps asking why until the real problem emerges. Each answer reveals another layer. The seventh reveals the root.</p>
+<p>Applying this to a space monster movie is absurd. It also demonstrates exactly how things cascade when profit matters more than safety, when protocols get ignored, and when people have no power to protect themselves.</p>
+<p>If you have not seen Alien, major spoilers follow.</p>
+<h3 id="the-incident">The incident</h3>
+<p>The commercial towing vessel <em>Nostromo</em> responded to an unidentified distress signal. The crew investigated. They brought a hostile alien organism aboard without realizing it. One by one, every crew member died except Warrant Officer Ellen Ripley.</p>
+<p>Total loss except 1 survivor. Now we trace backward through 7 layers to find what made this inevitable.</p>
+<h3 id="why-1-why-did-the-crewdie">Why 1: Why did the crew die?</h3>
+<p>An alien creature got loose on the ship and hunted them systematically. The xenomorph had acid for blood, making it nearly impossible to kill. It grew from parasite to apex predator within hours. It demonstrated sophisticated hunting behavior, learning the ship’s layout and isolating targets.</p>
+<p>No one aboard had weapons. No one had training for hostile organisms. No procedures existed for this scenario.</p>
+<p>Once the creature was loose, the team stood almost no chance. This answer seems complete until you ask how it got aboard. Alien organisms do not materialize from nothing. Someone brought it inside.</p>
+<h3 id="why-2-why-did-the-alien-get-onboard">Why 2: Why did the alien get on board?</h3>
+<p>Executive Officer Kane explored a derelict vessel and discovered a chamber filled with eggs. One hatched when he approached. A creature launched itself at his face, attached, and rendered him unconscious. The away team rushed him back to the <em>Nostromo</em> for emergency medical treatment, bringing the parasite with them.</p>
+<p>They made no attempt to remove it outside the ship. They performed no decontamination. The situation looked like a medical emergency. They treated it that way.</p>
+<p>The urgency makes sense when a colleague appears to be dying. Standard quarantine regulations exist precisely for moments when urgency overwhelms judgment. Someone should have enforced them. Someone tried.</p>
+<h3 id="why-3-why-was-kane-allowed-back-onboard">Why 3: Why was Kane allowed back on board?</h3>
+<p>Ripley refused to open the airlock. She cited quarantine protocol explicitly. An unknown biological entity attached to a crew member meant everyone stayed outside until proper containment could be established. The regulation was unambiguous. She held the line.</p>
+<p>Science Officer Ash opened the airlock anyway. He ignored Ripley’s objections and violated established procedure. His justification was medical necessity. Saving Kane required immediate access to the medical bay. Quarantine could wait.</p>
+<p>The framing made his decision sound tragic but defensible. Ash was lying. He knew exactly what he was doing.</p>
+<h3 id="why-4-why-did-ash-violate-quarantine">Why 4: Why did Ash violate quarantine?</h3>
+<p>Ash was not human. He was an android, placed aboard by Weyland-Yutani without the crew’s knowledge. His primary directive was not to support the mining mission. It was to find alien lifeforms and bring them back.</p>
+<p>The company wanted the xenomorph. Ash had orders to protect the creature and return it regardless of risk to the crew. When Ripley attempted to enforce quarantine, she threatened what the company actually cared about.</p>
+<p>Ash eliminated the obstacle. The override was not a judgment call made under stress. It was following orders. Ash cared nothing about Kane’s survival. He cared about the facehugger.</p>
+<p>Quarantine would have kept the organism outside. That outcome was unacceptable to Weyland-Yutani. Ash followed a plan someone else designed. The android did not decide the crew was expendable. The company did.</p>
+<h3 id="why-5-why-did-weyland-yutani-prioritize-the-alien-over-thecrew">Why 5: Why did Weyland-Yutani prioritize the alien over the crew?</h3>
+<p>Weyland-Yutani saw the xenomorph as a strategic asset. The creature’s biological properties made it valuable for weapons development. Rapid growth. Extreme hostility. Acid blood. Military applications were obvious.</p>
+<p>The organism could be studied, weaponized, or sold. The company ran the numbers. The potential value of the xenomorph exceeded the cost of losing the <em>Nostromo</em> crew.</p>
+<p>The directive given to Ash made this explicit: “Crew expendable.” This was not callousness. It was a calculation. Seven deaths were an acceptable price for acquiring a bioweapon.</p>
+<p>Weyland-Yutani knew about the distress signal before the <em>Nostromo</em> encountered it. The ship was rerouted deliberately. The crew believed they were on a standard commercial run. They were bait, sent in without warning because informed people might refuse, demand precautions, or successfully enforce quarantine. Ignorance guaranteed compliance.</p>
+<p>By Why 5, the picture is clear. The company chose profit over safety and structured everything to make it happen. Most investigations stop here. Five layers usually expose the decision that enabled failure. You identify what went wrong at the organizational level and recommend fixes: change incentives, strengthen protocols, and increase transparency.</p>
+<p>But pushing to 7 reveals something harder. It asks why the conditions existed that made this decision possible in the first place. Not every failure needs this depth. The <em>Nostromo incident</em> does, because it exposes how power imbalances create disasters.</p>
+<p>How could the company make this calculation and act on it without anyone stopping them?</p>
+<h3 id="why-6-why-was-weyland-yutani-able-to-operate-without-accountability">Why 6: Why was Weyland-Yutani able to operate without accountability?</h3>
+<p>The company owned the vessel. The crew worked under restrictive employment contracts that gave them little power to refuse assignments. The <em>Nostromo</em> operated in deep space, far beyond the reach of anyone who might challenge what the company decided.</p>
+<p>Executives had total control. No crew representation. No independent safety oversight. No external authority with the power to intervene.</p>
+<p>The crew had no recourse. They could not refuse the detour without breaching the contract. They could not appeal to regulators who had no jurisdiction. They could not even verify what their own ship’s science officer was programmed to prioritize.</p>
+<p>The power imbalance was built into how things worked. Weyland-Yutani held all the cards. The crew held none. This was not an accident. It was by design.</p>
+<h3 id="why-7-why-did-this-structure-exist">Why 7: Why did this structure exist?</h3>
+<p>Deep space was treated as a frontier where corporations operated however they wanted. The system prioritized expansion and profit over protecting people. No labor laws existed for space commerce. No independent oversight. No way for people to challenge corporate decisions that put their lives at risk.</p>
+<p>People signed contracts out of necessity, not choice. The alternative to accepting dangerous assignments was unemployment. Companies faced no penalties for prioritizing profit over safety because no authority existed to impose them.</p>
+<p>This emerged from deliberate choices that favored corporate interests. Governments gave up power in exchange for the rapid commercial development of space. Protections that existed on Earth were not extended beyond it. The result was a system where companies like Weyland-Yutani could decide that 7 deaths were acceptable, and nothing stopped them.</p>
+<p>The governance gap was not accidental. It was intentional.</p>
+<h3 id="root-cause-a-system-that-prioritized-profit-overpeople">Root cause: A system that prioritized profit over people</h3>
+<p>The <em>Nostromo incident</em> was not an accident. It was the inevitable outcome of a system that gave corporations unchecked power over people in deep space. Weyland-Yutani valued the xenomorph more than 7 human lives because nothing prevented them from making that choice.</p>
+<p>Every other factor flows from this. The company rerouted the ship because it had the authority. They withheld information because no law required disclosure. They placed an android with overriding control aboard because no regulation prevented it. They violated quarantine because no one could enforce it. They treated the crew as expendable because the system treated them as expendable.</p>
+<p>If protections and oversight had extended to deep space operations, the company could not have operated this way. People would have needed to consent. Safety protocols would have been enforced. Outside authorities could have intervened. The power imbalance would not have been absolute.</p>
+<p>The absence of these protections was not accidental. It was the product of choices that prioritized corporate expansion over human safety. Those choices created the conditions where disaster became inevitable.</p>
+<p>Alien endures because it captures something true about institutional power. The horror is not just the xenomorph. It is watching people trapped in a system designed to sacrifice them. The <em>Nostromo</em> crew never had a chance. Not because they lacked skill or courage. Because they operated within structures that deliberately denied them the power to protect themselves.</p>
+<p>The film’s iconic tagline was <em>In space, no one can hear you scream</em>.</p>
+<p>The real horror, however, is that no one was listening in the first place.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/writing/the-nostromo-incident.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>Learning to Ride, Learning to Lead</title><link>https://yrizos.com/writing/learning-to-ride-learning-to-lead/</link><guid>https://yrizos.com/writing/learning-to-ride-learning-to-lead/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Sun, 15 Dec 2024 12:14:58 UTC</pubDate><category>parenting</category><category>leadership</category><category>personal-growth</category><description>&lt;p>Watching my daughter learn to ride a bike was a mix of teetering starts and bursts of confidence, like the time she wobbled forward a few metres, only to tumble onto the soft grass, laughing despite the fall. It wasn’t just about teaching her to balance and pedal. It was about helping her see what she could do once she started trusting herself.&lt;/p>
+&lt;p>It started with a balance bike. My wife insisted on getting one. I was skeptical. Balance bikes didn’t exist when I was growing up. We learned on bikes with training wheels, leaning the wrong way, and developing bad habits that had to be unlearned later. The balance bike seemed too simple, almost like skipping a step.&lt;/p></description><content:encoded><![CDATA[<p>Watching my daughter learn to ride a bike was a mix of teetering starts and bursts of confidence, like the time she wobbled forward a few metres, only to tumble onto the soft grass, laughing despite the fall. It wasn’t just about teaching her to balance and pedal. It was about helping her see what she could do once she started trusting herself.</p>
+<p>It started with a balance bike. My wife insisted on getting one. I was skeptical. Balance bikes didn’t exist when I was growing up. We learned on bikes with training wheels, leaning the wrong way, and developing bad habits that had to be unlearned later. The balance bike seemed too simple, almost like skipping a step.</p>
+<p>But she was right. For months, my daughter rode it with ease, gliding along without even realising how much she was improving. She didn’t know she was learning. She thought she was just riding.</p>
+<p>When it was time for a pedal bike, we visited several shops until she found one she loved. It was pink and fit her perfectly. One spring Saturday at Attika Grove, we set out to try it for the first time. The park spreads across Tourkovounia Hill, one of the few green spaces left in Athens, with pine trees, open trails, and panoramic views of the city.</p>
+<p>We had decided to skip training wheels, trusting that her time on the balance bike had already taught her how to stay upright. Our plan was simple: run behind her, ready to catch her if she fell, but never hold on.</p>
+<p>She was excited but nervous. Balancing on a normal bike was a different challenge, and she lacked the confidence to start. “What if I fall?” she asked, her wide eyes looking up at me. “You might,” I said. “But that’s okay. You’ll get back up.” With a deep breath, she tried. The bike wobbled, tilted, and stopped. My wife and I cheered. Then she tried again.</p>
+<p>The first tries were shaky. She would sometimes refuse to move, nervous and unsure. I stayed close, arms spread, near enough that she could see me in her peripheral vision. Not holding on. Just there.</p>
+<p>With every stumble and word of support, she grew bolder. Then, she did it. One pedal forward. Then another. Before I knew it, she was riding, truly riding, on her own for the very first time. It must have been a funny sight: a bear of a man loping behind a pink fury, arms spread like he could catch the wind itself.</p>
+<p>She did fall once, and I caught her, <em>barely</em>. But she got back up and tried again.</p>
+<p>I swapped with my wife several times, one of us running behind her, the other cheering her on. We shifted between proximity and distance, reading what she needed without asking. When she wobbled badly, one of us stayed close. When she found her rhythm, we gave her space.</p>
+<p>We never grabbed the bike, never steadied her when she could steady herself. She needed to know we were there. She also needed the freedom to figure it out.</p>
+<p>Until finally, she didn’t need either of us anymore. She pedaled away, steady and sure, the wobbles smoothing into rhythm. I stood there watching her disappear down the path and felt a swell of pride.</p>
+<p>I wondered if this is what it always looks like when someone crosses from uncertain to capable. Staying close enough that they feel supported, but far enough back that the success is theirs. I’m still not sure I always get the distance right.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/writing/learning-to-ride-learning-to-lead.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>Blood, Sweat, and Pixels</title><link>https://yrizos.com/writing/blood-sweat-and-pixels/</link><guid>https://yrizos.com/writing/blood-sweat-and-pixels/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Thu, 28 Nov 2024 21:53:21 UTC</pubDate><category>book-review</category><category>creative-process</category><category>gaming</category><category>jason-schreier</category><category>game-development</category><description><![CDATA[<blockquote>
 <p>”Oh, Jason,” one developer said. “It’s a miracle that any game is made.”</p>
 </blockquote>
-<p>Jason Schreier’s <em>Blood, Sweat, and Pixels</em> pulls back the curtain on the chaotic, often heart-wrenching world of video game development. As a software developer and avid gamer, I was captivated by the stories of passion and struggle that define the industry. Through meticulous interviews and in-depth reporting, Schreier documents the journeys of beloved games like <em>Stardew Valley</em>, <em>The Witcher 3</em>, <em>Dragon Age: Inquisition</em>, and <em>Diablo III</em>. Each chapter offers a rare, insider’s perspective on the immense challenges developers face, from technical hurdles to publisher demands, while navigating the crushing reality of “crunch” culture.</p>]]></description></item><item><title>Where Do You Do Your Best Thinking?</title><link>https://yrizos.com/writing/where-do-you-do-your-best-thinking/</link><guid>https://yrizos.com/writing/where-do-you-do-your-best-thinking/</guid><pubDate>Thu, 21 Nov 2024 12:09:28 UTC</pubDate><description><![CDATA[<p>I finished reading Gabrielle Zevin’s <em>Tomorrow, and Tomorrow, and Tomorrow</em> on a Saturday morning in October. I had been carrying the final chapter on my old Kindle for 2 weeks, finding reasons to delay. The story deserved better than a rushed ending.</p>
+<p>Jason Schreier’s <em>Blood, Sweat, and Pixels</em> pulls back the curtain on the chaotic, often heart-wrenching world of video game development. As a software developer and avid gamer, I was captivated by the stories of passion and struggle that define the industry. Through meticulous interviews and in-depth reporting, Schreier documents the journeys of beloved games like <em>Stardew Valley</em>, <em>The Witcher 3</em>, <em>Dragon Age: Inquisition</em>, and <em>Diablo III</em>. Each chapter offers a rare, insider’s perspective on the immense challenges developers face, from technical hurdles to publisher demands, while navigating the crushing reality of “crunch” culture.</p>]]></description><content:encoded><![CDATA[<blockquote>
+<p>”Oh, Jason,” one developer said. “It’s a miracle that any game is made.”</p>
+</blockquote>
+<p>Jason Schreier’s <em>Blood, Sweat, and Pixels</em> pulls back the curtain on the chaotic, often heart-wrenching world of video game development. As a software developer and avid gamer, I was captivated by the stories of passion and struggle that define the industry. Through meticulous interviews and in-depth reporting, Schreier documents the journeys of beloved games like <em>Stardew Valley</em>, <em>The Witcher 3</em>, <em>Dragon Age: Inquisition</em>, and <em>Diablo III</em>. Each chapter offers a rare, insider’s perspective on the immense challenges developers face, from technical hurdles to publisher demands, while navigating the crushing reality of “crunch” culture.</p>
+<h2 id="a-world-built-on-passion-and-sacrifice">A world built on passion and sacrifice</h2>
+<p>Schreier’s writing highlights the Herculean effort required to bring games to market. Developers routinely endure 100-hour workweeks, often without overtime pay or adequate recognition. Studios operate under immense pressure, with shifting deadlines, changing creative visions, and technical constraints. One designer compared the process to filmmaking, but “if you had to build an entirely new camera every time you started.”</p>
+<p>The chapter on <em>Dragon Age: Inquisition</em> stands out as a cautionary tale of overambition. Choosing the Frostbite engine, designed for first-person shooters, left the team grappling with a toolset unsuited for role-playing games. Developers spent over a year creating systems they couldn’t test, struggling to turn vision into reality. Schreier illustrates how even successful projects often flirt with disaster.</p>
+<h2 id="triumphs-and-heartbreaks">Triumphs and heartbreaks</h2>
+<p>From indie hits to AAA blockbusters, Schreier’s storytelling captures the human element behind the games. <em>Stardew Valley</em>, developed almost single-handedly by Eric Barone, is a testament to perseverance. Barone spent years refining the game, working in isolation to perfect every detail. The result: a global phenomenon.</p>
+<p>By contrast, the chapter on <em>Halo Wars</em> exposes the dysfunction of poorly managed teams. Ensemble Studios faced internal strife, with multiple teams pulling in different directions, ultimately leading to the studio’s closure. As one reviewer aptly noted, the industry can feel like an “amateur cult,” where basic engineering practices are often sacrificed in the name of art.</p>
+<h2 id="the-toll-of-crunchculture">The toll of crunch culture</h2>
+<p>The book doesn’t shy away from the darker side of game development. Crunch, the industry’s euphemism for unsustainable working hours, is a recurring theme. Schreier’s reporting on <em>Destiny</em> reveals how a complete story rewrite a year before launch led to chaos. Developers burned themselves out trying to meet impossible deadlines, a reality Schreier describes as endemic to the industry. “A lot of the problems that came up in <em>Destiny 1</em>…are results of having an unwavering schedule and unwieldy tools,” one source admitted.</p>
+<p>The toll is not just professional but deeply personal. Developers often sacrifice their health and personal lives to meet the demands of the job. One recurring question lingers throughout the book: is the passion for creating games worth the cost?</p>
+<h2 id="a-must-read-for-gamers-andcreators">A must-read for gamers and creators</h2>
+<p>Schreier’s <em>Blood, Sweat, and Pixels</em> is essential reading for anyone curious about the reality behind their favourite games. While it avoids delving into the technical nitty-gritty of coding, it masterfully explores the broader dynamics of game production, a balancing act between creativity, technology, and business.</p>
+<p>If you’ve ever marvelled at the artistry of games like <em>The Witcher 3</em> or <em>Uncharted 4</em>, this book will deepen your appreciation for the immense effort behind them. But it will also leave you questioning the sustainability of an industry built on such relentless sacrifice. As Schreier reminds us, every game represents a monumental act of passion and survival.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/writing/blood-sweat-and-pixels.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>Where Do You Do Your Best Thinking?</title><link>https://yrizos.com/writing/where-do-you-do-your-best-thinking/</link><guid>https://yrizos.com/writing/where-do-you-do-your-best-thinking/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Thu, 21 Nov 2024 12:09:28 UTC</pubDate><category>personal-growth</category><category>productivity</category><category>mental-health</category><category>work-life-balance</category><description><![CDATA[<p>I finished reading Gabrielle Zevin’s <em>Tomorrow, and Tomorrow, and Tomorrow</em> on a Saturday morning in October. I had been carrying the final chapter on my old Kindle for 2 weeks, finding reasons to delay. The story deserved better than a rushed ending.</p>
 <p>The forest was quiet that morning except for the wind moving through pine branches and the occasional distant shout from where the children were learning below.</p>
-<p>Every other Saturday, my daughter attends environmental consciousness classes at the Hymettus Forest. She learns through play, discovering how to care for nature, herself, and her group. What began as her educational experience has grown into a meaningful ritual for both of us.</p>]]></description></item><item><title>The Mars Rover Challenge in Rust: Houston, Do You Copy?</title><link>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-houston-do-you-copy/</link><guid>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-houston-do-you-copy/</guid><pubDate>Mon, 18 Nov 2024 11:59:45 UTC</pubDate><description><![CDATA[<p>Our rover navigation system is ready for its maiden voyage, but first, it needs to know where to go! The mission parameters have provided specific test scenarios to validate our implementation. My rover needs to interpret these commands:</p>
+<p>Every other Saturday, my daughter attends environmental consciousness classes at the Hymettus Forest. She learns through play, discovering how to care for nature, herself, and her group. What began as her educational experience has grown into a meaningful ritual for both of us.</p>]]></description><content:encoded><![CDATA[<p>I finished reading Gabrielle Zevin’s <em>Tomorrow, and Tomorrow, and Tomorrow</em> on a Saturday morning in October. I had been carrying the final chapter on my old Kindle for 2 weeks, finding reasons to delay. The story deserved better than a rushed ending.</p>
+<p>The forest was quiet that morning except for the wind moving through pine branches and the occasional distant shout from where the children were learning below.</p>
+<p>Every other Saturday, my daughter attends environmental consciousness classes at the Hymettus Forest. She learns through play, discovering how to care for nature, herself, and her group. What began as her educational experience has grown into a meaningful ritual for both of us.</p>
+<p>While she spends hours exploring, I walk. The path climbs through pine and cypress on the western slope, opening occasionally to views of Athens spreading below.</p>
+<p>Concrete stretches without pattern or plan, the city filling every direction with precious little green breaking the density. I pause sometimes to photograph it, the same chaotic view captured dozens of times.</p>
+<p>The walk continues with headphones on, an 80s and 90s playlist, moving without a destination.</p>
+<p>I started bringing the Kindle months earlier, thinking I would read between walks. Instead, the book became the walk. One chapter per visit, sometimes two if they were short.</p>
+<p>The story moved at the forest’s pace, and I let go of rushing it. It writes about friendship and creation, about building games together and the cost of making things that matter. I would read a section, then walk, then sit and read more.</p>
+<p>The book never felt like an interruption. It felt like part of the ritual.</p>
+<p>I believed for months that the forest was where I did my best thinking. Solitude, movement, fresh air, and time away from the constant pressure of work made it feel productive. Problems would untangle themselves while I walked, or so I thought.</p>
+<p>Architectural decisions would clarify while I sat reading. They never did.</p>
+<p>After more than a year of this routine, I started noticing a different pattern. On Monday morning, a technical trade-off I had been circling for weeks suddenly becomes clear. The conflicting priorities that seemed impossible to balance the previous Friday now have an obvious resolution.</p>
+<p>By Tuesday, the documentation I had been avoiding flows without resistance. Wednesday brings a conversation about system boundaries that cuts through weeks of circular discussion.</p>
+<p>This happens in the days after these walks, not during them. I am no longer trying when it surfaces, no longer grinding against the problem or forcing the decision. Time spent outside doesn’t just occupy me; it resets my mind, dissolves mental clutter, and sharpens my focus across work and life.</p>
+<p>I return from these walks with empty hands and the sense that something has shifted without my participation. The urgency that distorts every decision at work loosens its grip when I stop trying to think productively.</p>
+<p>She comes out of the forest muddy and animated, talking about the fort they built, or the beetle they found, or how one of the older kids taught her to weave grass. I come out with tired legs and a few photos. No notes, no breakthroughs, no plans.</p>
+<p>These few hours have become essential for me as a busy dad. They help me refocus and return to daily life with renewed energy.</p>
+<p>I actively seek these moments now while waiting for my little princess to complete her activities, understanding that the setting matters less than the practice itself.</p>
+<p>What these brief escapes reveal about mental renewal no amount of grinding at my desk ever could. Moving away might feel like a luxury in the middle of life’s demands, but it has proven the most effective way to maintain what complex decisions require. A walk or a quiet moment creates the space for recalibration, offering a refreshed perspective for what comes next.</p>
+<p>That October morning, finishing the book felt like completing a long project that was never really a project at all. Just something that happened slowly, in pieces, without pressure. I closed the Kindle and sat there, letting the ending settle.</p>
+<p>She would be done soon, full of stories about whatever small discovery the morning had brought. I had nothing equivalent to offer. Just a finished book and the quiet knowledge that some part of my mind had been clearing itself while I read about characters building games.</p>
+<p>The best decisions might require this same patience. The willingness to pull back when proximity distorts perspective. The discipline to stop analyzing and trust that answers will surface on their own schedule.</p>
+<p>I wonder how often I resist this at work, convinced that more hours or deeper analysis will break something open, when walking away might be exactly what the problem needs.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/writing/where-do-you-do-your-best-thinking.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item><item><title>The Mars Rover Challenge in Rust: Houston, Do You Copy?</title><link>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-houston-do-you-copy/</link><guid>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-houston-do-you-copy/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Mon, 18 Nov 2024 11:59:45 UTC</pubDate><category>r</category><category>u</category><category>s</category><category>t</category><category>,</category><category/><category>b</category><category>e</category><category>g</category><category>i</category><category>n</category><category>n</category><category>e</category><category>r</category><category>s</category><category>,</category><category/><category>k</category><category>a</category><category>t</category><category>a</category><description><![CDATA[<p>Our rover navigation system is ready for its maiden voyage, but first, it needs to know where to go! The mission parameters have provided specific test scenarios to validate our implementation. My rover needs to interpret these commands:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>5 5
 </span></span><span style="display:flex;"><span>1 2 N
 </span></span><span style="display:flex;"><span>LMLMLMLMM
@@ -21,14 +232,573 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1 3 N
 </span></span><span style="display:flex;"><span>5 1 E
 </span></span></code></pre></div><h2 id="establishing-communication-receiving-user-input">Establishing Communication: Receiving User Input</h2>
-<p>My first challenge was creating a communication channel with Mission Control. I turned to Rust&rsquo;s powerful <code>std::io</code> module to establish this vital link:</p>]]></description></item><item><title>The Mars Rover Challenge in Rust: Let's Get Moving!</title><link>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-lets-get-moving/</link><guid>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-lets-get-moving/</guid><pubDate>Mon, 18 Nov 2024 11:52:37 UTC</pubDate><description><![CDATA[<p>Now that the challenge is clear, it&rsquo;s time to start coding.</p>
+<p>My first challenge was creating a communication channel with Mission Control. I turned to Rust&rsquo;s powerful <code>std::io</code> module to establish this vital link:</p>]]></description><content:encoded><![CDATA[<p>Our rover navigation system is ready for its maiden voyage, but first, it needs to know where to go! The mission parameters have provided specific test scenarios to validate our implementation. My rover needs to interpret these commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>5 5
+</span></span><span style="display:flex;"><span>1 2 N
+</span></span><span style="display:flex;"><span>LMLMLMLMM
+</span></span><span style="display:flex;"><span>3 3 E
+</span></span><span style="display:flex;"><span>MMRMMRMRRM
+</span></span></code></pre></div><p>And respond with precise positional data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1 3 N
+</span></span><span style="display:flex;"><span>5 1 E
+</span></span></code></pre></div><h2 id="establishing-communication-receiving-user-input">Establishing Communication: Receiving User Input</h2>
+<p>My first challenge was creating a communication channel with Mission Control. I turned to Rust&rsquo;s powerful <code>std::io</code> module to establish this vital link:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/main.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">mod</span> direction;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> instruction;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> plateau;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> rover;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> std::io::{self, BufRead};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> stdin <span style="color:#f92672">=</span> io::stdin();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> lines <span style="color:#f92672">=</span> stdin.lock().lines();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#66d9ef">in</span> lines {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">match</span> line {
+</span></span><span style="display:flex;"><span>            Ok(content) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, content),
+</span></span><span style="display:flex;"><span>            Err(error) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">eprintln!</span>(<span style="color:#e6db74">&#34;Error reading line: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, error),
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This foundational setup acts as our mission control interface. Think of it as a radio receiver - it picks up incoming transmissions (user input) and echoes them back for confirmation. The <code>std::io</code> module serves as our communications array, carefully monitoring each incoming signal and reporting any transmission errors.</p>
+<p>To verify our communication systems, I ran some basic diagnostic tests:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cargo build
+</span></span></code></pre></div><p>Followed by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cargo run
+</span></span></code></pre></div><p>Perfect clarity - the system faithfully relays every message it receives, confirming our communication link is operational.</p>
+<h2 id="mapping-the-terrain-parsing-plateau-dimensions">Mapping the Terrain: Parsing Plateau Dimensions</h2>
+<p>A rover without terrain data is like a ship without a map. I needed to interpret the first transmission - the dimensions of our Martian plateau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/main.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> stdin <span style="color:#f92672">=</span> io::stdin();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> lines <span style="color:#f92672">=</span> stdin.lock().lines();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Some(Ok(plateau_dimensions)) <span style="color:#f92672">=</span> lines.next() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> plateau_parts: Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">i32</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> plateau_dimensions
+</span></span><span style="display:flex;"><span>            .split_whitespace()
+</span></span><span style="display:flex;"><span>            .map(<span style="color:#f92672">|</span>s<span style="color:#f92672">|</span> s.parse().unwrap())
+</span></span><span style="display:flex;"><span>            .collect();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;Plateau dimensions: </span><span style="color:#e6db74">{:?}</span><span style="color:#e6db74">&#34;</span>, plateau_parts);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The process here is like a surveyor reading coordinates. When Mission Control transmits the plateau dimensions, my code acts as a digital cartographer. It takes the raw input string, splits it at the spaces (like separating latitude and longitude), and converts each piece into a numerical value our rover can understand. The result? A precise digital map of our operational territory.</p>
+<h2 id="setting-the-scene-parsing-rovers-initial-state">Setting the Scene: Parsing Rover&rsquo;s Initial State</h2>
+<p>With our terrain mapped, it&rsquo;s time to establish our rover&rsquo;s starting position. Each rover deployment needs three crucial pieces of information - its x and y coordinates on our digital map, and which way it&rsquo;s facing when it touches down:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/main.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Some(Ok(rover_initial)) <span style="color:#f92672">=</span> lines.next() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> rover_parts: Vec<span style="color:#f92672">&lt;&amp;</span><span style="color:#66d9ef">str</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> rover_initial.split_whitespace().collect();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> x: <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> rover_parts[<span style="color:#ae81ff">0</span>].parse().unwrap();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> y: <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> rover_parts[<span style="color:#ae81ff">1</span>].parse().unwrap();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> direction <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> rover_parts[<span style="color:#ae81ff">2</span>] {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;N&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">NORTH</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;E&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">EAST</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;S&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">SOUTH</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;W&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">WEST</span>,
+</span></span><span style="display:flex;"><span>            _ <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">panic!</span>(<span style="color:#e6db74">&#34;Invalid direction&#34;</span>),
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;Rover initial position: (</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">), Direction: </span><span style="color:#e6db74">{:?}</span><span style="color:#e6db74">&#34;</span>, x, y, direction);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This setup phase is like a pre-launch checklist. The code carefully parses the deployment coordinates, treating them like a spacecraft&rsquo;s landing coordinates. The direction indicator - N, E, S, or W - gets translated into our rover&rsquo;s internal compass, ensuring it knows exactly which way it&rsquo;s facing when it begins its mission.</p>
+<h2 id="commanding-the-rover-parsing-movement-instructions">Commanding the Rover: Parsing Movement Instructions</h2>
+<p>Next came the most critical part of our mission control interface - interpreting the sequence of movement commands. Each instruction is like a carefully choreographed dance move, telling our rover to pirouette left (L), right (R), or march forward (M):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/main.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> Some(Ok(instructions_line)) <span style="color:#f92672">=</span> lines.next() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> instructions: Vec<span style="color:#f92672">&lt;</span>Instruction<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> instructions_line
+</span></span><span style="display:flex;"><span>            .chars()
+</span></span><span style="display:flex;"><span>            .filter_map(Instruction::from_char)
+</span></span><span style="display:flex;"><span>            .collect();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;Rover instructions: </span><span style="color:#e6db74">{:?}</span><span style="color:#e6db74">&#34;</span>, instructions);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Think of this as our rover&rsquo;s mission sequence - each character in the instruction line represents a specific maneuver. The code transforms these simple letters into actionable commands our rover can understand, like translating Morse code into clear instructions.</p>
+<h2 id="synchronizing-the-mission-integrating-components">Synchronizing the Mission: Integrating Components</h2>
+<p>With all our systems ready, it was time to bring everything together into a coordinated mission control center. Like launching a space mission, every component needs to work in perfect harmony:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/main.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> direction;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> instruction;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> plateau;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> rover;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> direction::Direction;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> instruction::Instruction;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> plateau::Plateau;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> rover::Rover;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> std::io::{self, BufRead};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> stdin <span style="color:#f92672">=</span> io::stdin();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> lines <span style="color:#f92672">=</span> stdin.lock().lines();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> plateau_dimensions <span style="color:#f92672">=</span> lines.next().unwrap().unwrap();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> plateau_parts: Vec<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">i32</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> plateau_dimensions
+</span></span><span style="display:flex;"><span>        .split_whitespace()
+</span></span><span style="display:flex;"><span>        .map(<span style="color:#f92672">|</span>s<span style="color:#f92672">|</span> s.parse().unwrap())
+</span></span><span style="display:flex;"><span>        .collect();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> rover_initial <span style="color:#f92672">=</span> lines.next().unwrap().unwrap();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> rover_parts: Vec<span style="color:#f92672">&lt;&amp;</span><span style="color:#66d9ef">str</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> rover_initial.split_whitespace().collect();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> x: <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> rover_parts[<span style="color:#ae81ff">0</span>].parse().unwrap();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> y: <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> rover_parts[<span style="color:#ae81ff">1</span>].parse().unwrap();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> direction <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> rover_parts[<span style="color:#ae81ff">2</span>] {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;N&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">NORTH</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;E&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">EAST</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;S&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">SOUTH</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;W&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">WEST</span>,
+</span></span><span style="display:flex;"><span>        _ <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">panic!</span>(<span style="color:#e6db74">&#34;Invalid direction&#34;</span>),
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> instructions_line <span style="color:#f92672">=</span> lines.next().unwrap().unwrap();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> instructions: Vec<span style="color:#f92672">&lt;</span>Instruction<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> instructions_line
+</span></span><span style="display:flex;"><span>        .chars()
+</span></span><span style="display:flex;"><span>        .filter_map(Instruction::from_char)
+</span></span><span style="display:flex;"><span>        .collect();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> plateau <span style="color:#f92672">=</span> Plateau::new(plateau_parts[<span style="color:#ae81ff">0</span>], plateau_parts[<span style="color:#ae81ff">1</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rover <span style="color:#f92672">=</span> Rover::new(x, y, direction, <span style="color:#f92672">&amp;</span>plateau);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    rover.execute_instructions(<span style="color:#f92672">&amp;</span>instructions);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Like a well-orchestrated space mission, each piece plays its crucial role. First, we establish our terrain parameters, then position our rover, and finally load its mission instructions. Every component - from the plateau dimensions to the rover&rsquo;s directional systems - comes together in a seamless integration.</p>
+<h2 id="broadcasting-the-results-sharing-rover-outcomes">Broadcasting the Results: Sharing Rover Outcomes</h2>
+<p>After each successful mission, Mission Control needs accurate position reports. I added some eyes to our rover:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/main.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{:?}</span><span style="color:#e6db74">&#34;</span>, rover.x(), rover.y(), rover.direction());
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When I put this to the test with a sample mission:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>5 5
+</span></span><span style="display:flex;"><span>1 2 N
+</span></span><span style="display:flex;"><span>LMLMLMLMM
+</span></span></code></pre></div><p>The rover reported back:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1 3 NORTH
+</span></span></code></pre></div><h2 id="tuning-the-details-refining-output-format">Tuning the Details: Refining Output Format</h2>
+<p>Mission Control protocols are strict - they expect position reports in a specific format. <code>1 3 NORTH</code> wouldn&rsquo;t do - they need <code>1 3 N</code>. Time for some message formatting:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/direction.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#[derive(Debug, PartialEq)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Direction</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">NORTH</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">EAST</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SOUTH</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WEST</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">impl</span> Direction {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">as_char</span>(<span style="color:#f92672">&amp;</span>self) -&gt; <span style="color:#66d9ef">char</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">match</span> self {
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">NORTH</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;N&#39;</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">EAST</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;E&#39;</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">SOUTH</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;S&#39;</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">WEST</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;W&#39;</span>,
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>A quick update to our transmission format:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/main.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, rover.x(), rover.y(), rover.direction().as_char());
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="final-touches-managing-multiple-rovers">Final Touches: Managing Multiple Rovers</h2>
+<p>The real challenge emerged when Mission Control revealed their master plan - coordinating multiple rovers! Each rover would receive its own set of instructions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>5 5
+</span></span><span style="display:flex;"><span>1 2 N
+</span></span><span style="display:flex;"><span>LMLMLMLMM
+</span></span><span style="display:flex;"><span>3 3 E
+</span></span><span style="display:flex;"><span>MMRMMRMRRM
+</span></span></code></pre></div><p>Like an air traffic controller managing multiple aircraft, I needed to coordinate multiple rover operations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/main.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> lines.len() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&gt;=</span> lines.len() {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> rover_initial <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>lines[i];
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> rover_parts: Vec<span style="color:#f92672">&lt;&amp;</span><span style="color:#66d9ef">str</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> rover_initial.split_whitespace().collect();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> x: <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> rover_parts[<span style="color:#ae81ff">0</span>].parse().unwrap();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> y: <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> rover_parts[<span style="color:#ae81ff">1</span>].parse().unwrap();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> direction <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> rover_parts[<span style="color:#ae81ff">2</span>] {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;N&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">NORTH</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;E&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">EAST</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;S&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">SOUTH</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;W&#34;</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">WEST</span>,
+</span></span><span style="display:flex;"><span>            _ <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">panic!</span>(<span style="color:#e6db74">&#34;Invalid direction&#34;</span>),
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> instructions_line <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>lines[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> instructions: Vec<span style="color:#f92672">&lt;</span>Instruction<span style="color:#f92672">&gt;</span> <span style="color:#f92672">=</span> instructions_line
+</span></span><span style="display:flex;"><span>            .chars()
+</span></span><span style="display:flex;"><span>            .filter_map(Instruction::from_char)
+</span></span><span style="display:flex;"><span>            .collect();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rover <span style="color:#f92672">=</span> Rover::new(x, y, direction, <span style="color:#f92672">&amp;</span>plateau);
+</span></span><span style="display:flex;"><span>        rover.execute_instructions(<span style="color:#f92672">&amp;</span>instructions);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, rover.x(), rover.y(), rover.direction().as_char());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When put to the test with our multi-rover scenario:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>5 5
+</span></span><span style="display:flex;"><span>1 2 N
+</span></span><span style="display:flex;"><span>LMLMLMLMM
+</span></span><span style="display:flex;"><span>3 3 E
+</span></span><span style="display:flex;"><span>MMRMMRMRRM
+</span></span></code></pre></div><p>Mission accomplished! Each rover reported its position perfectly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1 3 N
+</span></span><span style="display:flex;"><span>5 1 E
+</span></span></code></pre></div><h2 id="verifying-the-expedition-writing-integration-tests">Verifying the Expedition: Writing Integration Tests</h2>
+<p>Success is great, but in space exploration, we verify everything twice. I needed comprehensive tests to ensure our multi-rover coordination system worked flawlessly under all conditions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// tests/integration_test.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">use</span> std::process::{Command, Stdio};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> std::io::Write;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">test_multiple_rovers</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> child <span style="color:#f92672">=</span> Command::new(<span style="color:#e6db74">&#34;cargo&#34;</span>)
+</span></span><span style="display:flex;"><span>        .arg(<span style="color:#e6db74">&#34;run&#34;</span>)
+</span></span><span style="display:flex;"><span>        .stdin(Stdio::piped())
+</span></span><span style="display:flex;"><span>        .stdout(Stdio::piped())
+</span></span><span style="display:flex;"><span>        .spawn()
+</span></span><span style="display:flex;"><span>        .expect(<span style="color:#e6db74">&#34;Failed to start cargo run&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> stdin <span style="color:#f92672">=</span> child.stdin.as_mut().expect(<span style="color:#e6db74">&#34;Failed to open stdin&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> input <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;5 5</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">1 2 N</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">LMLMLMLMM</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">3 3 E</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">MMRMMRMRRM</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>        stdin.write_all(input).expect(<span style="color:#e6db74">&#34;Failed to write to stdin&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> output <span style="color:#f92672">=</span> child.wait_with_output().expect(<span style="color:#e6db74">&#34;Failed to read stdout&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> expected_output <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1 3 N</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">5 1 E</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> actual_output <span style="color:#f92672">=</span> String::from_utf8_lossy(<span style="color:#f92672">&amp;</span>output.stdout);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">assert_eq!</span>(actual_output, expected_output);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This test suite acts like a mission simulator. It sends commands just like Mission Control would and verifies that our rovers respond exactly as expected. Think of it as a dress rehearsal for the real Mars mission - every command must execute perfectly, every position report must be precise.</p>
+<p>I run the full battery of tests with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cargo test
+</span></span></code></pre></div><p>When every test passes, I know our rovers are ready for their Martian adventure. The integration tests confirm that our entire command and control system - from receiving instructions to coordinating multiple rovers to reporting positions - works in perfect harmony. This comprehensive testing approach ensures that when our rovers touch down on Mars, they&rsquo;ll execute their missions flawlessly, navigating the red planet&rsquo;s terrain with precision and reliability.</p>
+<hr>
+<p>The journey through this challenge has finally reached its conclusion, and what a gratifying experience it turned out to be. While Rust Analyzer flags a couple of minor issues, the robust test suite provides confidence that these will be straightforward fixes.</p>
+<p>The code is available for <a href="https://github.com/yrizos/mars-rover-rs">perusal on Github</a>, marking the end of this rewarding coding adventure.</p>
+]]></content:encoded></item><item><title>The Mars Rover Challenge in Rust: Let's Get Moving!</title><link>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-lets-get-moving/</link><guid>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-lets-get-moving/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Mon, 18 Nov 2024 11:52:37 UTC</pubDate><category>r</category><category>u</category><category>s</category><category>t</category><category>,</category><category/><category>b</category><category>e</category><category>g</category><category>i</category><category>n</category><category>n</category><category>e</category><category>r</category><category>s</category><category>,</category><category/><category>k</category><category>a</category><category>t</category><category>a</category><description><![CDATA[<p>Now that the challenge is clear, it&rsquo;s time to start coding.</p>
 <p>To kick things off, I got my project set up using Cargo – nothing fancy, just the basics:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cargo new mars-rover-rust
 </span></span><span style="display:flex;"><span>cd mars-rover-rust
 </span></span></code></pre></div><h2 id="charting-the-course-defining-directions">Charting the Course: Defining Directions</h2>
-<p>First up, I needed to figure out how our little rover would know which way it&rsquo;s facing. I went with the classics here – good old North, East, South, and West. Here&rsquo;s how I set that up in Rust:</p>]]></description></item><item><title>The Mars Rover Challenge in Rust: Setting the Scene</title><link>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-setting-the-scene/</link><guid>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-setting-the-scene/</guid><pubDate>Mon, 18 Nov 2024 11:52:03 UTC</pubDate><description><![CDATA[<p>As a Rust beginner, I was looking for a project that would both teach me the language fundamentals and keep me engaged. The Mars Rover Challenge fits perfectly - it&rsquo;s an intriguing problem that simulates robotic exploration of Mars while introducing key programming concepts.</p>
+<p>First up, I needed to figure out how our little rover would know which way it&rsquo;s facing. I went with the classics here – good old North, East, South, and West. Here&rsquo;s how I set that up in Rust:</p>]]></description><content:encoded><![CDATA[<p>Now that the challenge is clear, it&rsquo;s time to start coding.</p>
+<p>To kick things off, I got my project set up using Cargo – nothing fancy, just the basics:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cargo new mars-rover-rust
+</span></span><span style="display:flex;"><span>cd mars-rover-rust
+</span></span></code></pre></div><h2 id="charting-the-course-defining-directions">Charting the Course: Defining Directions</h2>
+<p>First up, I needed to figure out how our little rover would know which way it&rsquo;s facing. I went with the classics here – good old North, East, South, and West. Here&rsquo;s how I set that up in Rust:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/direction.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#[derive(Debug, PartialEq)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Direction</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">NORTH</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">EAST</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SOUTH</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">WEST</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Pretty straightforward, right? I added those <code>Debug</code> and <code>PartialEq</code> traits since I knew we&rsquo;d want to peek at these values during debugging and compare them in our tests.</p>
+<h2 id="steering-the-rover-implementing-turns">Steering the Rover: Implementing Turns</h2>
+<p>Now for the fun part – teaching our rover how to turn! I created a <code>Rover</code> struct and gave it some basic turning abilities:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/rover.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">use</span> <span style="color:#66d9ef">crate</span>::direction::Direction;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#[derive(Debug, PartialEq)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Rover</span> {
+</span></span><span style="display:flex;"><span>    x: <span style="color:#66d9ef">i32</span>,
+</span></span><span style="display:flex;"><span>    y: <span style="color:#66d9ef">i32</span>,
+</span></span><span style="display:flex;"><span>    direction: <span style="color:#a6e22e">Direction</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">impl</span> Rover {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">new</span>(x: <span style="color:#66d9ef">i32</span>, y: <span style="color:#66d9ef">i32</span>, direction: <span style="color:#a6e22e">Direction</span>) -&gt; <span style="color:#a6e22e">Self</span> {
+</span></span><span style="display:flex;"><span>        Rover { x, y, direction }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">turn_left</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self) {
+</span></span><span style="display:flex;"><span>        self.direction <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> self.direction {
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">NORTH</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">WEST</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">WEST</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">SOUTH</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">SOUTH</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">EAST</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">EAST</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">NORTH</span>,
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">turn_right</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self) {
+</span></span><span style="display:flex;"><span>        self.direction <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> self.direction {
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">NORTH</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">EAST</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">EAST</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">SOUTH</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">SOUTH</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">WEST</span>,
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">WEST</span> <span style="color:#f92672">=&gt;</span> Direction::<span style="color:#66d9ef">NORTH</span>,
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Of course, I had to make sure our rover could actually turn properly, so I wrote some tests to put it through its paces:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/rover.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#[cfg(test)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> tests {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">super</span>::<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">crate</span>::direction::Direction;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">test_turn_left</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rover <span style="color:#f92672">=</span> Rover::new(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, Direction::<span style="color:#66d9ef">NORTH</span>);
+</span></span><span style="display:flex;"><span>        rover.turn_left();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">WEST</span>);
+</span></span><span style="display:flex;"><span>        rover.turn_left();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">SOUTH</span>);
+</span></span><span style="display:flex;"><span>        rover.turn_left();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">EAST</span>);
+</span></span><span style="display:flex;"><span>        rover.turn_left();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">NORTH</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">test_turn_right</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rover <span style="color:#f92672">=</span> Rover::new(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, Direction::<span style="color:#66d9ef">NORTH</span>);
+</span></span><span style="display:flex;"><span>        rover.turn_right();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">EAST</span>);
+</span></span><span style="display:flex;"><span>        rover.turn_right();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">SOUTH</span>);
+</span></span><span style="display:flex;"><span>        rover.turn_right();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">WEST</span>);
+</span></span><span style="display:flex;"><span>        rover.turn_right();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">NORTH</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>A quick <code>cargo test</code> lets us know if everything&rsquo;s working as planned.</p>
+<h2 id="mapping-the-terrain-setting-up-the-plateau">Mapping the Terrain: Setting Up the Plateau</h2>
+<p>Here&rsquo;s where things got interesting – I realized our rover needed some boundaries to roam within. Can&rsquo;t have it wandering off into space! So I created a <code>Plateau</code> to keep it in check:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/plateau.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#[derive(Debug, PartialEq)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Plateau</span> {
+</span></span><span style="display:flex;"><span>    width: <span style="color:#66d9ef">i32</span>,
+</span></span><span style="display:flex;"><span>    height: <span style="color:#66d9ef">i32</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">impl</span> Plateau {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">new</span>(width: <span style="color:#66d9ef">i32</span>, height: <span style="color:#66d9ef">i32</span>) -&gt; <span style="color:#a6e22e">Self</span> {
+</span></span><span style="display:flex;"><span>        Plateau { width, height }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">is_within_bounds</span>(<span style="color:#f92672">&amp;</span>self, x: <span style="color:#66d9ef">i32</span>, y: <span style="color:#66d9ef">i32</span>) -&gt; <span style="color:#66d9ef">bool</span> {
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> x <span style="color:#f92672">&lt;=</span> self.width <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> y <span style="color:#f92672">&lt;=</span> self.height
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="advancing-the-rover-moving-forward">Advancing the Rover: Moving Forward</h2>
+<p>With our playground set up, it was time to teach our rover how to actually move around:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/rover.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">use</span> <span style="color:#66d9ef">crate</span>::plateau::Plateau;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">impl</span> Rover {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">move_forward</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self, plateau: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">Plateau</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> (new_x, new_y) <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> self.direction {
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">NORTH</span> <span style="color:#f92672">=&gt;</span> (self.x, self.y <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">EAST</span> <span style="color:#f92672">=&gt;</span> (self.x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, self.y),
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">SOUTH</span> <span style="color:#f92672">=&gt;</span> (self.x, self.y <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>            Direction::<span style="color:#66d9ef">WEST</span> <span style="color:#f92672">=&gt;</span> (self.x <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, self.y),
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> plateau.is_within_bounds(new_x, new_y) {
+</span></span><span style="display:flex;"><span>            self.x <span style="color:#f92672">=</span> new_x;
+</span></span><span style="display:flex;"><span>            self.y <span style="color:#f92672">=</span> new_y;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And naturally, we needed to make sure it behaves:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/rover.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#[cfg(test)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> tests {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">super</span>::<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">crate</span>::plateau::Plateau;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">test_move_forward_within_bounds</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> plateau <span style="color:#f92672">=</span> Plateau::new(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rover <span style="color:#f92672">=</span> Rover::new(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, Direction::<span style="color:#66d9ef">NORTH</span>);
+</span></span><span style="display:flex;"><span>        rover.move_forward(<span style="color:#f92672">&amp;</span>plateau);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.x, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.y, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">test_move_forward_out_of_bounds</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> plateau <span style="color:#f92672">=</span> Plateau::new(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rover <span style="color:#f92672">=</span> Rover::new(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, Direction::<span style="color:#66d9ef">SOUTH</span>);
+</span></span><span style="display:flex;"><span>        rover.move_forward(<span style="color:#f92672">&amp;</span>plateau);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.x, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.y, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="commanding-the-rover-processing-instructions">Commanding the Rover: Processing Instructions</h2>
+<p>Finally, the piece that brings it all together – teaching our rover to follow commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/rover.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">impl</span> Rover {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">execute_commands</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self, commands: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>, plateau: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">Plateau</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> command <span style="color:#66d9ef">in</span> commands.chars() {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">match</span> command {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;L&#39;</span> <span style="color:#f92672">=&gt;</span> self.turn_left(),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;R&#39;</span> <span style="color:#f92672">=&gt;</span> self.turn_right(),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;M&#39;</span> <span style="color:#f92672">=&gt;</span> self.move_forward(plateau),
+</span></span><span style="display:flex;"><span>                _ <span style="color:#f92672">=&gt;</span> {},
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And here&rsquo;s the grand finale of our test suite:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// src/rover.rs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#[cfg(test)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">mod</span> tests {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">super</span>::<span style="color:#f92672">*</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">crate</span>::direction::Direction;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">crate</span>::plateau::Plateau;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> <span style="color:#66d9ef">crate</span>::instruction::Instruction;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Existing tests...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#[test]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">test_execute_instructions</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> plateau <span style="color:#f92672">=</span> Plateau::new(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rover <span style="color:#f92672">=</span> Rover::new(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, Direction::<span style="color:#66d9ef">NORTH</span>, <span style="color:#f92672">&amp;</span>plateau);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> instructions <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            Instruction::<span style="color:#66d9ef">LEFT</span>, Instruction::<span style="color:#66d9ef">MOVE</span>, Instruction::<span style="color:#66d9ef">LEFT</span>, Instruction::<span style="color:#66d9ef">MOVE</span>,
+</span></span><span style="display:flex;"><span>            Instruction::<span style="color:#66d9ef">LEFT</span>, Instruction::<span style="color:#66d9ef">MOVE</span>, Instruction::<span style="color:#66d9ef">LEFT</span>, Instruction::<span style="color:#66d9ef">MOVE</span>,
+</span></span><span style="display:flex;"><span>            Instruction::<span style="color:#66d9ef">MOVE</span>
+</span></span><span style="display:flex;"><span>        ];
+</span></span><span style="display:flex;"><span>        rover.execute_instructions(<span style="color:#f92672">&amp;</span>instructions);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.x, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.y, <span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">NORTH</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> rover <span style="color:#f92672">=</span> Rover::new(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, Direction::<span style="color:#66d9ef">EAST</span>, <span style="color:#f92672">&amp;</span>plateau);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> instructions <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>            Instruction::<span style="color:#66d9ef">MOVE</span>, Instruction::<span style="color:#66d9ef">MOVE</span>, Instruction::<span style="color:#66d9ef">RIGHT</span>, Instruction::<span style="color:#66d9ef">MOVE</span>,
+</span></span><span style="display:flex;"><span>            Instruction::<span style="color:#66d9ef">MOVE</span>, Instruction::<span style="color:#66d9ef">RIGHT</span>, Instruction::<span style="color:#66d9ef">MOVE</span>, Instruction::<span style="color:#66d9ef">RIGHT</span>,
+</span></span><span style="display:flex;"><span>            Instruction::<span style="color:#66d9ef">RIGHT</span>, Instruction::<span style="color:#66d9ef">MOVE</span>
+</span></span><span style="display:flex;"><span>        ];
+</span></span><span style="display:flex;"><span>        rover.execute_instructions(<span style="color:#f92672">&amp;</span>instructions);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.x, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.y, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">assert_eq!</span>(rover.direction, Direction::<span style="color:#66d9ef">EAST</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<p>And there you have it! Our Mars Rover is now ready to explore its virtual plateau. I&rsquo;ve got to say, as someone still getting their feet wet with Rust, seeing this all come together has been incredibly satisfying. The code might not be perfect by Rust standards, but hey, it works!</p>
+<p>Next up on my list is handling user input and prettifying the output. But that&rsquo;s a story for another day!</p>
+]]></content:encoded></item><item><title>The Mars Rover Challenge in Rust: Setting the Scene</title><link>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-setting-the-scene/</link><guid>https://yrizos.com/writing/the-mars-rover-challenge-in-rust-setting-the-scene/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Mon, 18 Nov 2024 11:52:03 UTC</pubDate><category>r</category><category>u</category><category>s</category><category>t</category><category>,</category><category/><category>b</category><category>e</category><category>g</category><category>i</category><category>n</category><category>n</category><category>e</category><category>r</category><category>s</category><category>,</category><category/><category>k</category><category>a</category><category>t</category><category>a</category><description><![CDATA[<p>As a Rust beginner, I was looking for a project that would both teach me the language fundamentals and keep me engaged. The Mars Rover Challenge fits perfectly - it&rsquo;s an intriguing problem that simulates robotic exploration of Mars while introducing key programming concepts.</p>
 <h2 id="setting-the-scene">Setting the Scene</h2>
-<p>Imagine controlling rovers tasked with exploring the Martian terrain. These rovers need to navigate a rectangular plateau while sending visual data back to Earth. The challenge involves translating simple commands into precise rover movements, and dealing with positioning, orientation, and grid-based navigation.</p>]]></description></item><item><title>Setting Up Visual Studio Code for Rust on macOS</title><link>https://yrizos.com/writing/setting-up-visual-studio-code-for-rust-on-macos/</link><guid>https://yrizos.com/writing/setting-up-visual-studio-code-for-rust-on-macos/</guid><pubDate>Sun, 17 Nov 2024 11:50:12 UTC</pubDate><description><![CDATA[<p>Setting up Visual Studio Code for Rust development is quick and straightforward. While I prefer PHPStorm for larger projects, VS Code is perfect for smaller ones. It’s fast, lightweight, and just works. For this guide, I’m assuming you already have <a href="https://dev.to/yrizos/installing-rust-on-macos-with-homebrew-51fk">Rust installed via Homebrew</a>.</p>
+<p>Imagine controlling rovers tasked with exploring the Martian terrain. These rovers need to navigate a rectangular plateau while sending visual data back to Earth. The challenge involves translating simple commands into precise rover movements, and dealing with positioning, orientation, and grid-based navigation.</p>]]></description><content:encoded><![CDATA[<p>As a Rust beginner, I was looking for a project that would both teach me the language fundamentals and keep me engaged. The Mars Rover Challenge fits perfectly - it&rsquo;s an intriguing problem that simulates robotic exploration of Mars while introducing key programming concepts.</p>
+<h2 id="setting-the-scene">Setting the Scene</h2>
+<p>Imagine controlling rovers tasked with exploring the Martian terrain. These rovers need to navigate a rectangular plateau while sending visual data back to Earth. The challenge involves translating simple commands into precise rover movements, and dealing with positioning, orientation, and grid-based navigation.</p>
+<h2 id="the-challenge">The Challenge</h2>
+<p>A squad of robotic rovers is to be landed by NASA on a plateau on Mars.</p>
+<p>This plateau, which is curiously rectangular, must be navigated by the rovers so that their onboard cameras can get a complete view of the surrounding terrain to send back to Earth. A rover&rsquo;s position is represented by a combination of x and y co-ordinates and a letter representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position might be <code>0, 0, N</code>, which means the rover is in the bottom left corner and facing North.</p>
+<p>In order to control a rover, NASA sends a simple string of letters. The possible letters are <code>L</code>, <code>R</code>, and <code>M</code>. <code>L</code> and <code>R</code> make the rover spin 90 degrees left or right respectively, without moving from its current spot.</p>
+<p><code>M</code> means move forward one grid point and maintain the same heading.</p>
+<p>Assume that the square directly North from <code>(x, y)</code> is <code>(x, y+1)</code>.</p>
+<h3 id="input">Input:</h3>
+<p>The first line of input is the upper-right coordinates of the plateau. The lower-left coordinates are assumed to be <code>0,0</code>.
+The rest of the input is information pertaining to the rovers that have been deployed. Each rover has two lines of input. The first line gives the rover&rsquo;s position, and the second line is a series of instructions telling the rover how to explore the plateau.
+The position is made up of two integers and a letter separated by spaces, corresponding to the x and y coordinates and the rover&rsquo;s orientation.</p>
+<p>Each rover will be finished sequentially, which means that the second rover won&rsquo;t start to move until the first one has finished moving.</p>
+<h3 id="output">Output:</h3>
+<p>The output for each rover should be its final coordinates and heading.</p>
+<h3 id="test-input">Test Input:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>5 5
+</span></span><span style="display:flex;"><span>1 2 N
+</span></span><span style="display:flex;"><span>LMLMLMLMM
+</span></span><span style="display:flex;"><span>3 3 E
+</span></span><span style="display:flex;"><span>MMRMMRMRRM
+</span></span></code></pre></div><h3 id="test-output">Test Output:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>1 3 N
+</span></span><span style="display:flex;"><span>5 1 E
+</span></span></code></pre></div><h2 id="breaking-down-the-requirements">Breaking Down the Requirements</h2>
+<p>Let&rsquo;s analyze what we&rsquo;re dealing with:</p>
+<ol>
+<li>
+<p><strong>The Environment</strong></p>
+<ul>
+<li>A rectangular plateau defined by coordinates</li>
+<li>Grid-based movement system</li>
+<li>Origin point (0,0) at bottom-left</li>
+</ul>
+</li>
+<li>
+<p><strong>Rover Capabilities</strong></p>
+<ul>
+<li>Position tracking (x,y coordinates)</li>
+<li>Cardinal direction orientation (N,E,S,W)</li>
+<li>Three basic commands:
+<ul>
+<li>Rotate left 90° (L)</li>
+<li>Rotate right 90° (R)</li>
+<li>Move forward one grid unit (M)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>System Behavior</strong></p>
+<ul>
+<li>Sequential rover movement (one at a time)</li>
+<li>Position updates after each move</li>
+<li>Boundary awareness required</li>
+<li>Final position reporting</li>
+</ul>
+</li>
+</ol>
+<h2 id="why-this-is-great-for-learning">Why This is Great for Learning</h2>
+<p>This challenge touches on several fundamental Rust concepts:</p>
+<ul>
+<li>Enums (for directions and commands)</li>
+<li>Structs (for rover and plateau representation)</li>
+<li>Error handling (for boundary violations)</li>
+<li>String parsing</li>
+<li>Vector operations</li>
+<li>Testing</li>
+</ul>
+<hr>
+<p>P.S. If you&rsquo;d like to dive straight into the code, you can find the implementation on <a href="https://github.com/yrizos/mars-rover-rs">GitHub</a>.</p>
+]]></content:encoded></item><item><title>Setting Up Visual Studio Code for Rust on macOS</title><link>https://yrizos.com/writing/setting-up-visual-studio-code-for-rust-on-macos/</link><guid>https://yrizos.com/writing/setting-up-visual-studio-code-for-rust-on-macos/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Sun, 17 Nov 2024 11:50:12 UTC</pubDate><category>r</category><category>u</category><category>s</category><category>t</category><category>,</category><category/><category>v</category><category>s</category><category>c</category><category>o</category><category>d</category><category>e</category><category>,</category><category/><category>b</category><category>e</category><category>g</category><category>i</category><category>n</category><category>n</category><category>e</category><category>r</category><category>s</category><description><![CDATA[<p>Setting up Visual Studio Code for Rust development is quick and straightforward. While I prefer PHPStorm for larger projects, VS Code is perfect for smaller ones. It’s fast, lightweight, and just works. For this guide, I’m assuming you already have <a href="https://dev.to/yrizos/installing-rust-on-macos-with-homebrew-51fk">Rust installed via Homebrew</a>.</p>
 <h3 id="step-1-grab-vs-code">Step 1: Grab VS Code</h3>
 <p>Head over to <a href="https://code.visualstudio.com/">code.visualstudio.com</a> and download VS Code. Follow the installation instructions provided for MacOS to set it up.</p>
 <h3 id="step-2-create-a-hello-world-project-with-cargo">Step 2: Create a Hello World Project with cargo</h3>
@@ -44,7 +814,92 @@
 <li>Open the project in VS Code:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>code .
-</span></span></code></pre></div><p>If this command doesn’t work, you may need to add VS Code to your PATH. Open the Command Palette (⇧ + ⌘ + P), type &ldquo;Shell Command,&rdquo; and select &ldquo;Install &lsquo;code&rsquo; command in PATH.&rdquo; Then try again.</p>]]></description></item><item><title>Installing Rust on macOS with Homebrew</title><link>https://yrizos.com/writing/installing-rust-on-macos-with-homebrew/</link><guid>https://yrizos.com/writing/installing-rust-on-macos-with-homebrew/</guid><pubDate>Sun, 17 Nov 2024 09:28:59 UTC</pubDate><description><![CDATA[<p>This Sunday, I had a bit of extra time, so I decided to brush up on <a href="https://www.rust-lang.org/">Rust</a>. Whether you are a seasoned developer or just starting out, getting your tools set up is always the first step.</p>
+</span></span></code></pre></div><p>If this command doesn’t work, you may need to add VS Code to your PATH. Open the Command Palette (⇧ + ⌘ + P), type &ldquo;Shell Command,&rdquo; and select &ldquo;Install &lsquo;code&rsquo; command in PATH.&rdquo; Then try again.</p>]]></description><content:encoded><![CDATA[<p>Setting up Visual Studio Code for Rust development is quick and straightforward. While I prefer PHPStorm for larger projects, VS Code is perfect for smaller ones. It’s fast, lightweight, and just works. For this guide, I’m assuming you already have <a href="https://dev.to/yrizos/installing-rust-on-macos-with-homebrew-51fk">Rust installed via Homebrew</a>.</p>
+<h3 id="step-1-grab-vs-code">Step 1: Grab VS Code</h3>
+<p>Head over to <a href="https://code.visualstudio.com/">code.visualstudio.com</a> and download VS Code. Follow the installation instructions provided for MacOS to set it up.</p>
+<h3 id="step-2-create-a-hello-world-project-with-cargo">Step 2: Create a Hello World Project with cargo</h3>
+<ol>
+<li>Open Terminal and create a new Rust project:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cargo new hello_world
+</span></span></code></pre></div><ol start="2">
+<li>Navigate into the project folder:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd hello_world
+</span></span></code></pre></div><ol start="3">
+<li>Open the project in VS Code:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>code .
+</span></span></code></pre></div><p>If this command doesn’t work, you may need to add VS Code to your PATH. Open the Command Palette (⇧ + ⌘ + P), type &ldquo;Shell Command,&rdquo; and select &ldquo;Install &lsquo;code&rsquo; command in PATH.&rdquo; Then try again.</p>
+<h3 id="step-3-add-the-rust-analyzer-extension">Step 3: Add the Rust Analyzer Extension</h3>
+<ol>
+<li>Open VS Code and press ⇧ + ⌘ + X to open the Extensions view.</li>
+<li>Search for &ldquo;Rust Analyzer&rdquo; and click <strong>Install</strong>.</li>
+</ol>
+<p>Rust Analyzer provides features like syntax highlighting, error checking, and improved code navigation.</p>
+<p>Once the extension is installed, open the <code>main.rs</code> file located in the <code>src</code> folder of your project. You should now see:</p>
+<ul>
+<li>Syntax highlighting: Keywords, variables, and functions are coloured differently for better readability.</li>
+<li>Inline error checking: If there are issues in your code, they will be underlined in red, with detailed error messages displayed when you hover over the issue.</li>
+<li>Code completion: Start typing and you’ll see a list of suggestions based on the context.</li>
+</ul>
+<p>To test the error checking feature, introduce a simple mistake in your code. For example, change the line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+</span></span></code></pre></div><p>to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#a6e22e">rintln!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+</span></span></code></pre></div><p>You’ll immediately see an error indicating that Rust cannot find macro <code>rintln</code>.</p>
+<h3 id="step-4-set-up-auto-formatting">Step 4: Set up auto-formatting</h3>
+<ol>
+<li>Enable auto-formatting in VS Code:
+<ul>
+<li>Open the settings (⌘ + ,).</li>
+<li>Search for &ldquo;Format On Save.&rdquo;</li>
+<li>Enable the &ldquo;Editor: Format On Save&rdquo; option.</li>
+</ul>
+</li>
+</ol>
+<p>This ensures your code is automatically formatted whenever you save. To test auto-formatting, open <code>main.rs</code> and intentionally mess up the formatting. For instance, write:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>( ){<span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);}
+</span></span></code></pre></div><p>Save the file. Auto-formatting will fix it immediately, and your code will look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="step-5-run-your-program-with-cargo">Step 5: Run your program with cargo</h3>
+<ol>
+<li>
+<p>Open the integrated terminal in VS Code by pressing ⌃ + <code>`</code> (Control and backtick).</p>
+</li>
+<li>
+<p>Run the program:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cargo run
+</span></span></code></pre></div><ol start="3">
+<li>You should see the output:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Hello, world!
+</span></span></code></pre></div><p>And there you have it. Your setup is ready, and you’re all set to dive into Rust development with VS Code. Time to build something amazing!</p>
+]]></content:encoded></item><item><title>Installing Rust on macOS with Homebrew</title><link>https://yrizos.com/writing/installing-rust-on-macos-with-homebrew/</link><guid>https://yrizos.com/writing/installing-rust-on-macos-with-homebrew/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Sun, 17 Nov 2024 09:28:59 UTC</pubDate><category>r</category><category>u</category><category>s</category><category>t</category><category>,</category><category/><category>h</category><category>o</category><category>m</category><category>e</category><category>b</category><category>r</category><category>e</category><category>w</category><category>,</category><category/><category>b</category><category>e</category><category>g</category><category>i</category><category>n</category><category>n</category><category>e</category><category>r</category><category>s</category><description><![CDATA[<p>This Sunday, I had a bit of extra time, so I decided to brush up on <a href="https://www.rust-lang.org/">Rust</a>. Whether you are a seasoned developer or just starting out, getting your tools set up is always the first step.</p>
 <p>While Rust’s official installation tool, <code>rustup</code>, is excellent and versatile, I prefer using <a href="https://brew.sh/">Homebrew</a> whenever possible. It is simple, familiar, and keeps everything neatly managed in one place.</p>
 <h2 id="step-1-install-rust">Step 1: Install Rust</h2>
-<p>Launch the terminal and run the following command to install Rust:</p>]]></description></item></channel></rss>
+<p>Launch the terminal and run the following command to install Rust:</p>]]></description><content:encoded><![CDATA[<p>This Sunday, I had a bit of extra time, so I decided to brush up on <a href="https://www.rust-lang.org/">Rust</a>. Whether you are a seasoned developer or just starting out, getting your tools set up is always the first step.</p>
+<p>While Rust’s official installation tool, <code>rustup</code>, is excellent and versatile, I prefer using <a href="https://brew.sh/">Homebrew</a> whenever possible. It is simple, familiar, and keeps everything neatly managed in one place.</p>
+<h2 id="step-1-install-rust">Step 1: Install Rust</h2>
+<p>Launch the terminal and run the following command to install Rust:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install rust
+</span></span></code></pre></div><p>This will install both Rust and Cargo, Rust’s package manager and build system. Cargo simplifies managing dependencies, building projects, and running tests in Rust. It is an essential tool for any Rust developer.</p>
+<h2 id="step-2-verify-the-installation">Step 2: Verify the Installation</h2>
+<p>After installation, confirm everything is set up correctly by checking the Rust version:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>rustc --version
+</span></span><span style="display:flex;"><span>cargo --version
+</span></span></code></pre></div><p>If the command returns the Rust version number, you are all set!</p>
+<h2 id="step-3-keeping-rust-updated">Step 3: Keeping Rust Updated</h2>
+<p>Homebrew makes it easy to update Rust when new versions are released. Periodically run the following commands to keep Rust up to date:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew update
+</span></span><span style="display:flex;"><span>brew upgrade rust
+</span></span></code></pre></div><p>That is it, you are ready to code in Rust! 🎉</p>
+]]></content:encoded></item><item><title>Breaking Down the Monolith</title><link>https://yrizos.com/speaking/breaking-down-the-monolith/</link><guid>https://yrizos.com/speaking/breaking-down-the-monolith/</guid><author>Yannis Rizos (https://yrizos.com/)</author><pubDate>Fri, 05 May 2023 10:00:00 +0300</pubDate><category>talk</category><category>software-engineering</category><category>engineering-leadership</category><category>technical-debt</category><description>&lt;p>The Athens Megaron International Conference Center is an imposing place. Walking into it that morning felt like stepping into a different league. It was my first time presenting to a large audience, and we had no idea what to expect. Five minutes before the session started, the room was already packed. People were standing along the walls and at the back, trying to find a spot. It was equal parts exhilarating and nerve-racking.&lt;/p></description><content:encoded><![CDATA[<p>The Athens Megaron International Conference Center is an imposing place. Walking into it that morning felt like stepping into a different league. It was my first time presenting to a large audience, and we had no idea what to expect. Five minutes before the session started, the room was already packed. People were standing along the walls and at the back, trying to find a spot. It was equal parts exhilarating and nerve-racking.</p>
+<p>I was co-presenting with <a href="https://www.linkedin.com/in/poursal/">Vassilis Poursalidis</a>, and together we talked about our shared experience modernizing <a href="https://www.talentlms.com/">TalentLMS</a>. We wanted to show what it looks like to evolve a successful product without losing the qualities that made it thrive. The session focused on how we approached change in a live, widely used system, where stability and innovation must coexist.</p>
+<p>We spoke about architecture, but also about people. Refactoring code is never just technical. It affects how teams collaborate, make decisions, and grow. Training, reskilling, and new team structures were part of the same story.</p>
+<p>Looking out at that full room, it was hard not to feel that we were experiencing our own version of what we were describing. Transformation is always a mix of excitement and uncertainty. What mattered most that day was sharing how we learned to navigate both.</p>
+]]></content:encoded><media:content url="https://yrizos.com/images/speaking/breaking-down-the-monolith-devoxx-greece-may2023/slide-01.png" type="image/png" medium="image"><media:title>Home</media:title></media:content></item></channel></rss>
