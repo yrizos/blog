@@ -48,7 +48,7 @@
   {{- if $description }}
     <meta name="description" content="{{ $description | htmlEscape }}">
   {{- end }}
-  {{- $isArticle := or (eq .Section "writing") (eq .Params.type "posts") -}}
+  {{- $isArticle := or (eq .Section "writing") (eq .Params.type "posts") (eq .Params.type "talk") -}}
   <meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
   <meta property="og:title" content="{{ .Title | htmlEscape }}">
   <meta property="og:site_name" content="{{ site.Title | htmlEscape }}">
@@ -63,6 +63,7 @@
     {{- with .Lastmod }}
       <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
     {{- end }}
+    <meta property="article:author" content="{{ site.Title | htmlEscape }}">
     {{- with .Params.tags }}
       {{- range first 10 . }}
         <meta property="article:tag" content="{{ . | htmlEscape }}">
@@ -83,6 +84,9 @@
   {{- if $description }}
     <meta name="twitter:description" content="{{ $description | htmlEscape }}">
   {{- end }}
+{{- end }}
+{{- with site.Home.OutputFormats.Get "Feed" }}
+<link rel="alternate" type="{{ .MediaType }}" href="{{ .Permalink | absURL }}" title="{{ site.Title }}">
 {{- end }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
