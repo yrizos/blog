@@ -3,6 +3,27 @@
     <header class="post-header">
       <h1 class="post-title">{{ .Title }}</h1>
       {{ partial "post-meta.html" (dict "page" .) }}
+
+      {{- if .Params.series_title }}
+      <section class="post-series">
+        <ol class="post-series-list">
+          {{- $currentPage := . -}}
+          {{- $seriesPages := where site.RegularPages "Params.series_title" .Params.series_title -}}
+          {{- $seriesPages = sort $seriesPages "Params.series_order" -}}
+          {{- range $seriesPages }}
+            {{- $isCurrent := eq .RelPermalink $currentPage.RelPermalink }}
+            <li class="post-series-item{{ if $isCurrent }} post-series-item--current{{ end }}">
+              <span class="post-series-number">{{ .Params.series_order }}</span>
+              {{- if $isCurrent }}
+                <span class="post-series-link">{{ .Title }}</span>
+              {{- else }}
+                <a href="{{ .RelPermalink }}" class="post-series-link">{{ .Title }}</a>
+              {{- end }}
+            </li>
+          {{- end }}
+        </ol>
+      </section>
+      {{- end }}
     </header>
 
     {{- if .Params.image }}
