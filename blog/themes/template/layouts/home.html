@@ -9,6 +9,6 @@
   {{ $recentPosts = first $limit (sort $recentPosts "Date" "desc") }}
   {{ partial "posts-list.html" (dict "title" "Recent posts" "pages" $recentPosts) }}
   <div class="all-posts-link">
-    <a href="/writing/">All posts <i class="fa-solid fa-angles-right"></i></a>
+    <a href="/writing/">All posts {{ partial "icon" (dict "icon" "angles-right" "style" "solid") }}</a>
   </div>
 {{ end }}

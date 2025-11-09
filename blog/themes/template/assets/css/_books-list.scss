@@ -95,6 +95,14 @@ $motion-books-list-cover-easing: ease-in;
   .fa-regular {
     color: $color-books-list-rating-empty;
   }
+  
+  .icon {
+    color: $color-books-list-rating-filled;
+  }
+  
+  .icon.icon-empty {
+    color: $color-books-list-rating-empty;
+  }
 }
 
 .book-cover {

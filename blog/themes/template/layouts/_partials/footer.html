@@ -1,25 +1,25 @@
 <div class="social-icons" aria-label="Social media links">
   {{ if site.Params.social.linkedin }}
   <a href="{{ site.Params.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+      {{ partial "icon" (dict "icon" "linkedin" "style" "brands") }}
   </a>
   {{ end }}
   {{ if site.Params.social.github }}
   <a href="{{ site.Params.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-    <i class="fa-brands fa-github" aria-hidden="true"></i>
+      {{ partial "icon" (dict "icon" "github" "style" "brands") }}
   </a>
   {{ end }}
   {{ if site.Params.social.medium }}
   <a href="{{ site.Params.social.medium }}" target="_blank" rel="noopener noreferrer" aria-label="Medium">
-    <i class="fa-brands fa-medium" aria-hidden="true"></i>
+      {{ partial "icon" (dict "icon" "medium" "style" "brands") }}
   </a>
   {{ end }}
   {{ if site.Params.social.goodreads }}
   <a href="{{ site.Params.social.goodreads }}" target="_blank" rel="noopener noreferrer" aria-label="Goodreads">
-    <i class="fa-brands fa-goodreads" aria-hidden="true"></i>
+      {{ partial "icon" (dict "icon" "goodreads" "style" "brands") }}
   </a>
   {{ end }}
   <a href="/feed.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS feed">
-    <i class="fa-solid fa-rss" aria-hidden="true"></i>
+      {{ partial "icon" (dict "icon" "rss" "style" "solid") }}
   </a>
 </div>

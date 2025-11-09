@@ -78,9 +78,9 @@
               {{- $rating := int .page.Params.rating }}
               {{- range seq 5 }}
                 {{- if le . $rating }}
-                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  {{ partial "icon" (dict "icon" "star" "style" "solid") }}
                 {{- else }}
-                  <i class="fa-regular fa-star" aria-hidden="true"></i>
+                  {{ partial "icon" (dict "icon" "star" "style" "regular" "class" "icon-empty") }}
                 {{- end }}
               {{- end }}
             </div>

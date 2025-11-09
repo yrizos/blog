@@ -22,7 +22,7 @@
     {{- with .Params.slides_pdf -}}
     <div class="talk-pdf-download">
       <a href="{{ . }}" class="talk-pdf-download__link" target="_blank" rel="noopener noreferrer" aria-label="Download PDF: {{ $.Title }}">
-        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+        {{ partial "icon" (dict "icon" "file-pdf" "style" "solid") }}
         <span>{{ $.Title }}</span>
       </a>
     </div>
@@ -30,8 +30,8 @@
 
     <div class="post-license">
       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" aria-label="Creative Commons Attribution 4.0 License">
-        <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
-        <i class="fa-brands fa-creative-commons-by" aria-hidden="true"></i>
+        {{ partial "icon" (dict "icon" "creative-commons" "style" "brands") }}
+        {{ partial "icon" (dict "icon" "creative-commons-by" "style" "brands") }}
         <span>CC BY 4.0</span>
       </a>
     </div>

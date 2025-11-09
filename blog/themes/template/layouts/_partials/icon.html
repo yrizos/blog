@@ -1,0 +1,12 @@
+{{- $icon := .icon -}}
+{{- $style := .style | default "solid" -}}
+{{- $class := .class | default "" -}}
+
+{{- $iconPath := printf "fontawesome/svgs/%s/%s.svg" $style $icon -}}
+{{- $svg := resources.Get $iconPath -}}
+
+{{- if $svg -}}
+  <span class="icon {{ $class }}" aria-hidden="true">{{ $svg.Content | safeHTML }}</span>
+{{- else -}}
+  <!-- Icon not found: {{ $iconPath }} -->
+{{- end -}}

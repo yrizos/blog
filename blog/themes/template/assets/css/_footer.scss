@@ -1,4 +1,21 @@
 // ============================================
+// ICONS
+// ============================================
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: middle;
+  }
+}
+
+// ============================================
 // FOOTER
 // ============================================
 
@@ -30,7 +47,8 @@ $size-social-icons-icon: $icon-size-primary;
   align-items: center;
 }
 
-.social-icons i {
+.social-icons i,
+.social-icons .icon {
   color: currentColor;
   font-size: $size-social-icons-icon;
 }
