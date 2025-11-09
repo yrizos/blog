@@ -5,6 +5,8 @@ draft = false
 type = "posts"
 canonical_url = "https://dev.to/yrizos/setting-up-visual-studio-code-for-rust-on-macos-95k"
 tags = ["rust", "vscode", "beginners"]
+series_title = "Rust on macOS"
+series_order = 2
 +++
 
 Setting up Visual Studio Code for Rust development is quick and straightforward. While I prefer PHPStorm for larger projects, VS Code is perfect for smaller ones. It’s fast, lightweight, and just works. For this guide, I’m assuming you already have [Rust installed via Homebrew](https://dev.to/yrizos/installing-rust-on-macos-with-homebrew-51fk).

@@ -15,3 +15,5 @@ class BlogPost:
     tags: List[str] = field(default_factory=list)
     image_url: Optional[str] = None
     image_alt: str = ""
+    series_title: Optional[str] = None
+    series_order: Optional[int] = None

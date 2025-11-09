@@ -39,6 +39,56 @@ def fetch_devto_article(article_id: str) -> dict:
     return response.json()
 
 
+def fetch_series_title(username: str, collection_id: int) -> Optional[str]:
+    """Fetch series title from the Dev.to series page."""
+    try:
+        series_url = f"https://dev.to/{username}/series/{collection_id}"
+        response = requests.get(series_url, timeout=30)
+        response.raise_for_status()
+
+        # Extract title from HTML <title> tag
+        import re
+        import html
+        match = re.search(r'<title>(.+?)</title>', response.text)
+        if match:
+            title = match.group(1)
+            # Decode HTML entities (e.g., &#39; -> ')
+            title = html.unescape(title)
+            # Remove "Series' Articles - DEV Community" suffix (handles ' or &#39;)
+            title = re.sub(r"\s+Series['\u2019]?\s+Articles\s*-\s*DEV Community.*$", "", title)
+            return title.strip()
+    except Exception:
+        # If we can't fetch series title, just return None
+        pass
+    return None
+
+
+def calculate_series_order(username: str, collection_id: int, article_id: int) -> Optional[int]:
+    """Calculate the article's position in the series based on publish date."""
+    try:
+        # Fetch all articles for the user
+        api_url = f"https://dev.to/api/articles?username={username}&per_page=1000"
+        response = requests.get(api_url, timeout=30)
+        response.raise_for_status()
+        articles = response.json()
+
+        # Filter articles by collection_id and sort by published_at
+        series_articles = [
+            a for a in articles
+            if a.get("collection_id") == collection_id
+        ]
+        series_articles.sort(key=lambda x: x.get("published_at", ""))
+
+        # Find the position of the current article
+        for index, article in enumerate(series_articles, start=1):
+            if article.get("id") == article_id:
+                return index
+    except Exception:
+        # If we can't determine order, return None
+        pass
+    return None
+
+
 def extract_devto_slug(entry) -> Optional[str]:
     """Extract the slug portion from a Dev.to entry link."""
     link = entry.get("link")
@@ -137,6 +187,21 @@ def parse_devto_entry(entry) -> BlogPost:
     else:
         tags = []
 
+    # Extract series information if article is part of a series
+    series_title = None
+    series_order = None
+    collection_id = api_data.get("collection_id")
+    if collection_id:
+        # Extract username from article_id (format: "username/slug")
+        username = article_id.split("/")[0] if "/" in article_id else None
+        if username:
+            series_title = fetch_series_title(username, collection_id)
+            article_numeric_id = api_data.get("id")
+            if article_numeric_id:
+                series_order = calculate_series_order(
+                    username, collection_id, article_numeric_id
+                )
+
     return BlogPost(
         title=title,
         slug=slug,
@@ -146,4 +211,6 @@ def parse_devto_entry(entry) -> BlogPost:
         tags=tags if tags else extract_tags(entry),
         image_url=image_url,
         image_alt=image_alt,
+        series_title=series_title,
+        series_order=series_order,
     )

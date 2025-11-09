@@ -5,6 +5,8 @@ draft = false
 type = "posts"
 canonical_url = "https://dev.to/yrizos/the-mars-rover-challenge-in-rust-setting-the-scene-49l8"
 tags = ["rust", "beginners", "kata"]
+series_title = "The Mars Rover Technical Challenge in Rust"
+series_order = 1
 +++
 
 As a Rust beginner, I was looking for a project that would both teach me the language fundamentals and keep me engaged. The Mars Rover Challenge fits perfectly - it's an intriguing problem that simulates robotic exploration of Mars while introducing key programming concepts.

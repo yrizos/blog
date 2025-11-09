@@ -5,6 +5,8 @@ draft = false
 type = "posts"
 canonical_url = "https://dev.to/yrizos/the-mars-rover-challenge-in-rust-houston-do-you-copy-334o"
 tags = ["rust", "beginners", "kata"]
+series_title = "The Mars Rover Technical Challenge in Rust"
+series_order = 3
 +++
 
 Our rover navigation system is ready for its maiden voyage, but first, it needs to know where to go! The mission parameters have provided specific test scenarios to validate our implementation. My rover needs to interpret these commands:

@@ -5,6 +5,8 @@ draft = false
 type = "posts"
 canonical_url = "https://dev.to/yrizos/the-mars-rover-challenge-in-rust-lets-get-moving-3a32"
 tags = ["rust", "beginners", "kata"]
+series_title = "The Mars Rover Technical Challenge in Rust"
+series_order = 2
 +++
 
 Now that the challenge is clear, it's time to start coding.

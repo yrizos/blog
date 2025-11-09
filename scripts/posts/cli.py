@@ -68,6 +68,10 @@ def build_front_matter(post: BlogPost, image_web_path: Optional[pathlib.Path]) -
         fields["imageAlt"] = post.image_alt or ""
     if post.tags:
         fields["tags"] = post.tags
+    if post.series_title:
+        fields["series_title"] = post.series_title
+    if post.series_order:
+        fields["series_order"] = post.series_order
 
     lines = ["+++"]
     for key, value in fields.items():
