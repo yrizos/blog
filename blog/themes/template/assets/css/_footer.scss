@@ -29,9 +29,17 @@ $space-social-icons-gap: $space-separator;
 // Social icons colors
 $color-social-icons-text: $color-text-primary;
 $color-social-icons-hover: $color-text-accent;
+$color-social-icons-underline: $color-link-underline;
+$color-social-icons-underline-hover: $color-text-accent;
+$color-social-icons-icon-bg-hover: $color-text-accent;
 
 // Social icons sizes
 $size-social-icons-icon: $icon-size-primary;
+$social-icons-underline-offset: $link-underline-offset;
+
+// Social icons motion
+$motion-social-icons-duration: $motion-duration-normal;
+$motion-social-icons-easing: $motion-easing-normal;
 
 .social-icons {
   display: flex;
@@ -42,17 +50,29 @@ $size-social-icons-icon: $icon-size-primary;
 
 .social-icons a {
   color: $color-social-icons-text;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: $color-social-icons-underline;
+  text-underline-offset: $social-icons-underline-offset;
   display: inline-flex;
   align-items: center;
+  transition: color $motion-social-icons-duration $motion-social-icons-easing,
+              text-decoration-color $motion-social-icons-duration $motion-social-icons-easing;
 }
 
 .social-icons i,
 .social-icons .icon {
   color: currentColor;
   font-size: $size-social-icons-icon;
+  text-decoration: none;
+  transition: background-color $motion-social-icons-duration $motion-social-icons-easing;
 }
 
 .social-icons a:hover {
   color: $color-social-icons-hover;
+  text-decoration-color: $color-social-icons-underline-hover;
+
+  i,
+  .icon {
+    background-color: $color-social-icons-icon-bg-hover;
+  }
 }

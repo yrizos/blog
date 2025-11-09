@@ -36,6 +36,7 @@ a {
   color: $color-text-primary;
   text-decoration: underline;
   text-decoration-color: $color-link-underline;
+  text-underline-offset: $link-underline-offset;
   transition: color $motion-duration-normal $motion-easing-normal,
               text-decoration-color $motion-duration-normal $motion-easing-normal;
 }

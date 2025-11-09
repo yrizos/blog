@@ -15,10 +15,18 @@ $font-talk-title-bottom: $space-normal;
 // Talk colors
 $color-talk-pdf-text: $color-text-primary;
 $color-talk-pdf-hover: $color-text-accent;
+$color-talk-pdf-underline: $color-link-underline;
+$color-talk-pdf-underline-hover: $color-text-accent;
+$color-talk-pdf-icon-bg-hover: $color-text-accent;
 
 // Talk sizes
 $space-talk-pdf-icon-margin-top: 0.1em;
 $space-talk-pdf-gap: $space-small;
+$talk-pdf-underline-offset: $link-underline-offset;
+
+// Talk motion
+$motion-talk-pdf-duration: $motion-duration-normal;
+$motion-talk-pdf-easing: $motion-easing-normal;
 
 .talk {
   // Inherits styles from article
@@ -56,10 +64,29 @@ $space-talk-pdf-gap: $space-small;
 
   span {
     text-decoration: underline;
+    text-decoration-color: $color-talk-pdf-underline;
+    text-underline-offset: $talk-pdf-underline-offset;
+    transition: color $motion-talk-pdf-duration $motion-talk-pdf-easing,
+                text-decoration-color $motion-talk-pdf-duration $motion-talk-pdf-easing;
+  }
+
+  i,
+  .icon {
+    text-decoration: none;
+    transition: background-color $motion-talk-pdf-duration $motion-talk-pdf-easing;
   }
 
   &:hover {
     color: $color-talk-pdf-hover;
+
+    span {
+      text-decoration-color: $color-talk-pdf-underline-hover;
+    }
+
+    i,
+    .icon {
+      background-color: $color-talk-pdf-icon-bg-hover;
+    }
   }
 }
 

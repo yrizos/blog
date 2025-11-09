@@ -23,9 +23,17 @@ $line-post-meta-height: $line-height-tight;
 
 // Post meta colors
 $color-post-meta-separator: $color-border-primary;
+$color-post-license-underline: $color-link-underline;
+$color-post-license-underline-hover: $color-text-accent;
+$color-post-license-icon-bg-hover: $color-text-accent;
 
 // Post meta sizes
 $size-post-meta-separator: $size-divider-dot;
+$post-license-underline-offset: $link-underline-offset;
+
+// Post meta motion
+$motion-post-license-duration: $motion-duration-normal;
+$motion-post-license-easing: $motion-easing-normal;
 
 // Post cover opacity
 $opacity-post-cover-image-hidden: 0;
@@ -130,8 +138,29 @@ $motion-post-cover-easing: ease-in;
   align-items: center;
   gap: $space-post-license-gap;
   text-decoration: none;
+  transition: color $motion-post-license-duration $motion-post-license-easing;
 }
 
-.post-license a:hover span {
+.post-license a span {
   text-decoration: underline;
+  text-decoration-color: $color-post-license-underline;
+  text-underline-offset: $post-license-underline-offset;
+  transition: text-decoration-color $motion-post-license-duration $motion-post-license-easing;
+}
+
+.post-license a i,
+.post-license a .icon {
+  text-decoration: none;
+  transition: background-color $motion-post-license-duration $motion-post-license-easing;
+}
+
+.post-license a:hover {
+  span {
+    text-decoration-color: $color-post-license-underline-hover;
+  }
+
+  i,
+  .icon {
+    background-color: $color-post-license-icon-bg-hover;
+  }
 }
