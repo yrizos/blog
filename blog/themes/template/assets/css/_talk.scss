@@ -12,16 +12,9 @@ $space-talk-description-bottom: $space-extra-large;
 // Talk typography
 $font-talk-title-bottom: $space-normal;
 
-// Talk colors
-$color-talk-pdf-icon-bg-hover: $color-text-accent;
-
 // Talk sizes
 $space-talk-pdf-icon-margin-top: 0.1em;
 $space-talk-pdf-gap: $space-small;
-
-// Talk motion
-$motion-talk-pdf-duration: $motion-duration-normal;
-$motion-talk-pdf-easing: $motion-easing-normal;
 
 .talk {
   // Inherits styles from article
@@ -63,13 +56,12 @@ $motion-talk-pdf-easing: $motion-easing-normal;
   i,
   .icon {
     text-decoration: none;
-    transition: background-color $motion-talk-pdf-duration $motion-talk-pdf-easing;
   }
 
   &:hover {
     i,
     .icon {
-      background-color: $color-talk-pdf-icon-bg-hover;
+      color: $color-text-accent;
     }
   }
 }

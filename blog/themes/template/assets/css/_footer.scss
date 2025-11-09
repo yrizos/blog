@@ -26,15 +26,8 @@
 // Social icons spacing
 $space-social-icons-gap: $space-separator;
 
-// Social icons colors
-$color-social-icons-icon-bg-hover: $color-text-accent;
-
 // Social icons sizes
 $size-social-icons-icon: $icon-size-primary;
-
-// Social icons motion
-$motion-social-icons-duration: $motion-duration-normal;
-$motion-social-icons-easing: $motion-easing-normal;
 
 .social-icons {
   display: flex;
@@ -53,12 +46,11 @@ $motion-social-icons-easing: $motion-easing-normal;
   color: currentColor;
   font-size: $size-social-icons-icon;
   text-decoration: none;
-  transition: background-color $motion-social-icons-duration $motion-social-icons-easing;
 }
 
 .social-icons a:hover {
   i,
   .icon {
-    background-color: $color-social-icons-icon-bg-hover;
+    color: $color-text-accent;
   }
 }

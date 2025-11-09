@@ -10,12 +10,6 @@ $space-posts-list-title-bottom: $space-normal;
 $space-posts-list-gap: $space-normal;
 $space-posts-list-item-gap: $space-small;
 
-// Posts list colors
-$color-posts-list-link-icon-bg-hover: $color-text-accent;
-
-// Posts list motion
-$motion-posts-list-link-duration: $motion-duration-normal;
-$motion-posts-list-link-easing: $motion-easing-normal;
 
 .posts-list-section {
   margin-top: $space-posts-list-section-top;
@@ -60,12 +54,11 @@ $motion-posts-list-link-easing: $motion-easing-normal;
 .all-posts-link a {
   .icon {
     text-decoration: none;
-    transition: background-color $motion-posts-list-link-duration $motion-posts-list-link-easing;
   }
 
   &:hover {
     .icon {
-      background-color: $color-posts-list-link-icon-bg-hover;
+      color: $color-text-accent;
     }
   }
 }
