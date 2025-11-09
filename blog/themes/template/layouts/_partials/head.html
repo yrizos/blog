@@ -124,6 +124,9 @@
 {{ partial "structured-data.html" . }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{- if and (or (eq .Type "talk") (eq .Params.type "talk")) .Params.slides_dir -}}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+{{- end -}}
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" as="style">
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 {{- if and (or (eq .Type "talk") (eq .Params.type "talk")) .Params.slides_dir -}}
