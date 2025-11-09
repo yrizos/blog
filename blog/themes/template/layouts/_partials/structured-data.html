@@ -1,0 +1,72 @@
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.Title | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "description": {{ (site.Params.description | default site.Title) | jsonify }}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.Title | jsonify }},
+  "url": {{ .Permalink | jsonify }}{{- if site.Params.social.linkedin }},
+  "sameAs": [
+    {{ site.Params.social.linkedin | jsonify }}{{- if site.Params.social.github }},
+    {{ site.Params.social.github | jsonify }}{{- end }}{{- if site.Params.social.medium }},
+    {{ site.Params.social.medium | jsonify }}{{- end }}
+  ]{{- end }}
+}
+</script>
+{{- else if .IsPage }}
+  {{- $isArticle := or (eq .Section "writing") (eq .Params.type "posts") (eq .Params.type "talk") -}}
+  {{- if $isArticle }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  {{- with .PublishDate | default .Date }}
+  "datePublished": {{ .Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  {{- end }}
+  {{- with .Lastmod }}
+  "dateModified": {{ .Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  {{- end }}
+  "author": {
+    "@type": "Person",
+    "name": {{ site.Title | jsonify }},
+    "url": {{ site.Home.Permalink | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.Title | jsonify }}
+  }{{- $description := .Params.description | default .Params.summary | default .Summary | default "" -}}{{ if $description }},
+  "description": {{ (strings.TrimSpace (truncate 200 (plainify $description))) | jsonify }}{{ end }}{{- with .Params.image }},
+  "image": {{ . | absURL | jsonify }}{{ end }}{{- with .Params.tags }},
+  "keywords": {{ . | jsonify }}{{ end }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }
+}
+</script>
+  {{- end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.Title | jsonify }},
+  "url": {{ site.Home.Permalink | jsonify }}{{- if site.Params.social.linkedin }},
+  "sameAs": [
+    {{ site.Params.social.linkedin | jsonify }}{{- if site.Params.social.github }},
+    {{ site.Params.social.github | jsonify }}{{- end }}{{- if site.Params.social.medium }},
+    {{ site.Params.social.medium | jsonify }}{{- end }}
+  ]{{- end }}
+}
+</script>
+{{- end }}
+

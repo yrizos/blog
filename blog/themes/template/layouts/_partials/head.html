@@ -88,6 +88,7 @@
 {{- with site.Home.OutputFormats.Get "Feed" }}
 <link rel="alternate" type="{{ .MediaType }}" href="{{ .Permalink | absURL }}" title="{{ site.Title }}">
 {{- end }}
+{{ partial "structured-data.html" . }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
