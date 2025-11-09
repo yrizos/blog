@@ -1,21 +1,48 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{- if .Params.canonical_url }}
-<link rel="canonical" href="{{ .Params.canonical_url }}">
-{{- end }}
+{{- $canonicalURL := .Params.canonical_url | default .Permalink -}}
+<link rel="canonical" href="{{ $canonicalURL }}">
 <link rel="icon" type="image/png" sizes="180x180" href="{{ "images/avatar/avatar-180x180-rounded.png" | relURL }}">
 <link rel="icon" type="image/x-icon" href="{{ "images/avatar/avatar-180x180-rounded.ico" | relURL }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/avatar/avatar-180x180-rounded.png" | relURL }}">
-{{- if .IsPage }}
+{{- if .IsHome }}
+  {{- $description := site.Params.description | default site.Title -}}
+  <meta name="description" content="{{ $description | htmlEscape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.Title | htmlEscape }}">
+  <meta property="og:site_name" content="{{ site.Title | htmlEscape }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:description" content="{{ $description | htmlEscape }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ site.Title | htmlEscape }}">
+  <meta name="twitter:description" content="{{ $description | htmlEscape }}">
+{{- else if .IsPage }}
   {{- $rawDescription := .Params.description | default .Params.summary | default .Summary | default .Content -}}
   {{- $description := strings.TrimSpace (truncate 200 (plainify $rawDescription)) -}}
-  <meta property="og:type" content="{{ if eq .Section "posts" }}article{{ else }}website{{ end }}">
+  {{- if $description }}
+    <meta name="description" content="{{ $description | htmlEscape }}">
+  {{- end }}
+  {{- $isArticle := or (eq .Section "writing") (eq .Params.type "posts") -}}
+  <meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
   <meta property="og:title" content="{{ .Title | htmlEscape }}">
   <meta property="og:site_name" content="{{ site.Title | htmlEscape }}">
   <meta property="og:url" content="{{ .Permalink }}">
   {{- if $description }}
     <meta property="og:description" content="{{ $description | htmlEscape }}">
+  {{- end }}
+  {{- if $isArticle }}
+    {{- with .PublishDate | default .Date }}
+      <meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+    {{- end }}
+    {{- with .Lastmod }}
+      <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+    {{- end }}
+    {{- with .Params.tags }}
+      {{- range first 10 . }}
+        <meta property="article:tag" content="{{ . | htmlEscape }}">
+      {{- end }}
+    {{- end }}
   {{- end }}
   {{- with .Params.image }}
     <meta property="og:image" content="{{ . | absURL }}">
