@@ -33,10 +33,8 @@ $color-slide-arrow-active-text: $color-background-primary;
 $color-slide-bullet-active: $color-text-accent;
 
 // Slide viewer motion
-$motion-slide-arrow-duration: $motion-duration-normal;
-$motion-slide-arrow-easing: $motion-easing-normal;
-$motion-slide-bullet-duration: $motion-duration-normal;
-$motion-slide-bullet-easing: $motion-easing-normal;
+$motion-slide-duration: $motion-duration-normal;
+$motion-slide-easing: $motion-easing-normal;
 
 .slide-viewer {
   margin: 0;
@@ -117,7 +115,7 @@ $motion-slide-bullet-easing: $motion-easing-normal;
   line-height: 1;
   padding: $space-slide-arrow-padding;
   border-radius: $border-slide-arrow-radius;
-  transition: background-color $motion-slide-arrow-duration $motion-slide-arrow-easing, color $motion-slide-arrow-duration $motion-slide-arrow-easing;
+  transition: background-color $motion-slide-duration $motion-slide-easing, color $motion-slide-duration $motion-slide-easing;
   flex-shrink: 0;
   margin: 0;
   outline: none;
@@ -150,7 +148,7 @@ $motion-slide-bullet-easing: $motion-easing-normal;
   height: $size-slide-bullet;
   width: $size-slide-bullet;
   padding: 0;
-  transition: background-color $motion-slide-bullet-duration $motion-slide-bullet-easing;
+  transition: background-color $motion-slide-duration $motion-slide-easing;
   outline: none;
 
   &:hover:not(&--active),

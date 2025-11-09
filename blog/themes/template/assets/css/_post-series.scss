@@ -6,10 +6,6 @@
 $series-number-bg: lighten($color-text-primary, 45%);
 $series-number-bg-active: darken($series-number-bg, 10%);
 $series-number-text: $color-background-primary;
-$series-link-text: $color-text-primary;
-$series-link-text-hover: $color-text-accent;
-$series-link-underline: $color-link-underline;
-$series-link-underline-hover: $color-text-accent;
 $series-current-link-text: $color-text-primary;
 
 // Spacing
@@ -21,7 +17,6 @@ $series-number-title-gap: $space-normal;
 $series-number-size: $space-large;
 $series-number-font-size: $font-size-base-mobile;
 $series-number-border-radius: 50%;
-$series-link-underline-offset: $link-underline-offset;
 
 // Typography
 $series-font-weight: $font-weight-normal;
@@ -74,18 +69,6 @@ $series-transition-easing: $motion-easing-normal;
 
 a.post-series-link {
   flex: 1;
-  color: $series-link-text;
-  text-decoration: underline;
-  text-decoration-color: $series-link-underline;
-  text-underline-offset: $series-link-underline-offset;
-  transition: color $series-transition-duration $series-transition-easing,
-              text-decoration-color $series-transition-duration $series-transition-easing;
-
-  &:hover,
-  &:focus {
-    color: $series-link-text-hover;
-    text-decoration-color: $series-link-underline-hover;
-  }
 }
 
 span.post-series-link {

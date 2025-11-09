@@ -2,10 +2,6 @@
 // 404 PAGE
 // ============================================
 
-// 404 page colors
-$color-404-background: $color-background-primary;
-$color-404-text: $color-text-primary;
-
 // 404 page spacing
 $space-404-padding: $space-large;
 $space-404-gap: $space-normal;
@@ -18,8 +14,6 @@ $font-404-title-family: $font-family-heading;
 $size-404-avatar: $size-avatar;
 
 .not-found-page {
-  background-color: $color-404-background;
-  color: $color-404-text;
   min-height: 100vh;
   margin: 0;
 }

@@ -6,9 +6,6 @@
 $space-hero-margin-bottom: $space-hero;
 $space-hero-gap: $space-normal;
 
-// Hero typography
-$line-hero-height: $line-height-body;
-
 .hero {
   margin: 0 0 $space-hero-margin-bottom 0;
   display: flex;
@@ -18,5 +15,4 @@ $line-hero-height: $line-height-body;
 
 .hero p {
   margin: 0;
-  line-height: $line-hero-height;
 }

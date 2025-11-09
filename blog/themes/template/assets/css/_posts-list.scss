@@ -11,13 +11,7 @@ $space-posts-list-gap: $space-normal;
 $space-posts-list-item-gap: $space-small;
 
 // Posts list colors
-$color-posts-list-link-underline: $color-link-underline;
-$color-posts-list-link-underline-hover: $color-text-accent;
-$color-posts-list-link-hover: $color-text-accent;
 $color-posts-list-link-icon-bg-hover: $color-text-accent;
-
-// Posts list sizes
-$posts-list-link-underline-offset: $link-underline-offset;
 
 // Posts list motion
 $motion-posts-list-link-duration: $motion-duration-normal;
@@ -64,25 +58,14 @@ $motion-posts-list-link-easing: $motion-easing-normal;
 }
 
 .all-posts-link a {
-  text-decoration: underline;
-  text-decoration-color: $color-posts-list-link-underline;
-  text-underline-offset: $posts-list-link-underline-offset;
-  transition: color $motion-posts-list-link-duration $motion-posts-list-link-easing,
-              text-decoration-color $motion-posts-list-link-duration $motion-posts-list-link-easing;
-}
-
-.all-posts-link a {
   .icon {
     text-decoration: none;
     transition: background-color $motion-posts-list-link-duration $motion-posts-list-link-easing;
   }
-}
 
-.all-posts-link a:hover {
-  color: $color-posts-list-link-hover;
-  text-decoration-color: $color-posts-list-link-underline-hover;
-
-  .icon {
-    background-color: $color-posts-list-link-icon-bg-hover;
+  &:hover {
+    .icon {
+      background-color: $color-posts-list-link-icon-bg-hover;
+    }
   }
 }

@@ -9,19 +9,10 @@ $space-talk-meta-gap: $space-separator;
 $line-talk-meta-height: $line-height-tight;
 
 // Talk meta colors
-$color-talk-meta-text: $color-text-primary;
-$color-talk-meta-hover: $color-text-accent;
-$color-talk-meta-underline: $color-link-underline;
-$color-talk-meta-underline-hover: $color-text-accent;
 $color-talk-meta-separator: $color-border-primary;
 
 // Talk meta sizes
 $size-talk-meta-separator: $size-divider-dot;
-$talk-meta-underline-offset: $link-underline-offset;
-
-// Talk meta motion
-$motion-talk-meta-duration: $motion-duration-normal;
-$motion-talk-meta-easing: $motion-easing-normal;
 
 .talk-meta {
   display: inline-flex;
@@ -46,33 +37,4 @@ $motion-talk-meta-easing: $motion-easing-normal;
     vertical-align: middle;
   }
 
-  &__event {
-    &[href] {
-      color: $color-talk-meta-text;
-      text-decoration: underline;
-      text-decoration-color: $color-talk-meta-underline;
-      text-underline-offset: $talk-meta-underline-offset;
-      transition: color $motion-talk-meta-duration $motion-talk-meta-easing,
-                  text-decoration-color $motion-talk-meta-duration $motion-talk-meta-easing;
-
-      &:hover {
-        color: $color-talk-meta-hover;
-        text-decoration-color: $color-talk-meta-underline-hover;
-      }
-    }
-  }
-
-  &__pdf {
-    color: $color-talk-meta-text;
-    text-decoration: underline;
-    text-decoration-color: $color-talk-meta-underline;
-    text-underline-offset: $talk-meta-underline-offset;
-    transition: color $motion-talk-meta-duration $motion-talk-meta-easing,
-                text-decoration-color $motion-talk-meta-duration $motion-talk-meta-easing;
-
-    &:hover {
-      color: $color-talk-meta-hover;
-      text-decoration-color: $color-talk-meta-underline-hover;
-    }
-  }
 }
