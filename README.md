@@ -21,7 +21,9 @@ Hugo-powered personal blog for https://yrizos.com.
 ├── scripts/                   # Utility scripts that support the blog workflow
 │   ├── fetch_posts.py         # Medium/Dev.to import
 │   ├── fetch_books.py         # Goodreads favorites import
-│   └── fetch_reading.py       # Goodreads currently-reading import
+│   ├── fetch_reading.py       # Goodreads currently-reading import
+│   └── pdf_to_images.py       # PDF slide conversion to images
+├── Dockerfile.python          # Docker image for Python scripts with dependencies
 ├── Makefile                   # Docker-based development commands
 └── CNAME                      # Domain configuration used when deploying the site
 ```
@@ -70,13 +72,7 @@ Static site output goes to `blog/public/`.
 
 ## Content Import Scripts
 
-### Setup
-
-The Python virtual environment is automatically set up when running Makefile commands. To set it up explicitly:
-
-```bash
-make venv-setup
-```
+All Python scripts run in Docker containers with dependencies pre-installed. The Docker image is built automatically on first use.
 
 ### Medium/Dev.to Posts
 
@@ -107,4 +103,12 @@ Fetches currently-reading books from Goodreads RSS feed.
 
 ```bash
 make fetch-reading
+```
+
+### PDF to Images
+
+Converts PDF presentation slides to JPG images for use in talk pages.
+
+```bash
+make pdf-to-images PDF=path/to/presentation.pdf
 ```
