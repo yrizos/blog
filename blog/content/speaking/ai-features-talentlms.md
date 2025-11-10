@@ -19,11 +19,11 @@ description: |
 tags: ["talk", "ai", "software-engineering", "engineering-leadership"]
 ---
 
-The first [Mindstone Athens Practical AI Meetup](https://www.meetup.com/mindstone-athens-practicalai-meetup/) at [Epignosis HQ](https://www.epignosishq.com/) drew a full house. It was the opening event of the Athens chapter of the Global Mindstone Practical AI community, and the energy in the room matched that sense of beginning.
+The June [Mindstone Athens Practical AI Meetup](https://www.meetup.com/mindstone-athens-practicalai-meetup/) at [Epignosis HQ](https://www.epignosishq.com/) drew a full house. It was the opening event of the Athens chapter of the Global Mindstone Practical AI community, and the energy in the room matched that sense of beginning.
 
 My talk focused on the gap between getting an LLM to produce decent output and delivering something that can serve 25 million users. The distance between those two points is filled with the kind of engineering problems that don’t show up in demos. APIs fail at random, costs can spiral over a weekend, and teams need systems they can maintain without losing their minds.
 
-LLMs behave like no other dependency. They are slow, inconsistent, and expensive to call. They can return different answers to the same question and undermine assumptions that most software architectures rely on. Building with them means rethinking reliability, cost control, and maintainability from the ground up.
+LLMs are grumpy dependencies. They are slow, inconsistent, and expensive to call. They can return different answers to the same question and undermine assumptions that most software architectures rely on. Building with them means rethinking reliability, cost control, and maintainability from the ground up.
 
 We treat that unpredictability as normal. Product teams never interact with LLMs directly. Prompts are versioned and tested like any other code. Failure handling comes first, not last. The boring parts matter most because they keep the system steady when everything else shifts.
 
