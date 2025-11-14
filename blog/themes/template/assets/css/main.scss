@@ -15,6 +15,7 @@
 @import 'reading-progress';
 @import 'syntax';
 @import 'syntax-override';
+@import 'inline-code';
 @import '404';
 
 // ============================================
@@ -142,7 +143,6 @@ blockquote {
   padding: $space-quote-padding;
   border-left: $border-width-accent solid $color-border-accent;
   background-color: $color-quote-background;
-  font-style: italic;
 }
 
 blockquote p:last-child {

@@ -1,0 +1,37 @@
+// ============================================
+// INLINE CODE
+// ============================================
+
+// Colors
+$inline-code-bg: lighten($color-background-primary, 5%);
+$inline-code-text: $color-text-primary;
+$inline-code-border: darken($color-background-primary, 10%);
+
+// Spacing
+$inline-code-padding-vertical: 0.2em;
+$inline-code-padding-horizontal: 0.5em;
+
+// Typography
+$inline-code-font-family: 'Source Code Pro', 'Monaco', 'Menlo', 'Consolas', monospace;
+$inline-code-font-size: $font-size-base-desktop * 0.9;
+
+// Border
+$inline-code-border-width: 1px;
+$inline-code-border-radius: 8px;
+// Motion
+$inline-code-transition-duration: $motion-duration-normal;
+$inline-code-transition-easing: $motion-easing-normal;
+
+// Inline code styling (code not inside pre or code blocks)
+code:not(pre code):not(.chroma code) {
+  background-color: $inline-code-bg;
+  color: $inline-code-text;
+  font-family: $inline-code-font-family;
+  font-size: $inline-code-font-size;
+  font-weight: $font-weight-normal;
+  padding: $inline-code-padding-vertical $inline-code-padding-horizontal;
+  border-radius: $inline-code-border-radius;
+  border: $inline-code-border-width solid $inline-code-border;
+  white-space: nowrap;
+}
+
