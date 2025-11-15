@@ -29,7 +29,7 @@ bridgeItem(
 
 As a sidenote, TypeScript didn't exist back then. The actual code was Java, but I _really don't love Java_.
 
-## For a while, everything worked fine.
+## For a While, Everything Worked Fine
 
 Then, one afternoon, a product stopped appearing in the store. It should have been a quick fix. I expected to find some data validation issue or maybe a network timeout. Instead, I spent nearly two hours jumping between files trying to understand what had gone wrong. The system had multiple layers (controllers, services, helpers, integration adapters) and every function accepted plain strings. Nothing in the signatures gave me any hint about which string represented which concept.
 
